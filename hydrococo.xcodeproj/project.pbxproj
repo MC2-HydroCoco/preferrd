@@ -16,6 +16,7 @@
 		8321CD5B2660F3710094519F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8321CD5A2660F3710094519F /* LaunchScreen.storyboard */; };
 		8321CD5E2660F3AB0094519F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8321CD5C2660F3AB0094519F /* Localizable.strings */; };
 		834005142661691D0061724B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834005132661691D0061724B /* Extensions.swift */; };
+		83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D22DBE266623AC0009B9AF /* ColorHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8321CD5D2660F3AB0094519F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8321CD5F2660F3B90094519F /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		834005132661691D0061724B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		83D22DBE266623AC0009B9AF /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				8321CD5A2660F3710094519F /* LaunchScreen.storyboard */,
 				8321CD5C2660F3AB0094519F /* Localizable.strings */,
 				834005132661691D0061724B /* Extensions.swift */,
+				83D22DBE266623AC0009B9AF /* ColorHelper.swift */,
 			);
 			path = hydrococo;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				834005142661691D0061724B /* Extensions.swift in Sources */,
 				8321CD4C2660EE5C0094519F /* hydrococo.xcdatamodeld in Sources */,
 				8321CD462660EE5C0094519F /* ViewController.swift in Sources */,
+				83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */,
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
 			);
