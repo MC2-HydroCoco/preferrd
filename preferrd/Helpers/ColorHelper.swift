@@ -83,9 +83,9 @@ extension UIColor {
     var alpha: CGFloat      = 0
 
     getHue(&hue,
-           saturation : &saturation,
-           brightness : &brightness,
-           alpha      : &alpha)
+           saturation: &saturation,
+           brightness: &brightness,
+           alpha: &alpha)
 
     return Float(saturation)
   }
@@ -97,9 +97,9 @@ extension UIColor {
     var alpha: CGFloat      = 0
 
     getHue(&hue,
-           saturation : &saturation,
-           brightness : &brightness,
-           alpha      : &alpha)
+           saturation: &saturation,
+           brightness: &brightness,
+           alpha: &alpha)
 
     return Float(brightness)
   }
