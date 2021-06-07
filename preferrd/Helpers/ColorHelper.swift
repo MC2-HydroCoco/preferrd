@@ -10,11 +10,11 @@ import UIKit
 
 // Usage Example
 /*
-let first = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).toRGB()
-let second = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).toRGB()
+ let first = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).toRGB()
+ let second = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).toRGB()
 
-let ratio = ColorHelper.getContrastRatio(rgb1: first, rgb2: second) // 1
-*/
+ let ratio = ColorHelper.getContrastRatio(rgb1: first, rgb2: second) // 1
+ */
 
 struct ColorHelper {
 
@@ -45,13 +45,62 @@ struct ColorHelper {
 
 extension UIColor {
   func toRGB() -> [Double] {
-    var red: CGFloat = 0
-    var green: CGFloat = 0
-    var blue: CGFloat = 0
-    var alpha: CGFloat = 0
+    var red: CGFloat    = 0
+    var green: CGFloat  = 0
+    var blue: CGFloat   = 0
+    var alpha: CGFloat  = 0
 
     getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
     return [Double(red), Double(green), Double(blue)]
+  }
+
+  func modify(saturation modifiedSaturation: Float = -1,
+              brightness modifiedBrightness: Float = -1) -> UIColor {
+    var hue: CGFloat        = 0
+    var saturation: CGFloat = 0
+    var brightness: CGFloat = 0
+    var alpha: CGFloat      = 0
+
+    getHue(&hue,
+           saturation: &saturation,
+           brightness: &brightness,
+           alpha: &alpha)
+
+    saturation = modifiedSaturation != -1 ? CGFloat(modifiedSaturation) : saturation
+    brightness = modifiedBrightness != -1 ? CGFloat(modifiedBrightness) : brightness
+
+    return UIColor(hue: hue,
+                   saturation: saturation,
+                   brightness: brightness,
+                   alpha: alpha)
+  }
+
+  func getSaturation() -> Float {
+    var hue: CGFloat        = 0
+    var saturation: CGFloat = 0
+    var brightness: CGFloat = 0
+    var alpha: CGFloat      = 0
+
+    getHue(&hue,
+           saturation : &saturation,
+           brightness : &brightness,
+           alpha      : &alpha)
+
+    return Float(saturation)
+  }
+
+  func getBrightness() -> Float {
+    var hue: CGFloat        = 0
+    var saturation: CGFloat = 0
+    var brightness: CGFloat = 0
+    var alpha: CGFloat      = 0
+
+    getHue(&hue,
+           saturation : &saturation,
+           brightness : &brightness,
+           alpha      : &alpha)
+
+    return Float(brightness)
   }
 }
