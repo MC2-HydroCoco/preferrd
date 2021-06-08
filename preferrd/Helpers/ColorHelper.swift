@@ -40,7 +40,6 @@ struct ColorHelper {
 
     return (brightest + 0.05) / (darkest + 0.05)
   }
-
 }
 
 extension UIColor {
