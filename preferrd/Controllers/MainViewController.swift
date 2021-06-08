@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
   var relatedTags   = [String: [String]]()
   @IBOutlet weak var colorView: UIView!
   @IBOutlet weak var hexCode: UILabel!
+  @IBOutlet weak var colorDesc: UILabel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,5 +33,6 @@ class MainViewController: UIViewController {
 
     colorView.backgroundColor = Color.blue.getColor()
     hexCode.text = Color.blue.hex
+    colorDesc.text = Color.blue.description
   }
 }

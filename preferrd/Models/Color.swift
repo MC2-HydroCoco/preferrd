@@ -33,6 +33,23 @@ enum Color: String, CaseIterable {
     }
   }
 
+  var description: String {
+    switch self {
+    case .red:
+      return "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    case .orange:
+      return "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    case .yellow:
+      return "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    case .green:
+      return "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    case .blue:
+      return "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    case .black:
+      return "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }
+  }
+
   func getColor() -> UIColor {
     UIColor(hex: self.hex)
   }
@@ -40,13 +57,21 @@ enum Color: String, CaseIterable {
   func getTags() -> [String] {
     switch self {
     case .red:
-      return []
+      return [
+        ColorMeanings.fresh
+      ].rawValues
     case .orange:
-      return []
+      return [
+        ColorMeanings.fresh
+      ].rawValues
     case .yellow:
-      return []
+      return [
+        ColorMeanings.fresh
+      ].rawValues
     case .green:
-      return []
+      return [
+        ColorMeanings.fresh
+      ].rawValues
     case .blue:
       return [
         ColorMeanings.relaxing

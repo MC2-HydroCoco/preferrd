@@ -30,17 +30,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBg-6v-Dha">
+                                <rect key="frame" x="16" y="60" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wBg-6v-Dha" secondAttribute="trailing" constant="16" id="3dE-16-Q5d"/>
                             <constraint firstItem="PLS-L0-YOW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="CpW-aK-Ar6"/>
+                            <constraint firstItem="wBg-6v-Dha" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Jd0-R7-dzq"/>
                             <constraint firstItem="PLS-L0-YOW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kaZ-gW-1ta"/>
+                            <constraint firstItem="wBg-6v-Dha" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="m28-3m-PxL"/>
                             <constraint firstItem="V1A-LH-JDh" firstAttribute="top" secondItem="PLS-L0-YOW" secondAttribute="bottom" constant="16" id="qgr-2t-sF3"/>
+                            <constraint firstItem="wBg-6v-Dha" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="rsJ-R2-rFj"/>
                             <constraint firstItem="V1A-LH-JDh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zIG-OZ-WxS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorDesc" destination="wBg-6v-Dha" id="ER4-j1-wcQ"/>
                         <outlet property="colorView" destination="PLS-L0-YOW" id="VID-yi-wQI"/>
                         <outlet property="hexCode" destination="V1A-LH-JDh" id="epx-0t-83O"/>
                     </connections>
