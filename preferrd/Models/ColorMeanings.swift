@@ -39,6 +39,6 @@ enum ColorMeanings: String, CaseIterable {
   }
 
   static func getAllColorMeanings() -> [String] {
-    ColorMeanings.allCases.map { "\($0.rawValue)" }
+    ColorMeanings.allCases.rawValues
   }
 }

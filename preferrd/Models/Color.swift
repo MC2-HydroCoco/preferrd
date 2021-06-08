@@ -45,17 +45,17 @@ enum Color: String, CaseIterable {
       return []
     case .blue:
       return [
-        ColorMeanings.relaxing.rawValue
-      ]
+        ColorMeanings.relaxing
+      ].rawValues
     case .black:
       return [
-        ColorMeanings.elegant.rawValue,
-        ColorMeanings.modern.rawValue
-      ]
+        ColorMeanings.elegant,
+        ColorMeanings.modern
+      ].rawValues
     }
   }
 
   static func getAllColors() -> [String] {
-    Color.allCases.map { "\($0.rawValue)" }
+    Color.allCases.rawValues
   }
 }
