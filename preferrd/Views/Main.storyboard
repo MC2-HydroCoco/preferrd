@@ -15,9 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLS-L0-YOW">
+                                <rect key="frame" x="27" y="268" width="360" height="360"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="JIi-8R-XDc"/>
+                                    <constraint firstAttribute="height" constant="360" id="QrJ-s1-hVB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1A-LH-JDh">
+                                <rect key="frame" x="186" y="644" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PLS-L0-YOW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="CpW-aK-Ar6"/>
+                            <constraint firstItem="PLS-L0-YOW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kaZ-gW-1ta"/>
+                            <constraint firstItem="V1A-LH-JDh" firstAttribute="top" secondItem="PLS-L0-YOW" secondAttribute="bottom" constant="16" id="qgr-2t-sF3"/>
+                            <constraint firstItem="V1A-LH-JDh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zIG-OZ-WxS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="PLS-L0-YOW" id="VID-yi-wQI"/>
+                        <outlet property="hexCode" destination="V1A-LH-JDh" id="epx-0t-83O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,21 +16,25 @@ enum Color: String, CaseIterable {
        blue    = "Blue",
        black   = "Black"
 
-  func getColor() -> UIColor {
+  var hex: String {
     switch self {
     case .red:
-      return #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+      return "#FF0000"
     case .orange:
-      return #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+      return "#FFA500"
     case .yellow:
-      return #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+      return "#FFFF00"
     case .green:
-      return #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+      return "#008000"
     case .blue:
-      return #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+      return "#0000FF"
     case .black:
-      return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+      return "#000000"
     }
+  }
+
+  func getColor() -> UIColor {
+    UIColor(hex: self.hex)
   }
 
   func getTags() -> [String] {

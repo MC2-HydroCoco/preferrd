@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
   var userSelection = [ColorMeanings]()
   var relatedColors = [String: [Color]]()
   var relatedTags   = [String: [String]]()
+  @IBOutlet weak var colorView: UIView!
+  @IBOutlet weak var hexCode: UILabel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,7 +29,8 @@ class MainViewController: UIViewController {
     print("User Selection:", userSelection)
     print("Related Colors:", relatedColors)
     print("Related Tags:", relatedTags)
-    print("All Colors:", Color.getAllColors())
-    print("All Color Meanings:", ColorMeanings.getAllColorMeanings())
+
+    colorView.backgroundColor = Color.blue.getColor()
+    hexCode.text = Color.blue.hex
   }
 }
