@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
   @IBOutlet weak var hexCode: UILabel!
   @IBOutlet weak var colorDesc: UILabel!
 
+  @IBOutlet var colorPalette: [UIView]!
+
   override func viewDidLoad() {
     super.viewDidLoad()
     userSelection = [.elegant, .relaxing]
@@ -34,5 +36,10 @@ class MainViewController: UIViewController {
     colorView.backgroundColor = Color.blue.getColor()
     hexCode.text = Color.blue.hex
     colorDesc.text = Color.blue.description
+
+    let myColorSet = ColorSet(baseColor: .orange).complementary
+    myColorSet.enumerated().forEach { (index, color) in
+      colorPalette[index].backgroundColor = color
+    }
   }
 }

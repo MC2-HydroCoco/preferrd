@@ -36,15 +36,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozy-ct-0HY">
+                                <rect key="frame" x="16" y="681" width="64" height="64"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="njf-ng-i5r"/>
+                                    <constraint firstAttribute="height" constant="64" id="uG2-jK-b7Z"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvG-Ob-m9x">
+                                <rect key="frame" x="88" y="681" width="64" height="64"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="FDz-5R-opF"/>
+                                    <constraint firstAttribute="height" constant="64" id="RUl-ai-KCo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFo-a9-dPw">
+                                <rect key="frame" x="160" y="681" width="64" height="64"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="XLc-iK-lGe"/>
+                                    <constraint firstAttribute="height" constant="64" id="kuH-lU-Pml"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEL-hI-gnN">
+                                <rect key="frame" x="232" y="681" width="64" height="64"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="aRi-of-Ruy"/>
+                                    <constraint firstAttribute="width" constant="64" id="f6J-Hj-fNX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wBg-6v-Dha" secondAttribute="trailing" constant="16" id="3dE-16-Q5d"/>
+                            <constraint firstItem="Ozy-ct-0HY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="5YY-XK-dnr"/>
                             <constraint firstItem="PLS-L0-YOW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="CpW-aK-Ar6"/>
                             <constraint firstItem="wBg-6v-Dha" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Jd0-R7-dzq"/>
+                            <constraint firstItem="fvG-Ob-m9x" firstAttribute="leading" secondItem="Ozy-ct-0HY" secondAttribute="trailing" constant="8" id="LCm-1O-RYR"/>
+                            <constraint firstItem="wEL-hI-gnN" firstAttribute="centerY" secondItem="Ozy-ct-0HY" secondAttribute="centerY" id="LbC-TV-afM"/>
+                            <constraint firstItem="fvG-Ob-m9x" firstAttribute="centerY" secondItem="Ozy-ct-0HY" secondAttribute="centerY" id="ZIK-6a-ttX"/>
+                            <constraint firstItem="NFo-a9-dPw" firstAttribute="leading" secondItem="fvG-Ob-m9x" secondAttribute="trailing" constant="8" id="aRV-7k-zdA"/>
+                            <constraint firstItem="Ozy-ct-0HY" firstAttribute="top" secondItem="V1A-LH-JDh" secondAttribute="bottom" constant="16" id="caR-Wd-4kp"/>
+                            <constraint firstItem="wEL-hI-gnN" firstAttribute="leading" secondItem="NFo-a9-dPw" secondAttribute="trailing" constant="8" id="fkX-1r-FNI"/>
                             <constraint firstItem="PLS-L0-YOW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kaZ-gW-1ta"/>
                             <constraint firstItem="wBg-6v-Dha" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="m28-3m-PxL"/>
+                            <constraint firstItem="NFo-a9-dPw" firstAttribute="centerY" secondItem="Ozy-ct-0HY" secondAttribute="centerY" id="oYM-ir-fgg"/>
                             <constraint firstItem="V1A-LH-JDh" firstAttribute="top" secondItem="PLS-L0-YOW" secondAttribute="bottom" constant="16" id="qgr-2t-sF3"/>
                             <constraint firstItem="wBg-6v-Dha" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="rsJ-R2-rFj"/>
                             <constraint firstItem="V1A-LH-JDh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zIG-OZ-WxS"/>
@@ -54,6 +94,10 @@
                         <outlet property="colorDesc" destination="wBg-6v-Dha" id="ER4-j1-wcQ"/>
                         <outlet property="colorView" destination="PLS-L0-YOW" id="VID-yi-wQI"/>
                         <outlet property="hexCode" destination="V1A-LH-JDh" id="epx-0t-83O"/>
+                        <outletCollection property="colorPalette" destination="Ozy-ct-0HY" collectionClass="NSMutableArray" id="sPc-fy-fQT"/>
+                        <outletCollection property="colorPalette" destination="fvG-Ob-m9x" collectionClass="NSMutableArray" id="MzT-8G-Yoz"/>
+                        <outletCollection property="colorPalette" destination="NFo-a9-dPw" collectionClass="NSMutableArray" id="Pz2-tc-rsu"/>
+                        <outletCollection property="colorPalette" destination="wEL-hI-gnN" collectionClass="NSMutableArray" id="pKb-BM-uk5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -64,6 +108,18 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
