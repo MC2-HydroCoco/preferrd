@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8304D0A7266EA64300EBABB5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D0A6266EA64300EBABB5 /* Color.swift */; };
+		83171EDE26714C60001999F7 /* RelatedColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83171EDD26714C60001999F7 /* RelatedColorCell.swift */; };
 		8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD412660EE5C0094519F /* AppDelegate.swift */; };
 		8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD432660EE5C0094519F /* SceneDelegate.swift */; };
 		8321CD462660EE5C0094519F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD452660EE5C0094519F /* MainViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		8304D0A6266EA64300EBABB5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		83171EDD26714C60001999F7 /* RelatedColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedColorCell.swift; sourceTree = "<group>"; };
 		8321CD3E2660EE5C0094519F /* preferrd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = preferrd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8321CD412660EE5C0094519F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8321CD432660EE5C0094519F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				8321CD582660F3570094519F /* Main.storyboard */,
 				8321CD5A2660F3710094519F /* LaunchScreen.storyboard */,
+				83171EDD26714C60001999F7 /* RelatedColorCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
 				83DD4D88266E81CD00BC2EC4 /* ColorMeaning.swift in Sources */,
+				83171EDE26714C60001999F7 /* RelatedColorCell.swift in Sources */,
 				8304D0A7266EA64300EBABB5 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

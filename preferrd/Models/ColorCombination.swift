@@ -16,8 +16,8 @@ import UIKit
 struct ColorCombination {
   let baseColor: UIColor
 
-  init(baseColor: Color) {
-    self.baseColor = baseColor.getUIColor()
+  init(baseColor: String) {
+    self.baseColor = UIColor(hex: baseColor)
   }
 
   var analogous: [UIColor] {

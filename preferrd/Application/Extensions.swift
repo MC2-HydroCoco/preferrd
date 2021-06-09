@@ -18,15 +18,6 @@ extension String {
   }
 }
 
-extension Array where Element: RawRepresentable {
-  // dari ColorMeanings.allCases.map { "\($0.rawValue)" }
-  // jadi ColorMeanings.allCases.rawValues
-  // biar ✨clean✨
-  var rawValues: [String] {
-    self.map { "\($0.rawValue)" }
-  }
-}
-
 extension UIColor {
   convenience init(hex: String, alpha: CGFloat = 1.0) {
     var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

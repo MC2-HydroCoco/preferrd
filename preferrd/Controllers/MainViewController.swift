@@ -9,37 +9,37 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-  var userSelection = [ColorMeaning]()
-  var relatedColors = [String: [Color]]()
-  var relatedTags   = [String: [String]]()
-  @IBOutlet weak var colorView: UIView!
-  @IBOutlet weak var hexCode: UILabel!
-  @IBOutlet weak var colorDesc: UILabel!
-
-  @IBOutlet var colorPalette: [UIView]!
+  @IBOutlet weak var tableView: UITableView!
+  var relatedColors = [UIColor]() {
+    didSet {
+      tableView.reloadData()
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    userSelection = [.elegant, .relaxing]
 
-    userSelection.forEach { meaning in
-      relatedColors[meaning.rawValue] = meaning.getRelatedColors()
-      meaning.getRelatedColors().forEach { color in
-        relatedTags[color.rawValue] = color.getTags()
-      }
-    }
-
-    print("User Selection:", userSelection)
-    print("Related Colors:", relatedColors)
-    print("Related Tags:", relatedTags)
-
-    colorView.backgroundColor = Color.blue.getUIColor()
-    hexCode.text = Color.blue.hex
-    colorDesc.text = Color.blue.description
-
-    let myColorSet = ColorCombination(baseColor: .orange).splitComplementary
-    myColorSet.enumerated().forEach { (index, color) in
-      colorPalette[index].backgroundColor = color
-    }
+    tableView.delegate = self
+    tableView.dataSource = self
+    
+    relatedColors = ColorCombination(baseColor: ColorMeaning.getRelatedColors(for: .fresh)[2].hex).triadic
   }
+
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    relatedColors.count
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "relatedCell") as? RelatedColorCell {
+      let color = relatedColors[indexPath.row]
+      cell.colorPreview.backgroundColor = color
+//      cell.colorName.text = color.name
+      return cell
+    }
+    return UITableViewCell()
+  }
+
 }

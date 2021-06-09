@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-enum ColorMeaning: String, CaseIterable {
+enum ColorMeaning: String {
   case relaxing     = "Relaxing",
        vintage      = "Vintage",
        happy        = "Happy",
@@ -15,26 +16,11 @@ enum ColorMeaning: String, CaseIterable {
        modern       = "Modern",
        nature       = "Nature",
        fresh        = "Fresh",
-       elegant      = "Elegant"
+       elegant      = "Elegant",
+       feminine     = "Feminine",
+       masculine    = "Masculine"
 
-  func getRelatedColors() -> [Color] {
-    switch self {
-    case .relaxing:
-      return [.blue]
-    case .vintage:
-      return []
-    case .happy:
-      return []
-    case .adventurous:
-      return []
-    case .modern:
-      return [.black]
-    case .nature:
-      return []
-    case .fresh:
-      return []
-    case .elegant:
-      return [.black]
-    }
+  static func getRelatedColors(for meaning: ColorMeaning) -> [Color] {
+    return staticColors.filter { $0.relatedTags.contains(meaning) }
   }
 }
