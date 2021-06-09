@@ -68,6 +68,14 @@
                                     <constraint firstAttribute="width" constant="64" id="f6J-Hj-fNX"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBs-hO-rIB">
+                                <rect key="frame" x="304" y="681" width="64" height="64"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="iJk-Ox-yQ9"/>
+                                    <constraint firstAttribute="width" constant="64" id="pVq-yE-6sq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -76,9 +84,11 @@
                             <constraint firstItem="Ozy-ct-0HY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="5YY-XK-dnr"/>
                             <constraint firstItem="PLS-L0-YOW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="CpW-aK-Ar6"/>
                             <constraint firstItem="wBg-6v-Dha" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Jd0-R7-dzq"/>
+                            <constraint firstItem="oBs-hO-rIB" firstAttribute="centerY" secondItem="Ozy-ct-0HY" secondAttribute="centerY" id="KUJ-Xb-s6X"/>
                             <constraint firstItem="fvG-Ob-m9x" firstAttribute="leading" secondItem="Ozy-ct-0HY" secondAttribute="trailing" constant="8" id="LCm-1O-RYR"/>
                             <constraint firstItem="wEL-hI-gnN" firstAttribute="centerY" secondItem="Ozy-ct-0HY" secondAttribute="centerY" id="LbC-TV-afM"/>
                             <constraint firstItem="fvG-Ob-m9x" firstAttribute="centerY" secondItem="Ozy-ct-0HY" secondAttribute="centerY" id="ZIK-6a-ttX"/>
+                            <constraint firstItem="oBs-hO-rIB" firstAttribute="leading" secondItem="wEL-hI-gnN" secondAttribute="trailing" constant="8" id="a5L-SZ-ldU"/>
                             <constraint firstItem="NFo-a9-dPw" firstAttribute="leading" secondItem="fvG-Ob-m9x" secondAttribute="trailing" constant="8" id="aRV-7k-zdA"/>
                             <constraint firstItem="Ozy-ct-0HY" firstAttribute="top" secondItem="V1A-LH-JDh" secondAttribute="bottom" constant="16" id="caR-Wd-4kp"/>
                             <constraint firstItem="wEL-hI-gnN" firstAttribute="leading" secondItem="NFo-a9-dPw" secondAttribute="trailing" constant="8" id="fkX-1r-FNI"/>
@@ -98,6 +108,7 @@
                         <outletCollection property="colorPalette" destination="fvG-Ob-m9x" collectionClass="NSMutableArray" id="MzT-8G-Yoz"/>
                         <outletCollection property="colorPalette" destination="NFo-a9-dPw" collectionClass="NSMutableArray" id="Pz2-tc-rsu"/>
                         <outletCollection property="colorPalette" destination="wEL-hI-gnN" collectionClass="NSMutableArray" id="pKb-BM-uk5"/>
+                        <outletCollection property="colorPalette" destination="oBs-hO-rIB" collectionClass="NSMutableArray" id="Adz-oZ-p1C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

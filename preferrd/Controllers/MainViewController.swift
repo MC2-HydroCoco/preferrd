@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-  var userSelection = [ColorMeanings]()
+  var userSelection = [ColorMeaning]()
   var relatedColors = [String: [Color]]()
   var relatedTags   = [String: [String]]()
   @IBOutlet weak var colorView: UIView!
@@ -33,11 +33,11 @@ class MainViewController: UIViewController {
     print("Related Colors:", relatedColors)
     print("Related Tags:", relatedTags)
 
-    colorView.backgroundColor = Color.blue.getColor()
+    colorView.backgroundColor = Color.blue.getUIColor()
     hexCode.text = Color.blue.hex
     colorDesc.text = Color.blue.description
 
-    let myColorSet = ColorSet(baseColor: .orange).complementary
+    let myColorSet = ColorCombination(baseColor: .orange).splitComplementary
     myColorSet.enumerated().forEach { (index, color) in
       colorPalette[index].backgroundColor = color
     }

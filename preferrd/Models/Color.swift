@@ -50,7 +50,7 @@ enum Color: String, CaseIterable {
     }
   }
 
-  func getColor() -> UIColor {
+  func getUIColor() -> UIColor {
     UIColor(hex: self.hex)
   }
 
@@ -58,33 +58,29 @@ enum Color: String, CaseIterable {
     switch self {
     case .red:
       return [
-        ColorMeanings.fresh
+        ColorMeaning.fresh
       ].rawValues
     case .orange:
       return [
-        ColorMeanings.fresh
+        ColorMeaning.fresh
       ].rawValues
     case .yellow:
       return [
-        ColorMeanings.fresh
+        ColorMeaning.fresh
       ].rawValues
     case .green:
       return [
-        ColorMeanings.fresh
+        ColorMeaning.fresh
       ].rawValues
     case .blue:
       return [
-        ColorMeanings.relaxing
+        ColorMeaning.relaxing
       ].rawValues
     case .black:
       return [
-        ColorMeanings.elegant,
-        ColorMeanings.modern
+        ColorMeaning.elegant,
+        ColorMeaning.modern
       ].rawValues
     }
-  }
-
-  static func getAllColors() -> [String] {
-    Color.allCases.rawValues
   }
 }

@@ -20,7 +20,7 @@
 		83897DDE266BFB8000AB4913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83897DDD266BFB8000AB4913 /* Constants.swift */; };
 		83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */; };
 		83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D22DBE266623AC0009B9AF /* ColorHelper.swift */; };
-		83DD4D88266E81CD00BC2EC4 /* ColorMeanings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DD4D87266E81CD00BC2EC4 /* ColorMeanings.swift */; };
+		83DD4D88266E81CD00BC2EC4 /* ColorMeaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DD4D87266E81CD00BC2EC4 /* ColorMeaning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		83897DDD266BFB8000AB4913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombination.swift; sourceTree = "<group>"; };
 		83D22DBE266623AC0009B9AF /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
-		83DD4D87266E81CD00BC2EC4 /* ColorMeanings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMeanings.swift; sourceTree = "<group>"; };
+		83DD4D87266E81CD00BC2EC4 /* ColorMeaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMeaning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 			children = (
 				8321CD4A2660EE5C0094519F /* Preferrd.xcdatamodeld */,
 				8304D0A6266EA64300EBABB5 /* Color.swift */,
-				83DD4D87266E81CD00BC2EC4 /* ColorMeanings.swift */,
+				83DD4D87266E81CD00BC2EC4 /* ColorMeaning.swift */,
 				83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */,
 			);
 			path = Models;
@@ -242,7 +242,7 @@
 				83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */,
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
-				83DD4D88266E81CD00BC2EC4 /* ColorMeanings.swift in Sources */,
+				83DD4D88266E81CD00BC2EC4 /* ColorMeaning.swift in Sources */,
 				8304D0A7266EA64300EBABB5 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

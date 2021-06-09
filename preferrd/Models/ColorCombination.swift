@@ -7,53 +7,66 @@
 /*
  Credit(s):
  - Computing Color Combination: https://stackoverflow.com/a/37060495/13449416
-*/
+ - Generate Extra Combination: https://github.com/bennyguitar/Colours/blob/master/Colours.swift
+ */
 
 import Foundation
 import UIKit
 
-enum ColorCombination {
-  case analogous,
-       complementary,
-       splitComplementary,
-       triadic,
-       tertradic
-}
-
-struct ColorSet {
+struct ColorCombination {
   let baseColor: UIColor
 
   init(baseColor: Color) {
-    self.baseColor = baseColor.getColor()
+    self.baseColor = baseColor.getUIColor()
   }
 
   var analogous: [UIColor] {
-    let firstAnalogous  = baseColor.withHueOffset(offset: -1 / 12)
-    let secondAnalogous = baseColor.withHueOffset(offset: 1 / 12)
-    return [baseColor, firstAnalogous, secondAnalogous]
+    return [
+      baseColor.offset(hue: -1 / 12),
+      baseColor.offset(hue: -0.5 / 12),
+      baseColor,
+      baseColor.offset(hue: 0.5 / 12),
+      baseColor.offset(hue: 1 / 12)
+    ]
   }
 
-   var complementary: [UIColor] {
-    let complement = baseColor.withHueOffset(offset: 0.5)
-    return [baseColor, complement]
+  var monochromatic: [UIColor] {
+    return [
+      baseColor,
+      baseColor.multiply(brightness: 4 / 5),
+      baseColor.multiply(brightness: 0.5),
+      baseColor.multiply(saturation: 0.5, brightness: 1 / 3),
+      baseColor.multiply(saturation: 1 / 3, brightness: 2 / 3)
+    ]
+  }
+
+  var complementary: [UIColor] {
+    return [
+      baseColor.multiply(brightness: 4 / 5),
+      baseColor.multiply(saturation: 5 / 7),
+      baseColor,
+      baseColor.offset(hue: 0.5),
+      baseColor.offset(hue: 0.5).multiply(saturation: 5 / 7)
+    ]
   }
 
   var splitComplementary: [UIColor] {
-    let firstSplitComplement = baseColor.withHueOffset(offset: 150 / 360)
-    let secondSplitComplement = baseColor.withHueOffset(offset: 210 / 360)
-    return [baseColor, firstSplitComplement, secondSplitComplement]
+    return [
+      baseColor.offset(hue: 150 / 360, saturation: -0.3, brightness: -0.05),
+      baseColor.offset(hue: 150 / 360),
+      baseColor,
+      baseColor.offset(hue: 210 / 360),
+      baseColor.offset(hue: 210 / 360, saturation: -0.3, brightness: -0.05)
+    ]
   }
 
   var triadic: [UIColor] {
-    let firstTriadic  = baseColor.withHueOffset(offset: 120 / 360)
-    let secondTriadic = baseColor.withHueOffset(offset: 240 / 360)
-    return [firstTriadic, secondTriadic, baseColor]
-  }
-
-  var tetradic: [UIColor] {
-    let firstTetradic = baseColor.withHueOffset(offset: 0.25)
-    let secondTetradic = baseColor.withHueOffset(offset: 0.5)
-    let thirdTetradic = baseColor.withHueOffset(offset: 0.75)
-    return [firstTetradic, secondTetradic, thirdTetradic, baseColor]
+    return [
+      baseColor.offset(hue: 120 / 360, brightness: -0.05).multiply(saturation: 2 / 3),
+      baseColor.offset(hue: 120 / 360),
+      baseColor,
+      baseColor.offset(hue: 240 / 360),
+      baseColor.offset(hue: 240 / 360, brightness: -0.05).multiply(saturation: 2 / 3)
+    ]
   }
 }

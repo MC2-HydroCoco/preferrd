@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ColorMeanings: String, CaseIterable {
+enum ColorMeaning: String, CaseIterable {
   case relaxing     = "Relaxing",
        vintage      = "Vintage",
        happy        = "Happy",
@@ -36,9 +36,5 @@ enum ColorMeanings: String, CaseIterable {
     case .elegant:
       return [.black]
     }
-  }
-
-  static func getAllColorMeanings() -> [String] {
-    ColorMeanings.allCases.rawValues
   }
 }
