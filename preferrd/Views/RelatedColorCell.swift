@@ -11,6 +11,8 @@ class RelatedColorCell: UITableViewCell {
 
   @IBOutlet weak var colorPreview: UIView!
   @IBOutlet weak var colorName: UILabel!
+  @IBOutlet weak var relatedTags: UILabel!
+  @IBOutlet weak var hexCode: UILabel!
 
   override func awakeFromNib() {
     super.awakeFromNib()

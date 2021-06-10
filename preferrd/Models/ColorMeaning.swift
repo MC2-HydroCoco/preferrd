@@ -21,6 +21,6 @@ enum ColorMeaning: String {
        masculine    = "Masculine"
 
   static func getRelatedColors(for meaning: ColorMeaning) -> [Color] {
-    return staticColors.filter { $0.relatedTags.contains(meaning) }
+    return Constants.colors.filter { $0.relatedTags.contains(meaning) }
   }
 }
