@@ -16,6 +16,8 @@
 		8304D0A7266EA64300EBABB5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D0A6266EA64300EBABB5 /* Color.swift */; };
 		83052DB3267378CE000B0A36 /* PaletteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83052DB2267378CE000B0A36 /* PaletteTableViewCell.swift */; };
 		83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83052DB426737903000B0A36 /* PaletteTableViewCell.xib */; };
+		83052DBB267379DE000B0A36 /* PreviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83052DBA267379DE000B0A36 /* PreviewsView.swift */; };
+		83052DBD267379F4000B0A36 /* Views.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83052DBC267379F4000B0A36 /* Views.xib */; };
 		83171EDE26714C60001999F7 /* RelatedColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83171EDD26714C60001999F7 /* RelatedColorCell.swift */; };
 		8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD412660EE5C0094519F /* AppDelegate.swift */; };
 		8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD432660EE5C0094519F /* SceneDelegate.swift */; };
@@ -46,6 +48,8 @@
 		8304D0A6266EA64300EBABB5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		83052DB2267378CE000B0A36 /* PaletteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteTableViewCell.swift; sourceTree = "<group>"; };
 		83052DB426737903000B0A36 /* PaletteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaletteTableViewCell.xib; sourceTree = "<group>"; };
+		83052DBA267379DE000B0A36 /* PreviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewsView.swift; sourceTree = "<group>"; };
+		83052DBC267379F4000B0A36 /* Views.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Views.xib; sourceTree = "<group>"; };
 		83171EDD26714C60001999F7 /* RelatedColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedColorCell.swift; sourceTree = "<group>"; };
 		8321CD3E2660EE5C0094519F /* preferrd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = preferrd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8321CD412660EE5C0094519F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				83B53B0F2673614900BED257 /* Theme Collection View */,
 				279A51D526722C37007A559E /* Color Table View  */,
 				83052DB626737933000B0A36 /* Palette Table View */,
+				83052DBE26737A07000B0A36 /* Previews */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -126,6 +131,15 @@
 				83052DB426737903000B0A36 /* PaletteTableViewCell.xib */,
 			);
 			path = "Palette Table View";
+			sourceTree = "<group>";
+		};
+		83052DBE26737A07000B0A36 /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				83052DBA267379DE000B0A36 /* PreviewsView.swift */,
+				83052DBC267379F4000B0A36 /* Views.xib */,
+			);
+			path = Previews;
 			sourceTree = "<group>";
 		};
 		8321CD352660EE5C0094519F = {
@@ -294,6 +308,7 @@
 				CCCA6C1026721C5700D7D3AF /* ThemeCollectionViewCell.xib in Resources */,
 				8321CD5B2660F3710094519F /* LaunchScreen.storyboard in Resources */,
 				83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */,
+				83052DBD267379F4000B0A36 /* Views.xib in Resources */,
 				8321CD592660F3570094519F /* Main.storyboard in Resources */,
 				279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */,
 			);
@@ -336,6 +351,7 @@
 				279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */,
 				83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */,
 				CC654F0E26735812004C7C8A /* PickThemeViewController.swift in Sources */,
+				83052DBB267379DE000B0A36 /* PreviewsView.swift in Sources */,
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
 				83DD4D88266E81CD00BC2EC4 /* ColorMeaning.swift in Sources */,
