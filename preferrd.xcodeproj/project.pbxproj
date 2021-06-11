@@ -29,6 +29,7 @@
 		83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D22DBE266623AC0009B9AF /* ColorHelper.swift */; };
 		83DD4D88266E81CD00BC2EC4 /* ColorMeaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DD4D87266E81CD00BC2EC4 /* ColorMeaning.swift */; };
 		CC654F0C26735284004C7C8A /* PickTheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC654F0B26735284004C7C8A /* PickTheme.storyboard */; };
+		CC654F0E26735812004C7C8A /* PickThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC654F0D26735812004C7C8A /* PickThemeViewController.swift */; };
 		CCCA6C0F26721C5700D7D3AF /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCA6C0D26721C5700D7D3AF /* ThemeCollectionViewCell.swift */; };
 		CCCA6C1026721C5700D7D3AF /* ThemeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCA6C0E26721C5700D7D3AF /* ThemeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		83D22DBE266623AC0009B9AF /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		83DD4D87266E81CD00BC2EC4 /* ColorMeaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMeaning.swift; sourceTree = "<group>"; };
 		CC654F0B26735284004C7C8A /* PickTheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickTheme.storyboard; sourceTree = "<group>"; };
+		CC654F0D26735812004C7C8A /* PickThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickThemeViewController.swift; sourceTree = "<group>"; };
 		CCCA6C0D26721C5700D7D3AF /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCCA6C0E26721C5700D7D3AF /* ThemeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8321CD452660EE5C0094519F /* MainViewController.swift */,
+				CC654F0D26735812004C7C8A /* PickThemeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				83897DDE266BFB8000AB4913 /* Constants.swift in Sources */,
 				279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */,
 				83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */,
+				CC654F0E26735812004C7C8A /* PickThemeViewController.swift in Sources */,
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
 				83DD4D88266E81CD00BC2EC4 /* ColorMeaning.swift in Sources */,

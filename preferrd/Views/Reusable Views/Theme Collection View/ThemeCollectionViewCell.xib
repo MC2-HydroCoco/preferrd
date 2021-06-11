@@ -63,7 +63,9 @@
             </constraints>
             <size key="customSize" width="359" height="440"/>
             <connections>
+                <outlet property="removeButton" destination="9dk-Lg-B9w" id="4y8-O9-mCI"/>
                 <outlet property="themeContainer" destination="0RP-qS-FAx" id="bth-hv-nRX"/>
+                <outlet property="themeLabel" destination="ZQB-Ds-Z0H" id="FeB-bj-jhB"/>
             </connections>
             <point key="canvasLocation" x="46.376811594202906" y="191.18303571428569"/>
         </collectionViewCell>
