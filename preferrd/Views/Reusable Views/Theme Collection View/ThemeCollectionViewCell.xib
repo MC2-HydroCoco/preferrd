@@ -23,21 +23,33 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-hz-cFg">
                                 <rect key="frame" x="0.0" y="0.0" width="168" height="95"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYI-Ed-a8k">
-                                <rect key="frame" x="57.5" y="37" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="seo-In-AAV">
+                                <rect key="frame" x="16" y="8" width="136" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mountains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQB-Ds-Z0H">
+                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="79"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dk-Lg-B9w">
+                                        <rect key="frame" x="98.5" y="0.0" width="37.5" height="79"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aYI-Ed-a8k" firstAttribute="centerX" secondItem="0RP-qS-FAx" secondAttribute="centerX" id="ITr-AK-Rf9"/>
+                            <constraint firstItem="seo-In-AAV" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" constant="8" id="E8M-5w-HXA"/>
                             <constraint firstItem="6SC-hz-cFg" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" id="JH2-sT-5Vb"/>
                             <constraint firstAttribute="trailing" secondItem="6SC-hz-cFg" secondAttribute="trailing" id="VI7-IK-C6J"/>
+                            <constraint firstAttribute="trailing" secondItem="seo-In-AAV" secondAttribute="trailing" constant="16" id="XWJ-iO-ETI"/>
                             <constraint firstItem="6SC-hz-cFg" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" id="XvQ-hG-vEG"/>
+                            <constraint firstItem="seo-In-AAV" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" constant="16" id="fgx-zc-GkY"/>
                             <constraint firstAttribute="bottom" secondItem="6SC-hz-cFg" secondAttribute="bottom" id="gf8-1w-V7y"/>
-                            <constraint firstItem="aYI-Ed-a8k" firstAttribute="centerY" secondItem="0RP-qS-FAx" secondAttribute="centerY" id="jMO-wd-IU9"/>
+                            <constraint firstAttribute="bottom" secondItem="seo-In-AAV" secondAttribute="bottom" constant="8" id="wMv-4j-zDu"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -57,6 +69,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
