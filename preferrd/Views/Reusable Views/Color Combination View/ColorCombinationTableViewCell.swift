@@ -36,6 +36,6 @@ class ColorCombinationTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-    @IBAction func colorcombinationInformation(_ sender: UIButton) {
+    @IBAction func colorCombinationInformation(_ sender: UIButton) {
     }
 }
