@@ -20,36 +20,6 @@ extension String {
 
 extension UIColor {
 
-  func getTint(distance: CGFloat) -> UIColor {
-    var red: CGFloat    = 0,
-        green: CGFloat  = 0,
-        blue: CGFloat   = 0,
-        alpha: CGFloat  = 0
-    getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-    let distance: CGFloat = (0.1 * distance)
-
-    return UIColor(red: red + (1 - red) * distance,
-                   green: green + (1 - green) * distance,
-                   blue: blue + (1 - blue) * distance,
-                   alpha: alpha)
-  }
-
-  func getShade(distance: CGFloat) -> UIColor {
-    var red: CGFloat    = 0,
-        green: CGFloat  = 0,
-        blue: CGFloat   = 0,
-        alpha: CGFloat  = 0
-    getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-    let distance: CGFloat = (1 - 0.1 * distance)
-
-    return UIColor(red: red * distance,
-                   green: green * distance,
-                   blue: blue * distance,
-                   alpha: alpha)
-  }
-
   convenience init(hex: String, alpha: CGFloat = 1.0) {
     var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
@@ -68,36 +38,4 @@ extension UIColor {
     )
   }
 
-  func offset(hue hOffset: CGFloat = 0, saturation sOffset: CGFloat = 0, brightness bOffset: CGFloat = 0) -> UIColor {
-
-    var hue: CGFloat         = 0
-    var saturation: CGFloat  = 0
-    var brightness: CGFloat  = 0
-    var alpha: CGFloat       = 0
-
-    getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-
-    return UIColor(hue: fmod(hue + hOffset, 1),
-                   saturation: saturation + sOffset,
-                   brightness: brightness + bOffset,
-                   alpha: alpha)
-  }
-
-  func multiply(hue hMultiplier: CGFloat = 1,
-                saturation sMultiplier: CGFloat = 1,
-                brightness bMultiplier: CGFloat = 1,
-                alpha aMultiplier: CGFloat = 1) -> UIColor {
-
-    var hue: CGFloat         = 0
-    var saturation: CGFloat  = 0
-    var brightness: CGFloat  = 0
-    var alpha: CGFloat       = 0
-
-    getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-
-    return UIColor(hue: hue * hMultiplier,
-                   saturation: saturation * sMultiplier,
-                   brightness: brightness * bMultiplier,
-                   alpha: alpha * aMultiplier)
-  }
 }

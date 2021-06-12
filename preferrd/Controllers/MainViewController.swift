@@ -32,8 +32,11 @@ class MainViewController: UIViewController {
 
     selectedEmotions = [.elegant, .masculine]
 
-    let userSelection = ColorCombination(baseColor: Constants.colors[0].hex).splitComplementary
-    myColorSet = ColorSet.from(userSelection)
+    let baseColor = Constants.colors[100].hex
+    let userSelection = ColorCombination(baseColor: baseColor).triadic
+    myColorSet = ColorSet.filterContrastRatio(baseColor: baseColor,
+                                              from: ColorSet.from(userSelection),
+                                              for: .title)
   }
 
 }

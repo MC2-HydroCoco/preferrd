@@ -16,6 +16,12 @@ import UIKit
  let ratio = ColorHelper.getContrastRatio(rgb1: first, rgb2: second) // 1
  */
 
+enum ContrastRatioType: Double {
+  case title  = 3,
+       body   = 4.58,
+       button = 3.04
+}
+
 struct ColorHelper {
 
   static func getLuminance(red: Double, green: Double, blue: Double) -> Double {
