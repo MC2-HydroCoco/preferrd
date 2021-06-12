@@ -19,6 +19,37 @@ extension String {
 }
 
 extension UIColor {
+
+  func getTint(distance: CGFloat) -> UIColor {
+    var red: CGFloat    = 0,
+        green: CGFloat  = 0,
+        blue: CGFloat   = 0,
+        alpha: CGFloat  = 0
+    getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+    let distance: CGFloat = (0.1 * distance)
+
+    return UIColor(red: red + (1 - red) * distance,
+                   green: green + (1 - green) * distance,
+                   blue: blue + (1 - blue) * distance,
+                   alpha: alpha)
+  }
+
+  func getShade(distance: CGFloat) -> UIColor {
+    var red: CGFloat    = 0,
+        green: CGFloat  = 0,
+        blue: CGFloat   = 0,
+        alpha: CGFloat  = 0
+    getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+    let distance: CGFloat = (1 - 0.1 * distance)
+
+    return UIColor(red: red * distance,
+                   green: green * distance,
+                   blue: blue * distance,
+                   alpha: alpha)
+  }
+
   convenience init(hex: String, alpha: CGFloat = 1.0) {
     var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 

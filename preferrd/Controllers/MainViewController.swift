@@ -17,6 +17,11 @@ class MainViewController: UIViewController {
       tableView.reloadData()
     }
   }
+  var myColorSet = [UIColor]() {
+    didSet {
+      tableView.reloadData()
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,24 +31,27 @@ class MainViewController: UIViewController {
 //    relatedColors = ColorCombination(baseColor: ColorMeaning.getRelatedColors(for: .fresh)[2].hex).triadic
 
     selectedEmotions = [.elegant, .masculine]
+
+    let userSelection = ColorCombination(baseColor: Constants.colors[0].hex).splitComplementary
+    myColorSet = ColorSet.from(userSelection)
   }
 
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    Constants.colors.count
+    myColorSet.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if let cell = tableView.dequeueReusableCell(withIdentifier: "relatedCell") as? RelatedColorCell {
-      let color = Constants.colors[indexPath.row]
-      cell.colorPreview.backgroundColor = UIColor(hex: color.hex)
-      cell.colorName.text = color.name
-      cell.hexCode.text = color.hex
-      var relatedTags = ""
-      color.relatedTags.forEach { relatedTags += $0.rawValue }
-      cell.relatedTags.text = relatedTags
+      let color = myColorSet[indexPath.row]
+      cell.colorPreview.backgroundColor = color
+//      cell.colorName.text = color.name
+//      cell.hexCode.text = color.hex
+//      var relatedTags = ""
+//      color.relatedTags.forEach { relatedTags += $0.rawValue }
+//      cell.relatedTags.text = relatedTags
       return cell
     }
     return UITableViewCell()
