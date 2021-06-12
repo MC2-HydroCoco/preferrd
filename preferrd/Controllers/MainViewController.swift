@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
 
-    selectedEmotions = [.elegant, .masculine]
+    selectedEmotions = [.elegant, .masculine, .adventurous]
     selectedEmotions.forEach { theme in
       colorsRelatedToTheme.append(ColorTheme.getRelatedColors(for: theme))
     }
@@ -72,19 +72,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 }
 
+// MARK: - Color Combination
 class ColorCombinationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   @IBOutlet weak var colorPreview: UIView!
   @IBOutlet weak var colorName: UILabel!
   @IBOutlet weak var colorHex: UILabel!
   @IBOutlet weak var tableView: UITableView!
+
   var baseColor: Color!
-  var colorCombinations = [[UIColor]]()
-  let colorCombinationNames = [
-    "Analogous",
-    "Complementary",
-    "Split Complementary",
-    "Monochromatic",
-    "Triadic"
+  var colorCombinations: [ColorCombination] = [
+    .analogous,
+    .complementary,
+    .monochromatic,
+    .splitComplementary,
+    .triadic
   ]
 
   override func viewDidLoad() {
@@ -96,15 +97,15 @@ class ColorCombinationsViewController: UIViewController, UITableViewDelegate, UI
     colorPreview.backgroundColor = UIColor(hex: baseColor.hex)
     colorName.text = baseColor.name
     colorHex.text = baseColor.hex
+  }
 
-    let combination = ColorCombination(baseColor: baseColor.hex)
-    colorCombinations = [
-      combination.analogous,
-      combination.complementary,
-      combination.splitComplementary,
-      combination.monochromatic,
-      combination.triadic
-    ]
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "seeSet" {
+      if let colorSetVC = segue.destination as? ColorSetViewController,
+         let baseColors = sender as? [UIColor] {
+        colorSetVC.colorSet = baseColors
+      }
+    }
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,11 +114,17 @@ class ColorCombinationsViewController: UIViewController, UITableViewDelegate, UI
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if let cell = tableView.dequeueReusableCell(withIdentifier: "combinationCell") as? ColorCombinationCell {
-      cell.colors = colorCombinations[indexPath.row]
-      cell.combinationName.text = colorCombinationNames[indexPath.row]
+      let combination = colorCombinations[indexPath.row]
+      cell.colors = combination.getCombination(from: UIColor(hex: baseColor.hex))
+      cell.combinationName.text = combination.rawValue
       return cell
     }
     return UITableViewCell()
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "seeSet",
+                 sender: colorCombinations[indexPath.row].getCombination(from: UIColor(hex: baseColor.hex)))
   }
 
 }
@@ -130,5 +137,18 @@ class ColorCombinationCell: UITableViewCell {
 
   override func layoutSubviews() {
     combinationColors.enumerated().forEach { $1.backgroundColor = colors[$0] }
+  }
+}
+
+// MARK: - Color Set
+class ColorSetViewController: UIViewController {
+  @IBOutlet var colorSetPreview: [UIView]!
+  var colorSet = [UIColor]()
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    ColorSet.from(colorSet).enumerated().forEach { (index, color) in
+      colorSetPreview[index].backgroundColor = color
+    }
   }
 }

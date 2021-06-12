@@ -38,7 +38,7 @@ struct ColorHelper {
     return luminances[0] * 0.2126 + luminances[1] * 0.7152 + luminances[2] * 0.0722
   }
 
-  static func getContrastRatio(rgb1: [Double], rgb2: [Double]) -> Double {
+  static func getContrastRatio(between rgb1: [Double], and rgb2: [Double]) -> Double {
     let lum1 = getLuminance(red: rgb1[0], green: rgb1[1], blue: rgb1[2])
     let lum2 = getLuminance(red: rgb2[0], green: rgb2[1], blue: rgb2[2])
     let brightest = Double(max(lum1, lum2))

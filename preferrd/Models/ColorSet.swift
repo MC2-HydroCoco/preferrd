@@ -10,10 +10,7 @@ import UIKit
 
 struct ColorSet {
   static func from(_ baseColors: [UIColor]) -> [UIColor] {
-    var colorSet: [UIColor] = [
-      .white,
-      .black
-    ]
+    var colorSet = [UIColor]()
 
     baseColors.forEach { color in
       colorSet.append(contentsOf: [
@@ -30,7 +27,7 @@ struct ColorSet {
 
   static func filterContrastRatio(baseColor: String, from set: [UIColor], for type: ContrastRatioType) -> [UIColor] {
     set.filter { color in
-      ColorHelper.getContrastRatio(rgb1: UIColor(hex: baseColor).toRGB(), rgb2: color.toRGB()) > type.rawValue
+      ColorHelper.getContrastRatio(between: UIColor(hex: baseColor).toRGB(), and: color.toRGB()) > type.rawValue
     }
   }
 }
