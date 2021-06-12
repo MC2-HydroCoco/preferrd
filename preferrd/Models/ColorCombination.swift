@@ -22,51 +22,51 @@ struct ColorCombination {
 
   var analogous: [UIColor] {
     return [
-      baseColor.offset(hue: -1 / 12),
-      baseColor.offset(hue: -0.5 / 12),
+      baseColor.offset(hue: 18 / 360, saturation: 0.05, brightness: 0.05),
+      baseColor.offset(hue: 9 / 360, saturation: 0.05, brightness: 0.09),
       baseColor,
-      baseColor.offset(hue: 0.5 / 12),
-      baseColor.offset(hue: 1 / 12)
+      baseColor.multiply(hue: 10 / 3).offset(hue: 330 / 360, saturation: 0.05, brightness: 0.09),
+      baseColor.multiply(hue: 10 / 3).offset(hue: 300 / 360, saturation: 0.05, brightness: 0.05)
     ]
   }
 
   var monochromatic: [UIColor] {
     return [
+      baseColor.offset(brightness: 0.5),
+      baseColor.offset(saturation: 0.3),
       baseColor,
-      baseColor.multiply(brightness: 4 / 5),
-      baseColor.multiply(brightness: 0.5),
-      baseColor.multiply(saturation: 0.5, brightness: 1 / 3),
-      baseColor.multiply(saturation: 1 / 3, brightness: 2 / 3)
+      baseColor.offset(saturation: 0.3, brightness: 0.5),
+      baseColor.offset(brightness: 0.2)
     ]
   }
 
   var complementary: [UIColor] {
     return [
-      baseColor.multiply(brightness: 4 / 5),
-      baseColor.multiply(saturation: 5 / 7),
+      baseColor.multiply(hue: 2).offset(saturation: 0.1, brightness: 0.3),
+      baseColor.offset(saturation: -0.1, brightness: 0.3),
       baseColor,
-      baseColor.offset(hue: 0.5),
-      baseColor.offset(hue: 0.5).multiply(saturation: 5 / 7)
+      baseColor.multiply(hue: 2).offset(hue: 137 / 360, saturation: 0.2, brightness: 0.3),
+      baseColor.offset(hue: 137 / 360)
     ]
   }
 
   var splitComplementary: [UIColor] {
     return [
-      baseColor.offset(hue: 150 / 360, saturation: -0.3, brightness: -0.05),
-      baseColor.offset(hue: 150 / 360),
+      baseColor.multiply(hue: 2.1).offset(hue: 100 / 360, saturation: 0.1, brightness: 0.3),
+      baseColor.multiply(hue: 2.1).offset(hue: 100 / 360, saturation: 0.05),
       baseColor,
-      baseColor.offset(hue: 210 / 360),
-      baseColor.offset(hue: 210 / 360, saturation: -0.3, brightness: -0.05)
+      baseColor.multiply(hue: 1.9).offset(hue: 171 / 360, saturation: 0.1, brightness: 0.3),
+      baseColor.multiply(hue: 1.9).offset(hue: 171 / 360, saturation: 0.1)
     ]
   }
 
   var triadic: [UIColor] {
     return [
-      baseColor.offset(hue: 120 / 360, brightness: -0.05).multiply(saturation: 2 / 3),
-      baseColor.offset(hue: 120 / 360),
+      baseColor.offset(saturation: 0.1, brightness: 0.3),
+      baseColor.multiply(hue: 2).offset(hue: 60 / 360, saturation: 0.1),
       baseColor,
-      baseColor.offset(hue: 240 / 360),
-      baseColor.offset(hue: 240 / 360, brightness: -0.05).multiply(saturation: 2 / 3)
+      baseColor.multiply(hue: 2).offset(hue: 205 / 360, saturation: 0.1),
+      baseColor.multiply(hue: 2).offset(hue: 205 / 360, saturation: 0.1, brightness: 0.3)
     ]
   }
 }
@@ -83,7 +83,7 @@ extension UIColor {
 
     return UIColor(hue: fmod(hue + hOffset, 1),
                    saturation: saturation + sOffset,
-                   brightness: brightness + bOffset,
+                   brightness: brightness < 0.5 ? brightness + bOffset : brightness - bOffset,
                    alpha: alpha)
   }
 
@@ -99,7 +99,7 @@ extension UIColor {
 
     getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
 
-    return UIColor(hue: hue * hMultiplier,
+    return UIColor(hue: fmod(hue * hMultiplier, 1),
                    saturation: saturation * sMultiplier,
                    brightness: brightness * bMultiplier,
                    alpha: alpha * aMultiplier)

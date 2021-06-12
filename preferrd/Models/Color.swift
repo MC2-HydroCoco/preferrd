@@ -12,9 +12,9 @@ import UIKit
 
 struct Color {
   let name, hex, colorDescription: String
-  let relatedTags: [ColorMeaning]
+  let relatedTags: [ColorTheme]
 
-  init(name: String, hex: String, colorDescription: String = "", relatedTags: [ColorMeaning]) {
+  init(name: String, hex: String, colorDescription: String = "", relatedTags: [ColorTheme]) {
     self.name = name
     self.hex = hex
     self.colorDescription = colorDescription

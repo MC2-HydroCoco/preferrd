@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum ColorMeaning: String {
+enum ColorTheme: String {
   case relaxing     = "Relaxing",
        vintage      = "Vintage",
        happy        = "Happy",
@@ -20,7 +20,7 @@ enum ColorMeaning: String {
        feminine     = "Feminine",
        masculine    = "Masculine"
 
-  static func getRelatedColors(for meaning: ColorMeaning) -> [Color] {
+  static func getRelatedColors(for meaning: ColorTheme) -> [Color] {
     return Constants.colors.filter { $0.relatedTags.contains(meaning) }
   }
 }
