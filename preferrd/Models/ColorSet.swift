@@ -4,6 +4,8 @@
 //
 //  Created by Christianto Budisaputra on 12/06/21.
 //
+//  Credit(s):
+//  - Generate Tints & Shades: https://github.com/edelstone/tints-and-shades/blob/master/scripts/tints-and-shades.js
 
 import Foundation
 import UIKit

@@ -20,6 +20,7 @@ extension String {
 
 extension UIColor {
 
+  // MARK: - Initialize UIColor from HEX Code
   convenience init(hex: String, alpha: CGFloat = 1.0) {
     var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
@@ -38,4 +39,97 @@ extension UIColor {
     )
   }
 
+  // MARK: - Color Combination Extensions
+  func complement() -> UIColor {
+    withHue(adjustedBy: 0.5)
+  }
+
+  func withHue(adjustedBy change: CGFloat) -> UIColor {
+
+    guard (-1.0...1.0).contains(change) else {
+      fatalError("Hue adjustment must be between 1.0 and -1.0")
+    }
+
+    var hue: CGFloat         = 0
+    var saturation: CGFloat  = 0
+    var brightness: CGFloat  = 0
+    var alpha: CGFloat       = 0
+
+    getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+    return UIColor(hue: fmod(hue + change, 1),
+                   saturation: saturation,
+                   brightness: brightness,
+                   alpha: alpha)
+  }
+
+  func withSaturation(adjustedBy change: CGFloat,
+                      floorAt floor: CGFloat = 0.0,
+                      ceilingAt ceiling: CGFloat = 1.0,
+                      withOverflow: Bool = false) -> UIColor {
+
+    var hue: CGFloat         = 0
+    var saturation: CGFloat  = 0
+    var brightness: CGFloat  = 0
+    var alpha: CGFloat       = 0
+
+    getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+    var newSaturation = saturation + change
+
+    if withOverflow {
+      if newSaturation > ceiling {
+        newSaturation -= ceiling-floor
+      } else if newSaturation < floor {
+        newSaturation += ceiling-floor
+      }
+    } else {
+      if newSaturation > ceiling {
+        newSaturation = ceiling
+      } else if newSaturation < floor {
+        newSaturation = floor
+      }
+    }
+
+    return UIColor(hue: hue,
+                   saturation: newSaturation,
+                   brightness: brightness,
+                   alpha: alpha)
+  }
+
+  func withBrightness(adjustedBy change: CGFloat,
+                      floorAt floor: CGFloat = 0.0,
+                      ceilingAt ceiling: CGFloat = 1.0,
+                      withOverflow: Bool = false) -> UIColor {
+
+    var hue: CGFloat         = 0
+    var saturation: CGFloat  = 0
+    var brightness: CGFloat  = 0
+    var alpha: CGFloat       = 0
+
+    getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+    var newBrightness = brightness + change
+
+    if withOverflow {
+      if newBrightness > ceiling {
+        newBrightness -= ceiling-floor
+      } else if newBrightness < floor {
+        newBrightness += ceiling-floor
+      }
+    } else {
+      if newBrightness > ceiling {
+        newBrightness = ceiling
+      } else if newBrightness < floor {
+        newBrightness = floor
+      }
+    }
+
+    return UIColor(hue: hue,
+                   saturation: saturation,
+                   brightness: newBrightness,
+                   alpha: alpha)
+  }
+
 }
+

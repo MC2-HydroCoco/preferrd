@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
 
-    selectedEmotions = [.elegant, .masculine, .adventurous]
+    selectedEmotions = [.elegant, .masculine, .adventurous, .feminine, .happy, .fresh]
     selectedEmotions.forEach { theme in
       colorsRelatedToTheme.append(ColorTheme.getRelatedColors(for: theme))
     }
@@ -82,10 +82,13 @@ class ColorCombinationsViewController: UIViewController, UITableViewDelegate, UI
   var baseColor: Color!
   var colorCombinations: [ColorCombination] = [
     .analogous,
+    .accentedAnalogous,
     .complementary,
-    .monochromatic,
     .splitComplementary,
-    .triadic
+    .monochromatic,
+    .triadic,
+    .compound,
+    .shades
   ]
 
   override func viewDidLoad() {
@@ -136,7 +139,7 @@ class ColorCombinationCell: UITableViewCell {
   var colors: [UIColor]!
 
   override func layoutSubviews() {
-    combinationColors.enumerated().forEach { $1.backgroundColor = colors[$0] }
+    colors.enumerated().forEach { combinationColors[$0].backgroundColor = $1 }
   }
 }
 
