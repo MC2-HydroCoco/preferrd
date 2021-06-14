@@ -32,7 +32,6 @@
 		83897DDE266BFB8000AB4913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83897DDD266BFB8000AB4913 /* Constants.swift */; };
 		839AA889267737A50054C50F /* RelatedColors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839AA888267737A50054C50F /* RelatedColors.storyboard */; };
 		839AA88B267738C00054C50F /* OldMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839AA88A267738C00054C50F /* OldMain.swift */; };
-		839AA88F267739F80054C50F /* InputTheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839AA88E267739F80054C50F /* InputTheme.storyboard */; };
 		839AA89126773A9F0054C50F /* InputBaseColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839AA89026773A9F0054C50F /* InputBaseColor.storyboard */; };
 		83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */; };
 		83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D22DBE266623AC0009B9AF /* ColorHelper.swift */; };
@@ -72,7 +71,6 @@
 		83897DDD266BFB8000AB4913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		839AA888267737A50054C50F /* RelatedColors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RelatedColors.storyboard; sourceTree = "<group>"; };
 		839AA88A267738C00054C50F /* OldMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldMain.swift; sourceTree = "<group>"; };
-		839AA88E267739F80054C50F /* InputTheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputTheme.storyboard; sourceTree = "<group>"; };
 		839AA89026773A9F0054C50F /* InputBaseColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputBaseColor.storyboard; sourceTree = "<group>"; };
 		83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombination.swift; sourceTree = "<group>"; };
 		83D22DBE266623AC0009B9AF /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 				8321CD5A2660F3710094519F /* LaunchScreen.storyboard */,
 				83171EDD26714C60001999F7 /* RelatedColorCell.swift */,
 				839AA888267737A50054C50F /* RelatedColors.storyboard */,
-				839AA88E267739F80054C50F /* InputTheme.storyboard */,
 				839AA89026773A9F0054C50F /* InputBaseColor.storyboard */,
 			);
 			path = Views;
@@ -328,7 +325,6 @@
 				8321CD592660F3570094519F /* Main.storyboard in Resources */,
 				839AA889267737A50054C50F /* RelatedColors.storyboard in Resources */,
 				279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */,
-				839AA88F267739F80054C50F /* InputTheme.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

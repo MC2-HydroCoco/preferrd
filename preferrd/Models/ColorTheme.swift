@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum ColorTheme: String {
+enum ColorTheme: String, CaseIterable {
   case relaxing     = "Relaxing",
        vintage      = "Vintage",
        happy        = "Happy",
