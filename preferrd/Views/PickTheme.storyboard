@@ -16,29 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Your Theme" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQf-Gw-iFc">
-                                <rect key="frame" x="24" y="80" width="366" height="33.5"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkX-Cf-mvo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="HCW-og-bGk"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Your Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlO-eI-Axy">
+                                <rect key="frame" x="24" y="124" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dKz-pT-HQm">
-                                <rect key="frame" x="24" y="149.5" width="366" height="688.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-Vs-pRS">
+                                <rect key="frame" x="24" y="182" width="366" height="680"/>
                                 <color key="backgroundColor" red="0.87834967760000004" green="0.93404436079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dKz-pT-HQm" firstAttribute="top" secondItem="GQf-Gw-iFc" secondAttribute="bottom" constant="36" id="364-qy-5aA"/>
-                            <constraint firstItem="dKz-pT-HQm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="AxJ-jV-kly"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GQf-Gw-iFc" secondAttribute="trailing" constant="24" id="KoO-cF-mEs"/>
-                            <constraint firstItem="GQf-Gw-iFc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="OK6-x0-wrP"/>
-                            <constraint firstItem="GQf-Gw-iFc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="WMn-00-nMu"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dKz-pT-HQm" secondAttribute="trailing" constant="24" id="aIs-vI-Icg"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dKz-pT-HQm" secondAttribute="bottom" constant="24" id="m1A-gp-FMn"/>
+                            <constraint firstItem="yjj-Vs-pRS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="9lp-Aj-JQk"/>
+                            <constraint firstItem="yjj-Vs-pRS" firstAttribute="top" secondItem="YlO-eI-Axy" secondAttribute="bottom" constant="24" id="DSE-Io-URc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yjj-Vs-pRS" secondAttribute="trailing" constant="24" id="Kob-qZ-QQ1"/>
+                            <constraint firstItem="YlO-eI-Axy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="L8y-Vw-HAo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YlO-eI-Axy" secondAttribute="trailing" constant="24" id="PaX-kF-hkO"/>
+                            <constraint firstItem="YlO-eI-Axy" firstAttribute="top" secondItem="UkX-Cf-mvo" secondAttribute="bottom" constant="36" id="bvH-6o-KJY"/>
+                            <constraint firstItem="UkX-Cf-mvo" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="eYJ-Ik-ztW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yjj-Vs-pRS" secondAttribute="bottom" id="nJn-3f-ntJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UkX-Cf-mvo" secondAttribute="trailing" id="xvb-Na-Zza"/>
+                            <constraint firstItem="UkX-Cf-mvo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ztr-od-5WE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="themeVerticalStack" destination="yjj-Vs-pRS" id="eu8-Dl-G6p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
