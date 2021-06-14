@@ -84,9 +84,11 @@
                             <constraint firstAttribute="trailing" secondItem="PsM-Js-45B" secondAttribute="trailing" constant="26" id="Neb-vm-LPV"/>
                             <constraint firstItem="PsM-Js-45B" firstAttribute="leading" secondItem="DpV-B9-56Y" secondAttribute="leading" constant="25" id="QST-gr-Wsf"/>
                             <constraint firstItem="UMK-8W-mTF" firstAttribute="top" secondItem="DpV-B9-56Y" secondAttribute="top" constant="20" id="hjF-Sh-8Xb"/>
+                            <constraint firstAttribute="trailing" secondItem="PsM-Js-45B" secondAttribute="trailing" constant="26" id="jdw-bd-ncx"/>
                             <constraint firstItem="PsM-Js-45B" firstAttribute="top" secondItem="fRn-Bo-hJf" secondAttribute="bottom" constant="11.5" id="l96-YA-PjW"/>
                             <constraint firstAttribute="trailing" secondItem="UMK-8W-mTF" secondAttribute="trailing" constant="20" id="owP-TD-B0H"/>
                             <constraint firstItem="fRn-Bo-hJf" firstAttribute="leading" secondItem="DpV-B9-56Y" secondAttribute="leading" constant="25" id="uPA-cz-tb4"/>
+                            <constraint firstItem="PsM-Js-45B" firstAttribute="leading" secondItem="DpV-B9-56Y" secondAttribute="leading" constant="25" id="vhP-cQ-q3E"/>
                         </constraints>
                     </view>
                 </subviews>
