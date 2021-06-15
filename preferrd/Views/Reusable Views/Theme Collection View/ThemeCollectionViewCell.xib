@@ -36,6 +36,9 @@
                                         <rect key="frame" x="98.5" y="0.0" width="37.5" height="79"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="removeButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YdE-XN-LZS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

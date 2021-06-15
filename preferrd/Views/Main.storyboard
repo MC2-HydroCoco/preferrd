@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bzW-N8-8xS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bzW-N8-8xS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--InputTheme-->
+        <!--PickTheme-->
         <scene sceneID="f49-58-bXq">
             <objects>
-                <viewControllerPlaceholder storyboardName="InputTheme" id="2Ik-Os-dpd" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="PickTheme" id="2Ik-Os-dpd" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="UOV-r6-uey"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNH-M0-UNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -44,6 +44,7 @@
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Mqn-Rb-ThI"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="userPaletteTableView" destination="Hby-jW-Sye" id="uD8-97-aXy"/>
                         <segue destination="2Ik-Os-dpd" kind="show" id="WU8-OU-G8F"/>
                     </connections>
                 </viewController>

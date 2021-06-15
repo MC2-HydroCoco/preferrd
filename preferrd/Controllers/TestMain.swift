@@ -13,7 +13,7 @@ class TestMain: UIViewController {
     
     var sortedColors: [Color] = {return Constants.colors}()
     
-    var selectedEmotions =  [ColorMeaning]()
+    var selectedEmotions =  [ColorTheme]()
     var relatedColors = [UIColor]() {
         didSet {
             tableView.reloadData()

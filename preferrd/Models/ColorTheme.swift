@@ -22,10 +22,26 @@ enum ColorTheme: String, CaseIterable {
 
     func getImage() -> UIImage {
         switch self {
+        case .adventurous:
+            return #imageLiteral(resourceName: "Adventurous")
+        case .elegant:
+            return #imageLiteral(resourceName: "Elegant")
+        case .fresh:
+            return #imageLiteral(resourceName: "Fresh")
+        case .happy:
+            return #imageLiteral(resourceName: "Playfull")
+        case .modern:
+            return #imageLiteral(resourceName: "Modern")
+        case .nature:
+            return #imageLiteral(resourceName: "Nature")
         case .relaxing:
-            return #imageLiteral(resourceName: <#T##String#>)
-        default:
-            <#code#>
+            return #imageLiteral(resourceName: "Relaxing")
+        case .vintage:
+            return #imageLiteral(resourceName: "Modern")
+        case .feminine:
+            return #imageLiteral(resourceName: "Modern")
+        case .masculine:
+            return #imageLiteral(resourceName: "Modern")
         }
     }
     
