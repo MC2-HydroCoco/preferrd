@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C7989B4267882AC004D6138 /* TestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B3267882AC004D6138 /* TestMain.swift */; };
 		1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B526789754004D6138 /* BaseColorGroup.swift */; };
+		1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B92678AB60004D6138 /* StringHelper.swift */; };
 		279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D026721C3C007A559E /* ColorTableViewCell.swift */; };
 		279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279A51D126721C3C007A559E /* ColorTableViewCell.xib */; };
 		279A51D926722C76007A559E /* ColorCombinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		1C7989B3267882AC004D6138 /* TestMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMain.swift; sourceTree = "<group>"; };
 		1C7989B526789754004D6138 /* BaseColorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColorGroup.swift; sourceTree = "<group>"; };
+		1C7989B92678AB60004D6138 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		279A51D026721C3C007A559E /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		279A51D126721C3C007A559E /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
 		279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationTableViewCell.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				83D22DBE266623AC0009B9AF /* ColorHelper.swift */,
+				1C7989B92678AB60004D6138 /* StringHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				839266942677C426007865A3 /* PalettePreviewViewController.swift in Sources */,
 				8304D0A7266EA64300EBABB5 /* Color.swift in Sources */,
 				1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */,
+				1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */,
 				27C2685A26734C69000D2D10 /* InformationPopUpViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
