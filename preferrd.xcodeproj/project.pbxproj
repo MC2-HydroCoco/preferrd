@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C7989B4267882AC004D6138 /* TestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B3267882AC004D6138 /* TestMain.swift */; };
+		1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B526789754004D6138 /* BaseColorGroup.swift */; };
 		279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D026721C3C007A559E /* ColorTableViewCell.swift */; };
 		279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279A51D126721C3C007A559E /* ColorTableViewCell.xib */; };
 		279A51D926722C76007A559E /* ColorCombinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		1C7989B3267882AC004D6138 /* TestMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMain.swift; sourceTree = "<group>"; };
+		1C7989B526789754004D6138 /* BaseColorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColorGroup.swift; sourceTree = "<group>"; };
 		279A51D026721C3C007A559E /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		279A51D126721C3C007A559E /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
 		279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationTableViewCell.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				8321CD4A2660EE5C0094519F /* Preferrd.xcdatamodeld */,
 				8304D0A6266EA64300EBABB5 /* Color.swift */,
 				83DD4D87266E81CD00BC2EC4 /* ColorTheme.swift */,
+				1C7989B526789754004D6138 /* BaseColorGroup.swift */,
 				83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */,
 				835E7519267471D2005496EF /* ColorSet.swift */,
 				839266952677D2A9007865A3 /* PreviewStep.swift */,
@@ -391,6 +394,7 @@
 				83171EDE26714C60001999F7 /* RelatedColorCell.swift in Sources */,
 				839266942677C426007865A3 /* PalettePreviewViewController.swift in Sources */,
 				8304D0A7266EA64300EBABB5 /* Color.swift in Sources */,
+				1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */,
 				27C2685A26734C69000D2D10 /* InformationPopUpViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
