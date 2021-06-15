@@ -167,19 +167,19 @@ enum ColorCombination: String {
     func getMeaning() -> String {
         switch self {
         case .analogous:
-            return ""
+            return "The color grouping has similarities. These color scheme types have close relationships to one another, the range of colors in the color wheel are side by side."
         case .accentedAnalogous:
-            return ""
+            return "An accented analogous scheme (also called analogous complementary) is a combination of the analogous and complementary color schemes. It consists of colors which sit next to each other on the color wheel and a color that is directly opposite to these."
         case .complementary:
-            return ""
+            return "Complementary colors are pairs of colors which, when combined or mixed, cancel each other out (lose hue) by producing a grayscale color like white or black. When placed next to each other, they create the strongest contrast for those two colors. Complementary colors may also be called opposite colors."
         case .splitComplementary:
-            return ""
+            return "split-complementary color, is a mix together one primary color and two colors adjacent to its complement. While complementary colors tend to look dull, split-complementary colors are used well for contrast purposes."
         case .monochromatic:
-            return ""
+            return "Monochromatic colors are all the colors of a single hue. Monochromatic color schemes are derived from a single base hue and extended using its shades, tones and tints."
         case .compound:
-            return ""
+            return "This combination is made up of one color and the colors on either side of the complement. This strategy adds more variety than complementary color schemes by including three hues, without being too jarring or too bold."
         case .triadic:
-            return ""
+            return "A triadic color scheme is comprised of three colors evenly spaced on the color wheel. The two most basic triadic palettes are the primary colors red, blue, and yellow and the secondary hues orange, purple, and green."
         case .shades:
             return ""
         }
