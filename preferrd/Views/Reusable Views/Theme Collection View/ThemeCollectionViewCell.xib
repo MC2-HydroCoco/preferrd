@@ -63,6 +63,7 @@
             </constraints>
             <size key="customSize" width="359" height="440"/>
             <connections>
+                <outlet property="imageContainer" destination="6SC-hz-cFg" id="okX-b0-OFP"/>
                 <outlet property="removeButton" destination="9dk-Lg-B9w" id="4y8-O9-mCI"/>
                 <outlet property="themeContainer" destination="0RP-qS-FAx" id="bth-hv-nRX"/>
                 <outlet property="themeLabel" destination="ZQB-Ds-Z0H" id="FeB-bj-jhB"/>

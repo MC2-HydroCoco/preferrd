@@ -20,6 +20,15 @@ enum ColorTheme: String, CaseIterable {
        feminine     = "Feminine",
        masculine    = "Masculine"
 
+    func getImage() -> UIImage {
+        switch self {
+        case .relaxing:
+            return #imageLiteral(resourceName: <#T##String#>)
+        default:
+            <#code#>
+        }
+    }
+    
   static func getRelatedColors(for meaning: ColorTheme) -> [Color] {
     return Constants.colors.filter { $0.relatedTags.contains(meaning) }
   }
