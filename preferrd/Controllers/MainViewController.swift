@@ -12,6 +12,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
 
     @IBOutlet weak var userPaletteTable: UITableView!
+    @IBOutlet weak var userPaletteTableView: UITableView!
     
     override func viewDidLoad() {
     super.viewDidLoad()

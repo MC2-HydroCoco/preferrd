@@ -18,5 +18,8 @@ class ThemeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    @IBAction func removeButtonAction(_ sender: Any) {
+        self.removeFromSuperview()
+    }
 }
