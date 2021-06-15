@@ -26,7 +26,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="seo-In-AAV">
                                 <rect key="frame" x="16" y="8" width="136" height="79"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mountains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQB-Ds-Z0H">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mountains" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQB-Ds-Z0H">
                                         <rect key="frame" x="0.0" y="0.0" width="79.5" height="79"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -63,6 +63,7 @@
             </constraints>
             <size key="customSize" width="359" height="440"/>
             <connections>
+                <outlet property="imageContainer" destination="6SC-hz-cFg" id="okX-b0-OFP"/>
                 <outlet property="removeButton" destination="9dk-Lg-B9w" id="4y8-O9-mCI"/>
                 <outlet property="themeContainer" destination="0RP-qS-FAx" id="bth-hv-nRX"/>
                 <outlet property="themeLabel" destination="ZQB-Ds-Z0H" id="FeB-bj-jhB"/>
