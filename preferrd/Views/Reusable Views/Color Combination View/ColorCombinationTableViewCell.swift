@@ -16,20 +16,15 @@ class ColorCombinationTableViewCell: UITableViewCell {
     @IBOutlet weak var colorBox4: UIView!
     @IBOutlet weak var colorBox5: UIView!
     @IBOutlet weak var colorCombinationName: UILabel!
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         colorCombinationBakcground.layer.cornerRadius = 12
         colorBox1.layer.cornerRadius = 12
         colorBox2.layer.cornerRadius = 12
         colorBox3.layer.cornerRadius = 12
         colorBox4.layer.cornerRadius = 12
         colorBox5.layer.cornerRadius = 12
-        
-    
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

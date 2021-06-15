@@ -8,36 +8,28 @@
 import UIKit
 
 class TestMain: UIViewController {
-    
     @IBOutlet weak var tableView: UITableView!
-    
     var sortedColors: [Color] = {return Constants.colors}()
-    
     var selectedEmotions =  [ColorTheme]()
     var relatedColors = [UIColor]() {
         didSet {
             tableView.reloadData()
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         //    relatedColors = ColorCombination(baseColor: ColorMeaning.getRelatedColors(for: .fresh)[2].hex).triadic
-        
 //        selectedEmotions = [.elegant, .masculine]
-        
         sortedColors.sort(by: {
                             UIColor(hex: $0.hex).getHueValue() < UIColor(hex: $1.hex).getHueValue()
         })
         print(sortedColors.count)
-        
 //        var tempHue: Float = 0
 //        sortedColors.sort(by: {
-////            print(UIColor(hex: $0.hex).getHueValue())
-////            print(UIColor(hex: $0.hex).getHueValue() - UIColor(hex: $1.hex).getHueValue())
+//            print(UIColor(hex: $0.hex).getHueValue())
+//            print(UIColor(hex: $0.hex).getHueValue() - UIColor(hex: $1.hex).getHueValue())
 //            if (UIColor(hex: $0.hex).getHueValue() > Float(0.1) {
 //                tempHue += Float(0.1)
 //                return UIColor(hex: $0.hex).getSaturation() < UIColor(hex: $1.hex).getSaturation()
@@ -45,14 +37,12 @@ class TestMain: UIViewController {
 //            return false
 //        })
     }
-    
 }
 
 extension TestMain: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         sortedColors.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "relatedCell") as? RelatedColorCell {
             let color = sortedColors[indexPath.row]
@@ -70,5 +60,4 @@ extension TestMain: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
 }

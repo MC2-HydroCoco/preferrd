@@ -87,8 +87,7 @@ class ColorCombinationsViewController: UIViewController, UITableViewDelegate, UI
     .splitComplementary,
     .monochromatic,
     .triadic,
-    .compound,
-    .shades
+    .compound
   ]
 
   override func viewDidLoad() {

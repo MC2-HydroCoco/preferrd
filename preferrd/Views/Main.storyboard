@@ -49,7 +49,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="userPaletteTable" destination="Hby-jW-Sye" id="PuQ-YY-O9t"/>
-                        <segue destination="2Ik-Os-dpd" kind="show" id="WU8-OU-G8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk6-bO-bj6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

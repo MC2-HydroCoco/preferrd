@@ -16,7 +16,6 @@ class PaletteTableViewCell: UITableViewCell {
     @IBOutlet var colorPalette4: UIView!
     @IBOutlet var colorPalette5: UIView!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

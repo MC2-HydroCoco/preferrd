@@ -15,18 +15,14 @@ class ColorTableViewCell: UITableViewCell {
     @IBOutlet weak var colorBackground: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-      
         colorBackground.layer.cornerRadius = 12
         colorBox.layer.cornerRadius = 12
     }
 
     @IBAction func colorInformation(_ sender: UIButton) {
     }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
- 
     }
-    
 }
