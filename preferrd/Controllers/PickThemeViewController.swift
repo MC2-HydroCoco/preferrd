@@ -22,6 +22,10 @@ class PickThemeViewController: UIViewController {
         
         let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
         themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
+        themeCollectionView.delegate = self
+        themeCollectionView.dataSource = self
+        tagCollectionView.delegate = self
+        tagCollectionView.dataSource = self
     }
     
 }
