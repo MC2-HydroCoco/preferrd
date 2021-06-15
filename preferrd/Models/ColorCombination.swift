@@ -6,67 +6,161 @@
 
 /*
  Credit(s):
+ - Primary Source for Computing Color Combination(s): https://github.com/dunesailer/Aesthete
+ // Not so useful, eventually.
  - Computing Color Combination: https://stackoverflow.com/a/37060495/13449416
  - Generate Extra Combination: https://github.com/bennyguitar/Colours/blob/master/Colours.swift
  */
 
+// swiftlint:disable function_body_length
+
 import Foundation
 import UIKit
 
-struct ColorCombination {
-  let baseColor: UIColor
+enum ColorCombination: String {
+  case analogous          = "Analogous",
+       accentedAnalogous  = "Accented Analogous",
+       complementary      = "Complementary",
+       splitComplementary = "Split Complementary",
+       monochromatic      = "Monochromatic",
+       compound           = "Compound",
+       triadic            = "Triadic",
+       shades             = "Shades"
 
-  init(baseColor: String) {
-    self.baseColor = UIColor(hex: baseColor)
-  }
+  func getCombination(from baseColor: UIColor) -> [UIColor] {
+    let spacing: CGFloat = 0.05
 
-  var analogous: [UIColor] {
-    return [
-      baseColor.offset(hue: -1 / 12),
-      baseColor.offset(hue: -0.5 / 12),
-      baseColor,
-      baseColor.offset(hue: 0.5 / 12),
-      baseColor.offset(hue: 1 / 12)
-    ]
-  }
-
-  var monochromatic: [UIColor] {
-    return [
-      baseColor,
-      baseColor.multiply(brightness: 4 / 5),
-      baseColor.multiply(brightness: 0.5),
-      baseColor.multiply(saturation: 0.5, brightness: 1 / 3),
-      baseColor.multiply(saturation: 1 / 3, brightness: 2 / 3)
-    ]
-  }
-
-  var complementary: [UIColor] {
-    return [
-      baseColor.multiply(brightness: 4 / 5),
-      baseColor.multiply(saturation: 5 / 7),
-      baseColor,
-      baseColor.offset(hue: 0.5),
-      baseColor.offset(hue: 0.5).multiply(saturation: 5 / 7)
-    ]
-  }
-
-  var splitComplementary: [UIColor] {
-    return [
-      baseColor.offset(hue: 150 / 360, saturation: -0.3, brightness: -0.05),
-      baseColor.offset(hue: 150 / 360),
-      baseColor,
-      baseColor.offset(hue: 210 / 360),
-      baseColor.offset(hue: 210 / 360, saturation: -0.3, brightness: -0.05)
-    ]
-  }
-
-  var triadic: [UIColor] {
-    return [
-      baseColor.offset(hue: 120 / 360, brightness: -0.05).multiply(saturation: 2 / 3),
-      baseColor.offset(hue: 120 / 360),
-      baseColor,
-      baseColor.offset(hue: 240 / 360),
-      baseColor.offset(hue: 240 / 360, brightness: -0.05).multiply(saturation: 2 / 3)
-    ]
+    switch self {
+    case .analogous:
+      return [
+        baseColor,
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.1)
+          .withHue(adjustedBy: spacing)
+          .withBrightness(adjustedBy: -0.05, floorAt: 0.2),
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.1)
+          .withHue(adjustedBy: spacing * 2)
+          .withBrightness(adjustedBy: 0, floorAt: 0.2),
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.1)
+          .withHue(adjustedBy: -spacing)
+          .withBrightness(adjustedBy: -0.05, floorAt: 0.2),
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.1)
+          .withHue(adjustedBy: -(spacing * 2))
+          .withBrightness(adjustedBy: 0, floorAt: 0.2)
+      ]
+    case .accentedAnalogous:
+      return [
+        baseColor,
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.10)
+          .withHue(adjustedBy: spacing).withBrightness(adjustedBy: -0.05, floorAt: 0.20),
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.10)
+          .withHue(adjustedBy: -spacing)
+          .withBrightness(adjustedBy: -0.05, floorAt: 0.20),
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.10)
+          .withHue(adjustedBy: spacing*2).complement()
+          .withBrightness(adjustedBy: 0, floorAt: 0.20),
+        baseColor
+          .withSaturation(adjustedBy: -0.05, floorAt: 0.10)
+          .withHue(adjustedBy: -(spacing*2)).complement()
+          .withBrightness(adjustedBy: 0, floorAt: 0.20)
+      ]
+    case .complementary:
+      return [
+        baseColor,
+        baseColor
+          .withSaturation(adjustedBy: 0.10)
+          .withBrightness(adjustedBy: -0.30, floorAt: 0.20, withOverflow: true),
+        baseColor
+          .withSaturation(adjustedBy: -0.10)
+          .withBrightness(adjustedBy: 0.30),
+        baseColor
+          .complement()
+          .withSaturation(adjustedBy: 0.20)
+          .withBrightness(adjustedBy: -0.30, floorAt: 0.20, withOverflow: true),
+        baseColor
+          .complement()
+      ]
+    case .splitComplementary:
+      return [
+        baseColor,
+        baseColor
+          .withSaturation(adjustedBy: 0.10)
+          .withBrightness(adjustedBy: -0.30, floorAt: 0.20, withOverflow: true),
+        baseColor
+          .withSaturation(adjustedBy: -0.10)
+          .withBrightness(adjustedBy: 0.30),
+        baseColor
+          .complement()
+          .withHue(adjustedBy: spacing),
+        baseColor
+          .complement()
+          .withHue(adjustedBy: -spacing)
+      ]
+    case .monochromatic:
+      return [
+        baseColor,
+        baseColor
+          .withBrightness(adjustedBy: -0.50, floorAt: 0.20, withOverflow: true),
+        baseColor
+          .withSaturation(adjustedBy: -0.30, floorAt: 0.10, ceilingAt: 0.70, withOverflow: true),
+        baseColor
+          .withBrightness(adjustedBy: -0.50, floorAt: 0.20, withOverflow: true)
+          .withSaturation(adjustedBy: -0.3, floorAt: 0.10, ceilingAt: 0.70, withOverflow: true),
+        baseColor
+          .withBrightness(adjustedBy: -0.20, floorAt: 0.20, withOverflow: true)
+      ]
+    case .compound:
+      return [
+        baseColor,
+        baseColor
+          .withHue(adjustedBy: 0.1)
+          .withSaturation(adjustedBy: -0.10, floorAt: 0.10)
+          .withBrightness(adjustedBy: -0.20, floorAt: 0.20),
+        baseColor
+          .withHue(adjustedBy: 0.1)
+          .withSaturation(adjustedBy: -0.40, floorAt: 0.10, ceilingAt: 0.90)
+          .withBrightness(adjustedBy: -0.40, floorAt: 0.20),
+        baseColor
+          .withHue(adjustedBy: -0.05).complement()
+          .withSaturation(adjustedBy: -0.25, floorAt: 0.10)
+          .withBrightness(adjustedBy: 0.05, floorAt: 0.20),
+        baseColor
+          .withHue(adjustedBy: -0.1).complement()
+          .withSaturation(adjustedBy: 0.10, ceilingAt: 0.90)
+          .withBrightness(adjustedBy: -0.20, floorAt: 0.20)
+      ]
+    case .triadic:
+      return [
+        baseColor,
+        baseColor
+          .withSaturation(adjustedBy: 0.10)
+          .withBrightness(adjustedBy: -0.30, floorAt: 0.20, withOverflow: true),
+        baseColor
+          .withHue(adjustedBy: 0.33)
+          .withSaturation(adjustedBy: -0.10),
+        baseColor
+          .withHue(adjustedBy: 0.66)
+          .withSaturation(adjustedBy: -0.10)
+          .withBrightness(adjustedBy: -0.20),
+        baseColor
+          .withHue(adjustedBy: 0.66)
+          .withSaturation(adjustedBy: -0.05)
+          .withBrightness(adjustedBy: -0.30, floorAt: 0.40, withOverflow: true)
+      ]
+    case .shades:
+      return [
+        baseColor,
+        baseColor.withBrightness(adjustedBy: -0.25, floorAt: 0.20, withOverflow: true),
+        baseColor.withBrightness(adjustedBy: -0.50, floorAt: 0.20, withOverflow: true),
+        baseColor.withBrightness(adjustedBy: -0.75, floorAt: 0.20, withOverflow: true),
+        baseColor.withBrightness(adjustedBy: -0.10, floorAt: 0.20)
+      ]
+    }
   }
 }
