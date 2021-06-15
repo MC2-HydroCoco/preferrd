@@ -12,6 +12,7 @@ class ThemeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var themeContainer: UIView!
     @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var removeButton: UIButton!
+    @IBOutlet weak var imageContainer: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
