@@ -80,6 +80,20 @@ extension UIColor {
                    brightness: brightness,
                    alpha: alpha)
   }
+    
+    func getHueValue() -> Float {
+        var hue: CGFloat        = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat      = 0
+
+        getHue(&hue,
+               saturation: &saturation,
+               brightness: &brightness,
+               alpha: &alpha)
+
+        return Float(hue)
+    }
 
   func getSaturation() -> Float {
     var hue: CGFloat        = 0
