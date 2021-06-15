@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */; };
+		16DEB7EE26774A9500407D48 /* ColorCombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */; };
+		16DEB7F02678AB8D00407D48 /* FinalPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEB7EF2678AB8D00407D48 /* FinalPreview.storyboard */; };
 		1C7989B4267882AC004D6138 /* TestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B3267882AC004D6138 /* TestMain.swift */; };
 		279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D026721C3C007A559E /* ColorTableViewCell.swift */; };
 		279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279A51D126721C3C007A559E /* ColorTableViewCell.xib */; };
@@ -47,6 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorCombinations.storyboard; sourceTree = "<group>"; };
+		16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationViewController.swift; sourceTree = "<group>"; };
+		16DEB7EF2678AB8D00407D48 /* FinalPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalPreview.storyboard; sourceTree = "<group>"; };
 		1C7989B3267882AC004D6138 /* TestMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMain.swift; sourceTree = "<group>"; };
 		279A51D026721C3C007A559E /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		279A51D126721C3C007A559E /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
@@ -225,8 +231,10 @@
 				CC654F0B26735284004C7C8A /* PickTheme.storyboard */,
 				8321CD5A2660F3710094519F /* LaunchScreen.storyboard */,
 				83171EDD26714C60001999F7 /* RelatedColorCell.swift */,
+				16DEB7EF2678AB8D00407D48 /* FinalPreview.storyboard */,
 				839AA888267737A50054C50F /* RelatedColors.storyboard */,
 				839AA89026773A9F0054C50F /* InputBaseColor.storyboard */,
+				16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */,
 				839266912677BB57007865A3 /* PalettePreview.storyboard */,
 			);
 			path = Views;
@@ -247,6 +255,7 @@
 				CC654F0D26735812004C7C8A /* PickThemeViewController.swift */,
 				1C7989B3267882AC004D6138 /* TestMain.swift */,
 				839AA88A267738C00054C50F /* OldMain.swift */,
+				16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */,
 				839266932677C426007865A3 /* PalettePreviewViewController.swift */,
 			);
 			path = Controllers;
@@ -325,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C2685B26734C69000D2D10 /* InformationPopUpViewViewController.xib in Resources */,
+				16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */,
 				CC654F0C26735284004C7C8A /* PickTheme.storyboard in Resources */,
 				839266922677BB57007865A3 /* PalettePreview.storyboard in Resources */,
 				839AA89126773A9F0054C50F /* InputBaseColor.storyboard in Resources */,
@@ -334,6 +344,7 @@
 				CCCA6C1026721C5700D7D3AF /* ThemeCollectionViewCell.xib in Resources */,
 				8321CD5B2660F3710094519F /* LaunchScreen.storyboard in Resources */,
 				83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */,
+				16DEB7F02678AB8D00407D48 /* FinalPreview.storyboard in Resources */,
 				83052DBD267379F4000B0A36 /* Views.xib in Resources */,
 				8321CD592660F3570094519F /* Main.storyboard in Resources */,
 				839AA889267737A50054C50F /* RelatedColors.storyboard in Resources */,
@@ -379,6 +390,7 @@
 				1C7989B4267882AC004D6138 /* TestMain.swift in Sources */,
 				83897DDE266BFB8000AB4913 /* Constants.swift in Sources */,
 				279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */,
+				16DEB7EE26774A9500407D48 /* ColorCombinationViewController.swift in Sources */,
 				83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */,
 				835E751A267471D2005496EF /* ColorSet.swift in Sources */,
 				CC654F0E26735812004C7C8A /* PickThemeViewController.swift in Sources */,
