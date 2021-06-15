@@ -97,7 +97,7 @@
                 <outlet property="colorPalette4" destination="CKk-tR-UhC" id="rXp-Jt-4Ad"/>
                 <outlet property="colorPalette5" destination="ykj-d0-t93" id="i2f-F9-4js"/>
                 <outlet property="colorPallete" destination="Wy5-Hz-y0O" id="als-0f-Txz"/>
-                <outlet property="labelPalette" destination="qB0-ps-BBK" id="cxx-Nm-sVP"/>
+                <outlet property="labelPalette" destination="qB0-ps-BBK" id="JX3-fZ-gLo"/>
             </connections>
             <point key="canvasLocation" x="166.66666666666669" y="100.78125"/>
         </tableViewCell>
