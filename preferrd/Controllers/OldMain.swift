@@ -150,7 +150,7 @@ class ColorSetViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    ColorSet.from(colorSet).enumerated().forEach { (index, color) in
+    ColorSet.generate(from: colorSet).enumerated().forEach { (index, color) in
       colorSetPreview[index].backgroundColor = color
     }
   }

@@ -133,3 +133,8 @@ extension UIColor {
 
 }
 
+extension Array where Element == UIView? {
+  func hide() {
+    self.forEach { $0?.layer.opacity = 0 }
+  }
+}
