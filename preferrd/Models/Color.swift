@@ -8,14 +8,14 @@ import Foundation
 import UIKit
 
 struct Color {
-    let name, hex, colorDescription: String
-    let relatedTags: [ColorTheme]
-    let baseColorGroup: []
-    
-    init(name: String, hex: String, colorDescription: String = "", relatedTags: [ColorTheme]) {
-        self.name = name
-        self.hex = hex
-        self.colorDescription = colorDescription
-        self.relatedTags = relatedTags
-    }
+  let name, hex, colorDescription: String
+  let relatedTags: [ColorTheme]
+//  let baseColorGroup: [BaseColorGroup]
+
+  init(name: String, hex: String, colorDescription: String = "", relatedTags: [ColorTheme]) {
+    self.name = name
+    self.hex = hex
+    self.colorDescription = colorDescription
+    self.relatedTags = relatedTags
+  }
 }
