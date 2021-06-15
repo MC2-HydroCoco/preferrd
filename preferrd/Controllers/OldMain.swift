@@ -23,7 +23,7 @@ class OldMainViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
 
-    selectedEmotions = [.elegant, .masculine, .adventurous, .feminine, .happy, .fresh]
+    selectedEmotions = [.elegant, .masculine, .adventurous, .feminine, .playful, .fresh]
     selectedEmotions.forEach { theme in
       colorsRelatedToTheme.append(ColorTheme.getRelatedColors(for: theme))
     }

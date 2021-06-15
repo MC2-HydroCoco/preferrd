@@ -11,7 +11,7 @@ import UIKit
 enum ColorTheme: String, CaseIterable {
   case relaxing     = "Relaxing",
        vintage      = "Vintage",
-       happy        = "Happy",
+       playful      = "Playful",
        adventurous  = "Adventurous",
        modern       = "Modern",
        nature       = "Nature",
@@ -28,8 +28,8 @@ enum ColorTheme: String, CaseIterable {
       return #imageLiteral(resourceName: "Elegant")
     case .fresh:
       return #imageLiteral(resourceName: "Fresh")
-    case .happy:
-      return #imageLiteral(resourceName: "Playfull")
+    case .playful:
+      return #imageLiteral(resourceName: "Playful")
     case .modern:
       return #imageLiteral(resourceName: "Modern")
     case .nature:
