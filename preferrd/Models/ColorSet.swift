@@ -11,26 +11,31 @@ import Foundation
 import UIKit
 
 struct ColorSet {
-  static func from(_ baseColors: [UIColor]) -> [UIColor] {
-    var colorSet = [UIColor]()
+  static func generate(from baseColors: [UIColor]) -> [UIColor] {
+    var colorSet: [UIColor] = [
+      .white,
+      .black
+    ]
 
     baseColors.forEach { color in
       colorSet.append(contentsOf: [
-        color.getTint(distance: 6.67),
-        color.getTint(distance: 3.33),
+        color.getTint(distance: 5),
         color,
-        color.getShade(distance: 3.33),
-        color.getShade(distance: 6.67)
+        color.getShade(distance: 5)
       ])
     }
 
     return colorSet
   }
 
-  static func filterContrastRatio(baseColor: String, from set: [UIColor], for type: ContrastRatioType) -> [UIColor] {
-    set.filter { color in
-      ColorHelper.getContrastRatio(between: UIColor(hex: baseColor).toRGB(), and: color.toRGB()) > type.rawValue
+  static func filterContrastRatio(baseColor: UIColor, from set: [UIColor], for type: ContrastRatioType) -> [Int] {
+    var validColorsIndex = [Int]()
+    set.enumerated().forEach { (index, color) in
+      if ColorHelper.getContrastRatio(between: baseColor.toRGB(), and: color.toRGB()) > type.rawValue {
+        validColorsIndex.append(index)
+      }
     }
+    return validColorsIndex
   }
 }
 
