@@ -46,10 +46,26 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNj-VQ-ilf">
+                            <rect key="frame" x="24" y="738" width="366" height="56"/>
+                            <color key="backgroundColor" systemColor="labelColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56.119999999999997" id="HFi-zJ-wGt"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="LcQ-Bv-1Up" secondAttribute="bottom" constant="23" id="gwK-wK-Qs1"/>
+                        <constraint firstItem="nPH-pL-G7j" firstAttribute="top" secondItem="6to-mb-sNu" secondAttribute="top" constant="24" id="0cr-nO-Px7"/>
+                        <constraint firstItem="jOH-tx-YPn" firstAttribute="top" secondItem="nPH-pL-G7j" secondAttribute="bottom" constant="36" id="4Ir-cc-t66"/>
+                        <constraint firstAttribute="trailing" secondItem="jOH-tx-YPn" secondAttribute="trailing" constant="24" id="4f5-ho-xwG"/>
+                        <constraint firstItem="hNj-VQ-ilf" firstAttribute="leading" secondItem="6to-mb-sNu" secondAttribute="leading" constant="24" id="NkG-XP-Zab"/>
+                        <constraint firstAttribute="trailing" secondItem="nPH-pL-G7j" secondAttribute="trailing" constant="24" id="Q8t-pU-jFl"/>
+                        <constraint firstItem="jOH-tx-YPn" firstAttribute="leading" secondItem="6to-mb-sNu" secondAttribute="leading" constant="24" id="RpG-v6-OEd"/>
+                        <constraint firstAttribute="trailing" secondItem="hNj-VQ-ilf" secondAttribute="trailing" constant="24" id="Tte-U4-Ewy"/>
+                        <constraint firstAttribute="bottom" secondItem="hNj-VQ-ilf" secondAttribute="bottom" constant="24" id="WpM-OY-SfZ"/>
+                        <constraint firstItem="nPH-pL-G7j" firstAttribute="leading" secondItem="6to-mb-sNu" secondAttribute="leading" constant="24" id="w4G-WI-qMr"/>
                     </constraints>
                 </view>
             </subviews>
@@ -62,9 +78,6 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6to-mb-sNu" secondAttribute="trailing" id="jO2-CY-93X"/>
             </constraints>
             <connections>
-                <outlet property="backgroundView" destination="LcQ-Bv-1Up" id="gID-MN-yNI"/>
-                <outlet property="buttonBackgroundView" destination="LcQ-Bv-1Up" id="54b-MD-zfp"/>
-                <outlet property="buttonLabel" destination="zDD-D7-DkM" id="4rP-4L-Tbf"/>
                 <outlet property="captionLabel" destination="jOH-tx-YPn" id="SoU-qc-3p0"/>
                 <outlet property="tittleLabel" destination="nPH-pL-G7j" id="1wZ-3K-X5q"/>
             </connections>
@@ -72,11 +85,11 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

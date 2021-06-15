@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -15,13 +15,39 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cA3-Ib-q5h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="ns3-PL-UZV"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cA3-Ib-q5h" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Xot-2Z-aPX"/>
+                            <constraint firstItem="cA3-Ib-q5h" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Xur-OY-Hef"/>
+                            <constraint firstItem="cA3-Ib-q5h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="q92-yP-KbB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="1jY-zq-KC5" kind="show" id="Iv9-gV-NgP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="76"/>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--ColorCombinations-->
+        <scene sceneID="Hdk-Bm-BR4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ColorCombinations" id="1jY-zq-KC5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="umt-gW-CPt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdH-kA-RjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="113"/>
         </scene>
     </scenes>
     <resources>
