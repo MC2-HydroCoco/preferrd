@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C7989B4267882AC004D6138 /* TestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B3267882AC004D6138 /* TestMain.swift */; };
 		279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D026721C3C007A559E /* ColorTableViewCell.swift */; };
 		279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279A51D126721C3C007A559E /* ColorTableViewCell.xib */; };
 		279A51D926722C76007A559E /* ColorCombinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C7989B3267882AC004D6138 /* TestMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMain.swift; sourceTree = "<group>"; };
 		279A51D026721C3C007A559E /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		279A51D126721C3C007A559E /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
 		279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationTableViewCell.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				8321CD452660EE5C0094519F /* MainViewController.swift */,
 				CC654F0D26735812004C7C8A /* PickThemeViewController.swift */,
+				1C7989B3267882AC004D6138 /* TestMain.swift */,
 				839AA88A267738C00054C50F /* OldMain.swift */,
 			);
 			path = Controllers;
@@ -366,6 +369,7 @@
 				8321CD462660EE5C0094519F /* MainViewController.swift in Sources */,
 				839AA88B267738C00054C50F /* OldMain.swift in Sources */,
 				83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */,
+				1C7989B4267882AC004D6138 /* TestMain.swift in Sources */,
 				83897DDE266BFB8000AB4913 /* Constants.swift in Sources */,
 				279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */,
 				83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */,
