@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bzW-N8-8xS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bzW-N8-8xS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,10 +25,24 @@
                     <view key="view" contentMode="scaleToFill" id="LL5-cz-9I3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-jW-Sye">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="RvP-q8-yPE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RvP-q8-yPE" firstAttribute="trailing" secondItem="Hby-jW-Sye" secondAttribute="trailing" id="8ZK-Wh-hST"/>
+                            <constraint firstItem="Hby-jW-Sye" firstAttribute="leading" secondItem="RvP-q8-yPE" secondAttribute="leading" id="enn-SG-qNS"/>
+                            <constraint firstItem="RvP-q8-yPE" firstAttribute="bottom" secondItem="Hby-jW-Sye" secondAttribute="bottom" id="p0h-B5-sFn"/>
+                            <constraint firstItem="Hby-jW-Sye" firstAttribute="top" secondItem="RvP-q8-yPE" secondAttribute="top" id="qHC-Le-O76"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Main Menu" id="Aup-Yq-krO"/>
+                    <navigationItem key="navigationItem" title="Palettes" id="uGf-xQ-HWN">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Mqn-Rb-ThI"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="2Ik-Os-dpd" kind="show" id="WU8-OU-G8F"/>
                     </connections>
@@ -57,6 +71,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
