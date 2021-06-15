@@ -33,7 +33,9 @@ enum BaseColorGroup: String, CaseIterable {
          gray        = "Gray"
     
     func getRawBaseColor() -> String {
-//        return self.rawValue.suffix(1)
+        let words = self.rawValue.byWords
+        let lastWord = words.last ?? ""
+        return String(lastWord)
     }
     
     func getColorMeaning() -> String {
