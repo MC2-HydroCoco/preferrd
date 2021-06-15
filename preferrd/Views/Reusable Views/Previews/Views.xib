@@ -17,16 +17,33 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6to-mb-sNu">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPH-pL-G7j">
-                            <rect key="frame" x="24" y="24" width="366" height="29"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcQ-Bv-1Up">
+                            <rect key="frame" x="87" y="725" width="241" height="42"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDD-D7-DkM">
+                                    <rect key="frame" x="97" y="6" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPH-pL-G7j">
+                            <rect key="frame" x="26" y="29" width="55" height="27"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="24"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-tx-YPn">
-                            <rect key="frame" x="24" y="89" width="366" height="193.5"/>
-                            <string key="text">Consectetur adipiscing elit. In eleifend sollicitudin ante vitae ullamcorper. Vestibulum laoreet nisi elit, at sodales est semper convallis. Sed id blandit sem. Aliquam volutpat mi vitae sapien dictum, et molestie felis condimentum. Sed odio lorem, maximus quis sapien ornare, scelerisque maximus eros. Ut sapien neque, tempor sed lobortis sit amet, porttitor vitae mi. Suspendisse potenti.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-tx-YPn">
+                            <rect key="frame" x="26" y="87" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Label">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system" size="17"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNj-VQ-ilf">
@@ -55,16 +72,16 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6to-mb-sNu" secondAttribute="trailing" id="434-aV-hd6"/>
-                <constraint firstItem="6to-mb-sNu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="80p-88-kuH"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6to-mb-sNu" secondAttribute="bottom" id="dkz-Xw-HZg"/>
-                <constraint firstItem="6to-mb-sNu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vFP-OB-cHn"/>
+                <constraint firstItem="6to-mb-sNu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6mX-VS-TWc"/>
+                <constraint firstItem="6to-mb-sNu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Efg-wY-4BN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6to-mb-sNu" secondAttribute="bottom" id="f6W-uC-ie1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6to-mb-sNu" secondAttribute="trailing" id="jO2-CY-93X"/>
             </constraints>
             <connections>
                 <outlet property="captionLabel" destination="jOH-tx-YPn" id="SoU-qc-3p0"/>
                 <outlet property="tittleLabel" destination="nPH-pL-G7j" id="1wZ-3K-X5q"/>
             </connections>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="-14" y="163"/>
         </view>
     </objects>
     <resources>

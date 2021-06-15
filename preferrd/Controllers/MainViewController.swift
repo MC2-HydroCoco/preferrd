@@ -9,7 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-  override func viewDidLoad() {
+    @IBOutlet weak var userPaletteTableView: UITableView!
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
   }
 

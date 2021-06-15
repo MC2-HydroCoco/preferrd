@@ -7,18 +7,7 @@
 
 import UIKit
 
-class PickThemeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
-    
-    var themeImages:[String] = [
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
-    ]
+class PickThemeViewController: UIViewController {
     
     @IBOutlet weak var tagCollectionView: UICollectionView!
     @IBOutlet weak var themeCollectionView: UICollectionView!
@@ -31,9 +20,17 @@ class PickThemeViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nibCell = UINib(nibName: "ThemeCollectionViewCell", bundle: nil)
+        let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
         themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
+        themeCollectionView.delegate = self
+        themeCollectionView.dataSource = self
+        tagCollectionView.delegate = self
+        tagCollectionView.dataSource = self
     }
+    
+}
+
+extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == tagCollectionView) {
@@ -45,17 +42,17 @@ class PickThemeViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "themeCollectionViewCell", for: indexPath) as? ThemeCollectionViewCell {
+            let getColorTheme = ColorTheme.allCases[indexPath.row]
             if (collectionView == tagCollectionView) {
-                cell.removeButton
-                cell.themeContainer
-                cell.themeLabel
+                cell.themeContainer.layer.cornerRadius = 12
+                cell.themeLabel.text = getColorTheme.rawValue
                 cell.imageContainer.isHidden = true
                 
             } else {
                 cell.removeButton.isHidden = true
-                cell.themeContainer
-                cell.themeLabel
-                cell.imageContainer.image = UIImage(named: themeImages[indexPath.row])
+                cell.themeContainer.layer.cornerRadius = 12
+                cell.themeLabel.text = getColorTheme.rawValue
+                cell.imageContainer.image = getColorTheme.getImage()
         }
             return cell
         }
@@ -63,7 +60,10 @@ class PickThemeViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("abcde")
+        if (collectionView == tagCollectionView) {
+            
+        } else {
+            
+        }
     }
-    
 }

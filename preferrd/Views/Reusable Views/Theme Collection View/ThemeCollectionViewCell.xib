@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RP-qS-FAx">
                         <rect key="frame" x="0.0" y="0.0" width="168" height="95"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-hz-cFg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-hz-cFg">
                                 <rect key="frame" x="0.0" y="0.0" width="168" height="95"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="seo-In-AAV">
@@ -36,6 +36,9 @@
                                         <rect key="frame" x="98.5" y="0.0" width="37.5" height="79"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="removeButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YdE-XN-LZS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -44,11 +47,13 @@
                         <constraints>
                             <constraint firstItem="seo-In-AAV" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" constant="8" id="E8M-5w-HXA"/>
                             <constraint firstItem="6SC-hz-cFg" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" id="JH2-sT-5Vb"/>
+                            <constraint firstAttribute="height" constant="95" id="Uda-CX-ygi"/>
                             <constraint firstAttribute="trailing" secondItem="6SC-hz-cFg" secondAttribute="trailing" id="VI7-IK-C6J"/>
                             <constraint firstAttribute="trailing" secondItem="seo-In-AAV" secondAttribute="trailing" constant="16" id="XWJ-iO-ETI"/>
                             <constraint firstItem="6SC-hz-cFg" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" id="XvQ-hG-vEG"/>
                             <constraint firstItem="seo-In-AAV" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" constant="16" id="fgx-zc-GkY"/>
                             <constraint firstAttribute="bottom" secondItem="6SC-hz-cFg" secondAttribute="bottom" id="gf8-1w-V7y"/>
+                            <constraint firstAttribute="width" constant="168" id="vVe-S2-1vU"/>
                             <constraint firstAttribute="bottom" secondItem="seo-In-AAV" secondAttribute="bottom" constant="8" id="wMv-4j-zDu"/>
                         </constraints>
                     </view>
