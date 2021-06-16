@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+  @IBOutlet weak var constraint: NSLayoutConstraint!
   @IBOutlet weak var userPaletteTable: UITableView!
   @IBOutlet weak var userPaletteTableView: UITableView!
 
