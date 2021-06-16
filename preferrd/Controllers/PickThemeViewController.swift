@@ -88,8 +88,18 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == tagCollectionView {
             
-        } else {
+        }else {
+            let selectedCell:UICollectionViewCell = themeCollectionView.cellForItem(at: indexPath)!
+            selectedCell.contentView.backgroundColor = UIColor(red: 102/256, green: 255/256, blue: 255/256, alpha: 0.66)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == tagCollectionView {
             
+        }else {
+            let cellToDeselect:UICollectionViewCell = themeCollectionView.cellForItem(at: indexPath)!
+            cellToDeselect.contentView.backgroundColor = UIColor.clear
         }
     }
 }
