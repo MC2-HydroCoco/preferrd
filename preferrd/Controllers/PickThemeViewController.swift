@@ -23,6 +23,9 @@ class PickThemeViewController: UIViewController {
 
     let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
     themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
+    
+    tagCollectionView.register(nibCell, forCellWithReuseIdentifier: "tagCollectionViewCell")
+    
     themeCollectionView.delegate = self
     themeCollectionView.dataSource = self
     tagCollectionView.delegate = self
@@ -45,17 +48,18 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
         withReuseIdentifier: "themeCollectionViewCell",
         for: indexPath) as? ThemeCollectionViewCell {
       let getColorTheme = ColorTheme.allCases[indexPath.row]
-      if collectionView == tagCollectionView {
+      
+        if collectionView == tagCollectionView {
         cell.themeContainer.layer.cornerRadius = 12
         cell.themeLabel.text = getColorTheme.rawValue
         cell.imageContainer.isHidden = true
-
-      } else {
+            
+        } else {
         cell.removeButton.isHidden = true
         cell.themeContainer.layer.cornerRadius = 12
         cell.themeLabel.text = getColorTheme.rawValue
         cell.imageContainer.image = getColorTheme.getImage()
-      }
+        }
       return cell
     }
     return UICollectionViewCell()
