@@ -13,15 +13,15 @@ import UIKit
 struct ColorSet {
   static func generate(from baseColors: [UIColor]) -> [UIColor] {
     var colorSet: [UIColor] = [
-      .white,
-      .black
+      UIColor(hex: "#F7F7F7"),
+      UIColor(hex: "#222222")
     ]
 
     baseColors.forEach { color in
       colorSet.append(contentsOf: [
-        color.getTint(distance: 5),
+        color.getTint(distance: 6),
         color,
-        color.getShade(distance: 5)
+        color.getShade(distance: 3)
       ])
     }
 

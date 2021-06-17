@@ -19,15 +19,15 @@ enum PreviewStep: CaseIterable {
   var title: String {
     switch self {
     case .background:
-      return "Choose Background Color"
+      return "Background Color"
     case .title:
-      return "Choose Title Color"
+      return "Title Color"
     case .body:
-      return "Choose Body Color"
+      return "Body Color"
     case .button:
-      return "Choose Button Color"
+      return "Button Color"
     case .buttonText:
-      return "Choose Button Text Color"
+      return "Button Text Color"
     }
   }
 

@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class MainViewController: UIViewController {
-    
+  
     @IBOutlet weak var paletteTableView: UITableView!
     
     var palettes: [Palette] = []

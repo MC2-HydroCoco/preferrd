@@ -12,8 +12,10 @@ class PalettePreviewViewController: UIViewController {
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var nextButton: UIButton!
+  @IBOutlet weak var notion: UILabel!
   private var selectedColorsIndex = [Int]()
-  private var selectedColorIndex = 0
+  private var selectedColorIndex = -1
+  private var hasSelected = false
 
   // MARK: - Step
   private var currentStep = 0 {
@@ -22,11 +24,12 @@ class PalettePreviewViewController: UIViewController {
       applyHighlights()
       hidePreviewElements()
 
-      currentStepTitle.text = allSteps[currentStep].title
+      //      currentStepTitle.text = allSteps[currentStep].title
+      title = allSteps[currentStep].title
 
       switch currentStep {
       case 4:
-        previewButton.tintColor = .black
+        previewButton.tintColor = UIColor(hex: "#222222")
         fallthrough
       case 3:
         previewButton.layer.opacity = 1
@@ -45,8 +48,6 @@ class PalettePreviewViewController: UIViewController {
     }
   }
   private let allSteps = PreviewStep.allCases
-  @IBOutlet weak var currentStepTitle: UILabel!
-  @IBOutlet weak var currentStepDetail: UIButton!
 
   // MARK: - Preview Components
   @IBOutlet weak var previewBackground: UIStackView!
@@ -65,18 +66,30 @@ class PalettePreviewViewController: UIViewController {
 
     // Testing Purpose:
     selectedCombination = ColorCombination
-      .accentedAnalogous
-      .getCombination(from: UIColor(hex: "#BADA55"))
+      .triadic
+      .getCombination(from: UIColor(hex: "#52b69a"))
 
     setupView()
-
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "seeFinalPreview" {
+      if let finalPreviewViewController = segue.destination as? FinalPalettePreviewViewController,
+         let finalPalette = sender as? [UIColor] {
+        finalPreviewViewController.palette = finalPalette
+      }
+    }
+  }
+
+  // MARK: - Methods
   private func setupView() {
-    // 1. Hide unused preview element for first step: Choose Background.
+    // 1. Setup Current Step Title
+    title = allSteps[currentStep].title
+
+    // 2. Hide unused preview element for first step: Choose Background.
     hidePreviewElements()
 
-    // 2. Apply styling
+    // 3. Apply styling
     ([
       previewBackground,
       previewButton,
@@ -85,8 +98,15 @@ class PalettePreviewViewController: UIViewController {
     ] + colorSet).forEach { element in
       element?.layer.cornerRadius = 8
     }
+    [
+      backButton,
+      nextButton
+    ].forEach { button in
+      button?.backgroundColor = UIColor(named: "Dark")
+      button?.tintColor = UIColor(named: "Light")
+    }
 
-    // 3. Apply colors to color set
+    // 4. Apply colors to color set
     ColorSet
       .generate(from: selectedCombination)
       .enumerated()
@@ -94,7 +114,7 @@ class PalettePreviewViewController: UIViewController {
         colorSet[index].backgroundColor = color
       }
 
-    // 4. Add tap gesture to each color in color set
+    // 5. Add tap gesture to each color in color set
     colorSet.enumerated().forEach { (index, view) in
       view.tag = index
       let tapGesture = UITapGestureRecognizer(
@@ -104,8 +124,6 @@ class PalettePreviewViewController: UIViewController {
       view.addGestureRecognizer(tapGesture)
     }
   }
-
-  // MARK: - Methods
 
   private func hidePreviewElements() {
     [
@@ -129,12 +147,13 @@ class PalettePreviewViewController: UIViewController {
   private func applyHighlights() {
     selectedColorsIndex.forEach { index in
       let colorView = colorSet[index].layer
-      colorView.borderColor = UIColor.black.cgColor
+      colorView.borderColor = Constants.AppColors.highlight?.cgColor
       colorView.borderWidth = 4
     }
   }
 
   @objc func selectColor(_ sender: UITapGestureRecognizer) {
+    hasSelected = true
     clearHighlights()
     applyHighlights()
 
@@ -142,21 +161,31 @@ class PalettePreviewViewController: UIViewController {
        let selectedColor = sender.backgroundColor {
       switch currentStep {
       case 0:
-        previewBackground.backgroundColor = selectedColor
+        UIView.animate(withDuration: 0.75) {
+          self.previewBackground.backgroundColor = selectedColor
+        }
       case 1:
-        previewTitle.textColor = selectedColor
+        UIView.animate(withDuration: 0.75) {
+          self.previewTitle.textColor = selectedColor
+        }
       case 2:
-        previewBody.textColor = selectedColor
+        UIView.animate(withDuration: 0.75) {
+          self.previewBody.textColor = selectedColor
+        }
       case 3:
-        previewButton.backgroundColor = selectedColor
+        UIView.animate(withDuration: 0.75) {
+          self.previewButton.backgroundColor = selectedColor
+        }
       case 4:
-        previewButton.tintColor = selectedColor
+        UIView.animate(withDuration: 0.75) {
+          self.previewButton.tintColor = selectedColor
+        }
       default:
         return
       }
 
       let selectedView = sender.layer
-      selectedView.borderColor = UIColor.black.cgColor
+      selectedView.borderColor = Constants.AppColors.highlight?.cgColor
       selectedView.borderWidth = 4
 
       selectedColorIndex = sender.tag
@@ -179,43 +208,45 @@ class PalettePreviewViewController: UIViewController {
 
     // Disable all colors in Color Set
     colorSet.forEach { view in
-      view.isUserInteractionEnabled = false
-      view.layer.opacity = 0.1
+      UIView.animate(withDuration: 0.75) {
+        view.isUserInteractionEnabled = false
+        view.layer.opacity = 0.1
+      }
     }
 
     switch currentStep {
     // Reset for Background Color Step
     case 0:
-      print("0")
+      //      notion.isHidden = true
       colorSet.forEach { view in
         view.isUserInteractionEnabled = true
         view.layer.opacity = 1
       }
     // Curate for Headline Color Step
     case 1:
-      print("1")
+      //      notion.isHidden = false
       curatedColorsIndex = curateColorSet(baseColor: selectedBackgroundColor, for: .title)
     // Curate for Body Color Step
     case 2:
-      print("2")
       curatedColorsIndex = curateColorSet(baseColor: selectedBackgroundColor, for: .body)
     // Curate for Button Color Step
     case 3:
-      print("3")
       curatedColorsIndex = curateColorSet(baseColor: selectedBackgroundColor, for: .button)
     // Curate for Button Text Color Step
     case 4:
-      print("4")
-      let selectedButtonColor = colorSet[selectedColorsIndex[3]].backgroundColor!
-      curatedColorsIndex = curateColorSet(baseColor: selectedButtonColor, for: .body)
+      if let selectedButtonColor = colorSet[selectedColorsIndex[3]].backgroundColor {
+        curatedColorsIndex = curateColorSet(baseColor: selectedButtonColor, for: .body)
+      }
     default:
       return
     }
 
     // Enable curated color(s) in Color Set
     curatedColorsIndex.forEach { index in
-      colorSet[index].isUserInteractionEnabled = true
-      colorSet[index].layer.opacity = 1
+      UIView.animate(withDuration: 0.75) {
+        self.colorSet[index].isUserInteractionEnabled = true
+        self.colorSet[index].layer.opacity = 1
+      }
     }
   }
 
@@ -224,36 +255,39 @@ class PalettePreviewViewController: UIViewController {
       currentStep -= 1
       updateColorSet()
       selectedColorsIndex.removeLast()
+      hasSelected = true
       scrollUp()
     }
   }
 
   @IBAction func nextStep(_ sender: Any) {
-    if currentStep < 4 {
-      // Update selected colors
-      selectedColorsIndex.append(selectedColorIndex)
-      currentStep += 1
-      updateColorSet()
-      scrollUp()
-    } else {
-      guard let background = previewBackground.backgroundColor,
-            let title = previewTitle.textColor,
-            let body = previewBody.textColor,
-            let button = previewButton.backgroundColor,
-            let buttonText = previewButton.tintColor else {
-        fatalError("Error getting Preview Element's color")
+    if hasSelected {
+      if currentStep < 4 {
+        // Update selected colors
+        selectedColorsIndex.append(selectedColorIndex)
+        currentStep += 1
+        updateColorSet()
+        scrollUp()
+        hasSelected = false
+      } else {
+        guard let background = previewBackground.backgroundColor,
+              let title = previewTitle.textColor,
+              let body = previewBody.textColor,
+              let button = previewButton.backgroundColor,
+              let buttonText = previewButton.tintColor else {
+          fatalError("Error getting Preview Element's color")
+        }
+
+        let finalPalette = [
+          background,
+          title,
+          body,
+          button,
+          buttonText
+        ]
+
+        performSegue(withIdentifier: "seeFinalPreview", sender: finalPalette)
       }
-
-      let finalPalette = [
-        background,
-        title,
-        body,
-        button,
-        buttonText
-      ]
-
-      print(finalPalette)
-      print("Perform Segue!")
     }
   }
 
