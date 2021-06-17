@@ -20,11 +20,7 @@ class PaletteTableViewCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     selectionStyle = .none
-    paletteBackgroundView.layer.cornerRadius = 12
-    paletteBackgroundView.layer.shadowColor = UIColor.black.cgColor
-    paletteBackgroundView.layer.shadowOpacity = 0.1
-    paletteBackgroundView.layer.shadowOffset = CGSize(width: 4, height: 4)
-    paletteBackgroundView.layer.shadowRadius = 4
+    paletteBackgroundView.applyShadow()
 
     [
       backgroundColorView,

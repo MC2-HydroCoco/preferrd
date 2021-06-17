@@ -96,7 +96,8 @@ class PalettePreviewViewController: UIViewController {
       backButton,
       nextButton
     ] + colorSet).forEach { element in
-      element?.layer.cornerRadius = 8
+      view?.layer.cornerRadius = 8
+      element?.applyShadow()
     }
     [
       backButton,

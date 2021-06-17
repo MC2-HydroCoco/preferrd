@@ -78,13 +78,14 @@ class FinalPalettePreviewViewController: UIViewController {
 
     updateSlidersValue()
 
-    // Apply Design
+    // Apply Styling
     ([
       previewBackground,
       previewButton,
       applyButton
     ] + colorPalette).forEach { view in
       view?.layer.cornerRadius = 8
+      view?.applyShadow()
     }
 
     // Add tap gesture to each color in color palette

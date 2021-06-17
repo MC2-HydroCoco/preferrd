@@ -18,6 +18,16 @@ extension String {
   }
 }
 
+extension UIView {
+  func applyShadow() {
+    self.layer.cornerRadius = 12
+    self.layer.shadowColor = UIColor.black.cgColor
+    self.layer.shadowOpacity = 0.125
+    self.layer.shadowOffset = CGSize(width: 4, height: 4)
+    self.layer.shadowRadius = 4
+  }
+}
+
 extension UIColor {
 
   // MARK: - Initialize UIColor from HEX Code
