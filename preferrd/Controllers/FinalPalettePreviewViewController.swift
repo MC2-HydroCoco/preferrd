@@ -23,6 +23,7 @@ class FinalPalettePreviewViewController: UIViewController {
 
   // Adjustment Properties
   var selectedColorIndex = 0
+  var initialPalette = [UIColor]()
   @IBOutlet weak var saturationSlider: UISlider!
   @IBOutlet weak var brightnessSlider: UISlider!
   @IBOutlet weak var saturationWarning: UIButton!
@@ -36,6 +37,19 @@ class FinalPalettePreviewViewController: UIViewController {
     setupView()
   }
 
+  private func resetPalette() {
+    previewBackground.backgroundColor = palette[0]
+    previewTitle.textColor = palette[1]
+    previewBody.textColor = palette[2]
+    previewButton.backgroundColor = palette[3]
+    previewButton.tintColor = palette[4]
+
+    palette.enumerated().forEach { (index, color) in
+      colorPalette[index].backgroundColor = color
+      colorPaletteHex[index].text = color.hex
+    }
+  }
+
   private func setupView() {
     // Navigation Bar Item
     navigationItem.rightBarButtonItem = UIBarButtonItem(
@@ -45,24 +59,7 @@ class FinalPalettePreviewViewController: UIViewController {
     )
 
     // Palette Related Setup
-    palette.enumerated().forEach { (index, color) in
-      colorPalette[index].backgroundColor = color
-      colorPaletteHex[index].text = color.hex
-      switch index {
-      case 0:
-        previewBackground.backgroundColor = color
-      case 1:
-        previewTitle.textColor = color
-      case 2:
-        previewBody.textColor = color
-      case 3:
-        previewButton.backgroundColor = color
-      case 4:
-        previewButton.tintColor = color
-      default:
-        return
-      }
-    }
+    resetPalette()
 
     // Adjustment Sliders Setup
     saturationSlider.addTarget(
@@ -76,10 +73,7 @@ class FinalPalettePreviewViewController: UIViewController {
       for: .valueChanged
     )
 
-    if let initialColor = colorPalette[selectedColorIndex].backgroundColor {
-      saturationSlider.value = initialColor.getSaturation()
-      brightnessSlider.value = initialColor.getBrightness()
-    }
+    updateSlidersValue()
 
     // Apply Design
     ([
@@ -90,6 +84,28 @@ class FinalPalettePreviewViewController: UIViewController {
     ] + colorPalette).forEach { view in
       view?.layer.cornerRadius = 8
     }
+
+    // Add tap gesture to each color in color palette
+    colorPalette.enumerated().forEach { (index, view) in
+      view.tag = index
+      let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectColor))
+      view.addGestureRecognizer(tapGesture)
+    }
+  }
+
+  private func updateSlidersValue() {
+    if let color = colorPalette[selectedColorIndex].backgroundColor {
+        saturationSlider.value = color.getSaturation()
+        brightnessSlider.value = color.getBrightness()
+    }
+  }
+
+  @objc func selectColor(_ sender: UITapGestureRecognizer) {
+    if let sender = sender.view {
+      selectedColorIndex = sender.tag
+      updateHighlight()
+      updateSlidersValue()
+    }
   }
 
   @objc func adjustColor() {
@@ -98,6 +114,20 @@ class FinalPalettePreviewViewController: UIViewController {
         saturation: saturationSlider.value,
         brightness: brightnessSlider.value
       )
+      switch selectedColorIndex {
+      case 0:
+        previewBackground.backgroundColor = initialColor
+      case 1:
+        previewTitle.textColor = initialColor
+      case 2:
+        previewBody.textColor = initialColor
+      case 3:
+        previewButton.backgroundColor = initialColor
+      case 4:
+        previewButton.tintColor = initialColor
+      default:
+        return
+      }
     }
   }
 
@@ -105,8 +135,32 @@ class FinalPalettePreviewViewController: UIViewController {
     print("Perform Segue!")
   }
 
+  @IBAction func discardChanges(_ sender: Any) {
+    resetPalette()
+    updateSlidersValue()
+  }
+
+  @IBAction func applyChanges(_ sender: Any) {
+    self.adjustmentPanel.isHidden = true
+    updateHighlight()
+  }
+
+  private func updateHighlight() {
+    // Reset Highlight
+    colorPalette.forEach { view in
+      view.layer.borderWidth = 4
+      view.layer.borderColor = UIColor.clear.cgColor
+    }
+
+    // Apply new highlight
+    if adjustmentPanel.isHidden == false {
+      colorPalette[selectedColorIndex].layer.borderColor = Constants.AppColors.highlight?.cgColor
+    }
+  }
+
   @IBAction func toggleAdjustment(_ sender: Any) {
     self.adjustmentPanel.isHidden.toggle()
     adjustColor()
+    updateHighlight()
   }
 }

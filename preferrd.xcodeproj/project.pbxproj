@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */; };
 		16DEB7EE26774A9500407D48 /* ColorCombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */; };
-		16DEB7F02678AB8D00407D48 /* FinalPalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEB7EF2678AB8D00407D48 /* FinalPalettePreview.storyboard */; };
-		16DEB7F02678AB8D00407D48 /* FinalPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEB7EF2678AB8D00407D48 /* FinalPreview.storyboard */; };
 		1C5B79462679CAF80036A559 /* Preferrd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79442679CAF80036A559 /* Preferrd.xcdatamodeld */; };
 		1C5B79492679F2EE0036A559 /* Palette+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79472679F2EE0036A559 /* Palette+CoreDataClass.swift */; };
 		1C5B794A2679F2EE0036A559 /* Palette+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79482679F2EE0036A559 /* Palette+CoreDataProperties.swift */; };
@@ -41,6 +39,7 @@
 		8321CD5E2660F3AB0094519F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8321CD5C2660F3AB0094519F /* Localizable.strings */; };
 		834005142661691D0061724B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834005132661691D0061724B /* Extensions.swift */; };
 		835E751A267471D2005496EF /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E7519267471D2005496EF /* ColorSet.swift */; };
+		837809A4267B1B3D007BBD17 /* FinalPalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */; };
 		83897DDE266BFB8000AB4913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83897DDD266BFB8000AB4913 /* Constants.swift */; };
 		839266922677BB57007865A3 /* PalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839266912677BB57007865A3 /* PalettePreview.storyboard */; };
 		839266942677C426007865A3 /* PalettePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839266932677C426007865A3 /* PalettePreviewViewController.swift */; };
@@ -61,8 +60,6 @@
 /* Begin PBXFileReference section */
 		16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorCombinations.storyboard; sourceTree = "<group>"; };
 		16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationViewController.swift; sourceTree = "<group>"; };
-		16DEB7EF2678AB8D00407D48 /* FinalPalettePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalPalettePreview.storyboard; sourceTree = "<group>"; };
-		16DEB7EF2678AB8D00407D48 /* FinalPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalPreview.storyboard; sourceTree = "<group>"; };
 		1C5B79452679CAF80036A559 /* Preferrd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Preferrd.xcdatamodel; sourceTree = "<group>"; };
 		1C5B79472679F2EE0036A559 /* Palette+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Palette+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1C5B79482679F2EE0036A559 /* Palette+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Palette+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -96,6 +93,7 @@
 		8321CD5F2660F3B90094519F /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		834005132661691D0061724B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		835E7519267471D2005496EF /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalPalettePreview.storyboard; sourceTree = "<group>"; };
 		83897DDD266BFB8000AB4913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		839266912677BB57007865A3 /* PalettePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PalettePreview.storyboard; sourceTree = "<group>"; };
 		839266932677C426007865A3 /* PalettePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettePreviewViewController.swift; sourceTree = "<group>"; };
@@ -252,9 +250,9 @@
 				839AA888267737A50054C50F /* RelatedColors.storyboard */,
 				839AA89026773A9F0054C50F /* InputBaseColor.storyboard */,
 				16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */,
-				839266912677BB57007865A3 /* PalettePreview.storyboard */,
-				16DEB7EF2678AB8D00407D48 /* FinalPalettePreview.storyboard */,
 				279454CD2678B1C300BFB69F /* PickColorCombinationStoryboard.storyboard */,
+				839266912677BB57007865A3 /* PalettePreview.storyboard */,
+				837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,10 +369,10 @@
 				CCCA6C1026721C5700D7D3AF /* ThemeCollectionViewCell.xib in Resources */,
 				8321CD5B2660F3710094519F /* LaunchScreen.storyboard in Resources */,
 				83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */,
-				16DEB7F02678AB8D00407D48 /* FinalPalettePreview.storyboard in Resources */,
 				83052DBD267379F4000B0A36 /* Views.xib in Resources */,
 				8321CD592660F3570094519F /* Main.storyboard in Resources */,
 				839AA889267737A50054C50F /* RelatedColors.storyboard in Resources */,
+				837809A4267B1B3D007BBD17 /* FinalPalettePreview.storyboard in Resources */,
 				279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
