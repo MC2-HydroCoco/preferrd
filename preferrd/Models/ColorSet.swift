@@ -13,8 +13,8 @@ import UIKit
 struct ColorSet {
   static func generate(from baseColors: [UIColor]) -> [UIColor] {
     var colorSet: [UIColor] = [
-      .white,
-      .black
+      UIColor(hex: "#F7F7F7"),
+      UIColor(hex: "#222222")
     ]
 
     baseColors.forEach { color in

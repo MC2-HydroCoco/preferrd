@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
+
+  struct AppColors {
+    static let highlight = UIColor(named: "Highlight")
+  }
 
   static let colors = [
     Color(name: "Aero Blue", hex: "#B6FCDB", relatedTags: [.fresh]),

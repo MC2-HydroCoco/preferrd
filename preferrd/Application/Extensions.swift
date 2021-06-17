@@ -39,6 +39,21 @@ extension UIColor {
     )
   }
 
+  var hex: String {
+    guard let components = self.cgColor.components else { fatalError("HEX: Error Getting Color Components.") }
+    let red: CGFloat = components[0]
+    let green: CGFloat = components[1]
+    let blue: CGFloat = components[2]
+
+    let hexString = String.init(
+      format: "#%02lX%02lX%02lX",
+      lroundf(Float(red * 255)),
+      lroundf(Float(green * 255)),
+      lroundf(Float(blue * 255))
+    )
+    return hexString
+  }
+
   // MARK: - Color Combination Extensions
   func complement() -> UIColor {
     withHue(adjustedBy: 0.5)
