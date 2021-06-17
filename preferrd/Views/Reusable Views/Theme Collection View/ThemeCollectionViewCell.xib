@@ -23,6 +23,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-hz-cFg">
                                 <rect key="frame" x="0.0" y="0.0" width="168" height="95"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfy-RR-emg">
+                                <rect key="frame" x="0.0" y="0.0" width="168" height="95"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="seo-In-AAV">
                                 <rect key="frame" x="16" y="8" width="136" height="79"/>
                                 <subviews>
@@ -47,12 +50,16 @@
                         <constraints>
                             <constraint firstItem="seo-In-AAV" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" constant="8" id="E8M-5w-HXA"/>
                             <constraint firstItem="6SC-hz-cFg" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" id="JH2-sT-5Vb"/>
+                            <constraint firstItem="qfy-RR-emg" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" id="OZ0-Lm-wcG"/>
                             <constraint firstAttribute="height" constant="95" id="Uda-CX-ygi"/>
                             <constraint firstAttribute="trailing" secondItem="6SC-hz-cFg" secondAttribute="trailing" id="VI7-IK-C6J"/>
                             <constraint firstAttribute="trailing" secondItem="seo-In-AAV" secondAttribute="trailing" constant="16" id="XWJ-iO-ETI"/>
                             <constraint firstItem="6SC-hz-cFg" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" id="XvQ-hG-vEG"/>
+                            <constraint firstItem="qfy-RR-emg" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" id="ckS-zn-gtD"/>
+                            <constraint firstAttribute="bottom" secondItem="qfy-RR-emg" secondAttribute="bottom" id="eMD-cP-TtX"/>
                             <constraint firstItem="seo-In-AAV" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" constant="16" id="fgx-zc-GkY"/>
                             <constraint firstAttribute="bottom" secondItem="6SC-hz-cFg" secondAttribute="bottom" id="gf8-1w-V7y"/>
+                            <constraint firstAttribute="trailing" secondItem="qfy-RR-emg" secondAttribute="trailing" id="gjx-Y4-jwW"/>
                             <constraint firstAttribute="width" constant="168" id="vVe-S2-1vU"/>
                             <constraint firstAttribute="bottom" secondItem="seo-In-AAV" secondAttribute="bottom" constant="8" id="wMv-4j-zDu"/>
                         </constraints>
@@ -69,6 +76,7 @@
             <size key="customSize" width="359" height="440"/>
             <connections>
                 <outlet property="imageContainer" destination="6SC-hz-cFg" id="okX-b0-OFP"/>
+                <outlet property="imageOverlay" destination="qfy-RR-emg" id="L9u-bt-L8Y"/>
                 <outlet property="removeButton" destination="9dk-Lg-B9w" id="4y8-O9-mCI"/>
                 <outlet property="themeContainer" destination="0RP-qS-FAx" id="bth-hv-nRX"/>
                 <outlet property="themeLabel" destination="ZQB-Ds-Z0H" id="FeB-bj-jhB"/>

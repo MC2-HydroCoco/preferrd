@@ -23,27 +23,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-4Q-1SX">
-                                <rect key="frame" x="24" y="190" width="366" height="672"/>
+                                <rect key="frame" x="24" y="126" width="366" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SC1-TS-kYC">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="SC1-TS-kYC">
                                     <size key="itemSize" width="168" height="95"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fo9-1v-pUg">
-                                <rect key="frame" x="24" y="126" width="366" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Rpx-Li-dKl"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jns-pf-3RY">
-                                    <size key="itemSize" width="110" height="40"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
@@ -54,17 +40,13 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="f4W-4Q-1SX" secondAttribute="bottom" id="2C5-QZ-zVU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f4W-4Q-1SX" secondAttribute="trailing" constant="24" id="Fjj-gl-qMy"/>
                             <constraint firstItem="YlO-eI-Axy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="L8y-Vw-HAo"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fo9-1v-pUg" secondAttribute="trailing" constant="24" id="N8l-id-3FI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YlO-eI-Axy" secondAttribute="trailing" constant="24" id="PaX-kF-hkO"/>
                             <constraint firstItem="f4W-4Q-1SX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Phb-7F-eh8"/>
-                            <constraint firstItem="f4W-4Q-1SX" firstAttribute="top" secondItem="fo9-1v-pUg" secondAttribute="bottom" constant="24" id="Xit-9R-2YL"/>
+                            <constraint firstItem="f4W-4Q-1SX" firstAttribute="top" secondItem="YlO-eI-Axy" secondAttribute="bottom" constant="24" id="Sll-Ri-4w4"/>
                             <constraint firstItem="YlO-eI-Axy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="aSr-DL-KYr"/>
-                            <constraint firstItem="fo9-1v-pUg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="jyl-UU-g55"/>
-                            <constraint firstItem="fo9-1v-pUg" firstAttribute="top" secondItem="YlO-eI-Axy" secondAttribute="bottom" constant="24" id="sPT-Ir-QgJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tagCollectionView" destination="fo9-1v-pUg" id="ofH-kT-7nn"/>
                         <outlet property="themeCollectionView" destination="f4W-4Q-1SX" id="Hh1-7d-dPZ"/>
                     </connections>
                 </viewController>

@@ -13,7 +13,8 @@ class ThemeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var removeButton: UIButton!
     @IBOutlet weak var imageContainer: UIImageView!
-
+    @IBOutlet weak var imageOverlay: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
