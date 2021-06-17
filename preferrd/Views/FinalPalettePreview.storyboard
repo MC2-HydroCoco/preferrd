@@ -96,14 +96,14 @@
                                                                             <constraint firstAttribute="width" secondItem="w72-WF-7It" secondAttribute="height" multiplier="1:1" id="9Mc-Eo-hGY"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Jja-Jg-doV">
-                                                                        <rect key="frame" x="0.0" y="71" width="67" height="17"/>
-                                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" text="Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jja-Jg-doV">
+                                                                        <rect key="frame" x="0.0" y="71" width="67" height="13.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#FFFFFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="58V-yD-QPe">
-                                                                        <rect key="frame" x="0.0" y="92" width="67" height="14.5"/>
+                                                                        <rect key="frame" x="0.0" y="88.5" width="67" height="18"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -192,7 +192,7 @@
                                                                             <constraint firstAttribute="width" secondItem="udQ-yH-6VF" secondAttribute="height" multiplier="1:1" priority="750" id="85f-uD-7Zz"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Button Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="sz9-c4-UZw">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Button Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sz9-c4-UZw">
                                                                         <rect key="frame" x="0.0" y="71" width="67" height="17"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                         <nil key="textColor"/>

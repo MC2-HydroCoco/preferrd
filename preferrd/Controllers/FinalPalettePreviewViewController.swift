@@ -115,6 +115,8 @@ class FinalPalettePreviewViewController: UIViewController {
         saturation: saturationSlider.value,
         brightness: brightnessSlider.value
       )
+      colorPaletteHex[selectedColorIndex].text = initialColor.hex
+
       switch selectedColorIndex {
       case 0:
         previewBackground.backgroundColor = initialColor
