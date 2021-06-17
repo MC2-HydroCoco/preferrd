@@ -194,7 +194,7 @@ class PalettePreviewViewController: UIViewController {
 
   private func curateColorSet(baseColor: UIColor, for type: ContrastRatioType) -> [Int] {
     let initialColors = colorSet.map { $0.backgroundColor! }
-
+    print(initialColors.count)
     return ColorSet.filterContrastRatio(
       baseColor: baseColor,
       from: initialColors,
