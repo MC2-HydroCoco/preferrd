@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-jW-Sye">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="139" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-jW-Sye">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -40,7 +40,7 @@
                             <constraint firstItem="Hby-jW-Sye" firstAttribute="top" secondItem="RvP-q8-yPE" secondAttribute="top" id="qHC-Le-O76"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Palettes" id="uGf-xQ-HWN">
+                    <navigationItem key="navigationItem" title="My Palettes" id="uGf-xQ-HWN">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Mqn-Rb-ThI">
                             <connections>
                                 <segue destination="2Ik-Os-dpd" kind="show" id="9oN-GH-wOP"/>
@@ -48,7 +48,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="userPaletteTable" destination="Hby-jW-Sye" id="PuQ-YY-O9t"/>
+                        <outlet property="paletteTableView" destination="Hby-jW-Sye" id="2T4-5x-Fh0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk6-bO-bj6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
