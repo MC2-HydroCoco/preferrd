@@ -6,39 +6,31 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
-
-  @IBOutlet weak var userPaletteTable: UITableView!
-  @IBOutlet weak var userPaletteTableView: UITableView!
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    let nibCell = UINib(nibName: "PaletteTableViewCell", bundle: nil)
-    userPaletteTable.register(nibCell, forCellReuseIdentifier: "userPaletteTableViewCell")
-  }
-//  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//  }
-
-//  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    if let cell = tableView.dequeueReusableCell(withIdentifier: "userPaletteTableViewCell") as? PaletteTableViewCell {
-//      cell.colorPalette2
-//      cell.colorPalette3
-//      cell.colorPalette4
-//      cell.colorPalette5
-//      cell.colorPallete
-//      cell.labelPalette
-//    }
-//  }
+    
+    @IBOutlet weak var userPaletteTable: UITableView!
+    
+    var palettes: [Palette] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+        let nibCell = UINib(nibName: "PaletteTableViewCell", bundle: nil)
+        userPaletteTable.register(nibCell, forCellReuseIdentifier: "userPaletteTableViewCell")
+    }
 }
 
-extension MainViewController: UITableViewDataSource, UITabBarDelegate {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    1
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    UITableViewCell()
-  }
-
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        palettes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
 }
