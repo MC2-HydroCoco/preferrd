@@ -147,7 +147,7 @@ class PalettePreviewViewController: UIViewController {
   private func applyHighlights() {
     selectedColorsIndex.forEach { index in
       let colorView = colorSet[index].layer
-      colorView.borderColor = Constants.AppColors.highlight?.cgColor
+      colorView.borderColor = Constants.AppColors.highlight.cgColor
       colorView.borderWidth = 4
     }
   }
@@ -185,7 +185,7 @@ class PalettePreviewViewController: UIViewController {
       }
 
       let selectedView = sender.layer
-      selectedView.borderColor = Constants.AppColors.highlight?.cgColor
+      selectedView.borderColor = Constants.AppColors.highlight.cgColor
       selectedView.borderWidth = 4
 
       selectedColorIndex = sender.tag
@@ -194,7 +194,7 @@ class PalettePreviewViewController: UIViewController {
 
   private func curateColorSet(baseColor: UIColor, for type: ContrastRatioType) -> [Int] {
     let initialColors = colorSet.map { $0.backgroundColor! }
-    print(initialColors.count)
+
     return ColorSet.filterContrastRatio(
       baseColor: baseColor,
       from: initialColors,
