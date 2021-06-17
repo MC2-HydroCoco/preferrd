@@ -8,6 +8,9 @@
 import UIKit
 
 class FinalPalettePreviewViewController: UIViewController {
+  // CoreData Helper
+  let manager = PaletteManager()
+
   // Required Payload
   var palette = [UIColor]()
 
@@ -29,7 +32,6 @@ class FinalPalettePreviewViewController: UIViewController {
   @IBOutlet weak var saturationWarning: UIButton!
   @IBOutlet weak var brightnessWarning: UIButton!
   @IBOutlet weak var adjustmentPanel: UIStackView!
-  @IBOutlet weak var discardButton: UIButton!
   @IBOutlet weak var applyButton: UIButton!
 
   override func viewDidLoad() {
@@ -79,7 +81,6 @@ class FinalPalettePreviewViewController: UIViewController {
     ([
       previewBackground,
       previewButton,
-      discardButton,
       applyButton
     ] + colorPalette).forEach { view in
       view?.layer.cornerRadius = 8
@@ -95,8 +96,8 @@ class FinalPalettePreviewViewController: UIViewController {
 
   private func updateSlidersValue() {
     if let color = colorPalette[selectedColorIndex].backgroundColor {
-        saturationSlider.value = color.getSaturation()
-        brightnessSlider.value = color.getBrightness()
+      saturationSlider.value = color.getSaturation()
+      brightnessSlider.value = color.getBrightness()
     }
   }
 
@@ -132,7 +133,19 @@ class FinalPalettePreviewViewController: UIViewController {
   }
 
   @objc func doneButtonTapped() {
-    print("Perform Segue!")
+    if let background = previewBackground.backgroundColor,
+       let title      = previewTitle.textColor,
+       let body       = previewBody.textColor,
+       let button     = previewButton.backgroundColor,
+       let buttonText = previewButton.tintColor {
+      manager.add(name: "My Palette",
+                  backgroundHex: background.hex,
+                  headlineHex: title.hex,
+                  bodyHex: body.hex,
+                  buttonBgHex: button.hex,
+                  buttonTextHex: buttonText.hex)
+      navigationController?.popToRootViewController(animated: true)
+    }
   }
 
   @IBAction func discardChanges(_ sender: Any) {

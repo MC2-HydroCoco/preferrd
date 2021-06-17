@@ -24,7 +24,7 @@ class PalettePreviewViewController: UIViewController {
       applyHighlights()
       hidePreviewElements()
 
-//      currentStepTitle.text = allSteps[currentStep].title
+      //      currentStepTitle.text = allSteps[currentStep].title
       title = allSteps[currentStep].title
 
       switch currentStep {
@@ -100,7 +100,7 @@ class PalettePreviewViewController: UIViewController {
     }
     [
       backButton,
-     nextButton
+      nextButton
     ].forEach { button in
       button?.backgroundColor = UIColor(named: "Dark")
       button?.tintColor = UIColor(named: "Light")
@@ -217,14 +217,14 @@ class PalettePreviewViewController: UIViewController {
     switch currentStep {
     // Reset for Background Color Step
     case 0:
-      notion.isHidden = true
+      //      notion.isHidden = true
       colorSet.forEach { view in
         view.isUserInteractionEnabled = true
         view.layer.opacity = 1
       }
     // Curate for Headline Color Step
     case 1:
-      notion.isHidden = false
+      //      notion.isHidden = false
       curatedColorsIndex = curateColorSet(baseColor: selectedBackgroundColor, for: .title)
     // Curate for Body Color Step
     case 2:
@@ -261,33 +261,33 @@ class PalettePreviewViewController: UIViewController {
   }
 
   @IBAction func nextStep(_ sender: Any) {
-    if currentStep < 4 {
-      if hasSelected {
+    if hasSelected {
+      if currentStep < 4 {
         // Update selected colors
         selectedColorsIndex.append(selectedColorIndex)
         currentStep += 1
         updateColorSet()
         scrollUp()
         hasSelected = false
-      }
-    } else {
-      guard let background = previewBackground.backgroundColor,
-            let title = previewTitle.textColor,
-            let body = previewBody.textColor,
-            let button = previewButton.backgroundColor,
-            let buttonText = previewButton.tintColor else {
-        fatalError("Error getting Preview Element's color")
-      }
+      } else {
+        guard let background = previewBackground.backgroundColor,
+              let title = previewTitle.textColor,
+              let body = previewBody.textColor,
+              let button = previewButton.backgroundColor,
+              let buttonText = previewButton.tintColor else {
+          fatalError("Error getting Preview Element's color")
+        }
 
-      let finalPalette = [
-        background,
-        title,
-        body,
-        button,
-        buttonText
-      ]
+        let finalPalette = [
+          background,
+          title,
+          body,
+          button,
+          buttonText
+        ]
 
-      performSegue(withIdentifier: "seeFinalPreview", sender: finalPalette)
+        performSegue(withIdentifier: "seeFinalPreview", sender: finalPalette)
+      }
     }
   }
 
