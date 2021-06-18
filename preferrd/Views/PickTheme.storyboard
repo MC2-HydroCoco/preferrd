@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-4Q-1SX">
-                                <rect key="frame" x="24" y="126" width="366" height="736"/>
+                                <rect key="frame" x="24" y="182" width="366" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="SC1-TS-kYC">
                                     <size key="itemSize" width="168" height="95"/>
@@ -32,6 +33,30 @@
                                     <inset key="sectionInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="quu-gH-Pk7">
+                                <rect key="frame" x="24" y="118" width="366" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="S0i-ac-Y8F"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oHw-f3-9DD">
+                                    <size key="itemSize" width="128" height="47"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3k8-9r-BV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YF2-gp-vyT">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="120" height="40"/>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -42,11 +67,15 @@
                             <constraint firstItem="YlO-eI-Axy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="L8y-Vw-HAo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YlO-eI-Axy" secondAttribute="trailing" constant="24" id="PaX-kF-hkO"/>
                             <constraint firstItem="f4W-4Q-1SX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Phb-7F-eh8"/>
-                            <constraint firstItem="f4W-4Q-1SX" firstAttribute="top" secondItem="YlO-eI-Axy" secondAttribute="bottom" constant="24" id="Sll-Ri-4w4"/>
+                            <constraint firstItem="quu-gH-Pk7" firstAttribute="top" secondItem="YlO-eI-Axy" secondAttribute="bottom" constant="16" id="QQr-7i-rw0"/>
                             <constraint firstItem="YlO-eI-Axy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="aSr-DL-KYr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="quu-gH-Pk7" secondAttribute="trailing" constant="24" id="fJl-Aq-9DF"/>
+                            <constraint firstItem="f4W-4Q-1SX" firstAttribute="top" secondItem="quu-gH-Pk7" secondAttribute="bottom" constant="16" id="hdz-qz-qxX"/>
+                            <constraint firstItem="quu-gH-Pk7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="j7V-gI-weX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tagCollectionView" destination="quu-gH-Pk7" id="ZKD-Aq-syE"/>
                         <outlet property="themeCollectionView" destination="f4W-4Q-1SX" id="Hh1-7d-dPZ"/>
                     </connections>
                 </viewController>

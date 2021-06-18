@@ -10,36 +10,34 @@ import UIKit
 class PickThemeViewController: UIViewController {
 
     @IBOutlet weak var themeCollectionView: UICollectionView!
+    @IBOutlet weak var tagCollectionView: UICollectionView!
     
-    var selectedTheme = [Int]() {
+    var selectedTheme = [ThemeCollectionViewCell]() {
         didSet {
-            themeCollectionView.reloadData()
+            tagCollectionView.reloadData()
         }
     }
-    
-    var arrData = [String]() // This is your data array
-    var arrSelectedIndex = [IndexPath]() // This is selected cell Index array
-    var arrSelectedData = [String]() // This is selected cell data array
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
         themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
-//    let nibCellTag = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
-//        tagCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
         
         themeCollectionView.delegate = self
         themeCollectionView.dataSource = self
         themeCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-//        tagCollectionView.delegate = self
-//        tagCollectionView.dataSource = self
+        
+        tagCollectionView.delegate = self
+        tagCollectionView.dataSource = self
+        tagCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
         themeCollectionView.allowsMultipleSelection = true
 
     }
 }
+
+
 extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewDelegate,
                                    UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -65,6 +63,8 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
                 cell.themeContainer.layer.cornerRadius = 12
                 cell.themeLabel.text = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
                 cell.imageContainer.isHidden = true
+                cell.themeLabel.preferredMaxLayoutWidth = collectionView.frame.width - 32
+
                 
             } else {
                 let getColorTheme = ColorTheme.allCases[indexPath.row]
@@ -85,16 +85,17 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
         var height = CGFloat(0)
         
         if indexPath.section == 0 {
-            let noOfCellsInRow = 3
-
-            let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-            let totalSpace = flowLayout.sectionInset.left
-                    + flowLayout.sectionInset.right
-                    + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
-            let screenBounds = UIScreen.main.bounds
-            width = (screenBounds.width / CGFloat(noOfCellsInRow)) - totalSpace
-            height = (screenBounds.height / 10) - totalSpace
-            
+//            let noOfCellsInRow = 3
+//
+//            let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+//            let totalSpace = flowLayout.sectionInset.left
+//                    + flowLayout.sectionInset.right
+//                    + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
+//            let screenBounds = UIScreen.main.bounds
+//            width = (screenBounds.width / CGFloat(noOfCellsInRow)) - totalSpace
+//            height = (screenBounds.height / 10) - totalSpace
+            width = 200
+            height = 30
         } else {
             let noOfCellsInRow = 2
             
