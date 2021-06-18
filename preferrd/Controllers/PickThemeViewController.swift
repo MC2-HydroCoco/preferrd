@@ -12,9 +12,9 @@ class PickThemeViewController: UIViewController {
     @IBOutlet weak var themeCollectionView: UICollectionView!
     @IBOutlet weak var tagCollectionView: UICollectionView!
     
-    var selectedTheme = [ThemeCollectionViewCell]() {
+    var selectedTheme = [Int]() {
         didSet {
-            tagCollectionView.reloadData()
+            themeCollectionView.reloadData()
         }
     }
 
@@ -27,10 +27,6 @@ class PickThemeViewController: UIViewController {
         themeCollectionView.delegate = self
         themeCollectionView.dataSource = self
         themeCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        
-        tagCollectionView.delegate = self
-        tagCollectionView.dataSource = self
-        tagCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
         themeCollectionView.allowsMultipleSelection = true
 
@@ -61,11 +57,11 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
             
             if indexPath.section == 0 {
                 cell.themeContainer.layer.cornerRadius = 12
+                cell.imageOverlay.layer.backgroundColor = UIColor(hex: "#DEDEDE").cgColor
                 cell.themeLabel.text = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
                 cell.imageContainer.isHidden = true
                 cell.themeLabel.preferredMaxLayoutWidth = collectionView.frame.width - 32
 
-                
             } else {
                 let getColorTheme = ColorTheme.allCases[indexPath.row]
                 cell.removeButton.isHidden = true
@@ -81,21 +77,12 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var width = CGFloat(0)
-        var height = CGFloat(0)
         
         if indexPath.section == 0 {
-//            let noOfCellsInRow = 3
-//
-//            let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-//            let totalSpace = flowLayout.sectionInset.left
-//                    + flowLayout.sectionInset.right
-//                    + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
-//            let screenBounds = UIScreen.main.bounds
-//            width = (screenBounds.width / CGFloat(noOfCellsInRow)) - totalSpace
-//            height = (screenBounds.height / 10) - totalSpace
-            width = 200
-            height = 30
+            let item = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
+            let itemSize = item.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24)
+            ])
+            return itemSize
         } else {
             let noOfCellsInRow = 2
             
@@ -104,10 +91,10 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
                     + flowLayout.sectionInset.right
                     + flowLayout.minimumInteritemSpacing
             let screenBounds = UIScreen.main.bounds
-            width = (screenBounds.width / CGFloat(noOfCellsInRow)) - totalSpace - (16*2)
-            height = (screenBounds.height / 10) - totalSpace
+            let width = (screenBounds.width / CGFloat(noOfCellsInRow)) - totalSpace - (16*2)
+            let height = (screenBounds.height / 10) - totalSpace
+            return CGSize(width: width, height: height)
         }
-        return CGSize(width: width, height: height)
        
     }
     
