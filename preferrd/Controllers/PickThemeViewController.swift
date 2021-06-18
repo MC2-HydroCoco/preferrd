@@ -10,13 +10,15 @@ import UIKit
 class PickThemeViewController: UIViewController {
 
     @IBOutlet weak var themeCollectionView: UICollectionView!
-    @IBOutlet weak var tagCollectionView: UICollectionView!
+//    @IBOutlet weak var tagCollectionView: UICollectionView!
     
     var selectedTheme = [Int]() {
         didSet {
             themeCollectionView.reloadData()
         }
     }
+    
+    var arrayOfColorTheme:[ColorTheme] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,6 @@ class PickThemeViewController: UIViewController {
         themeCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
         themeCollectionView.allowsMultipleSelection = true
-
     }
 }
 
@@ -61,7 +62,12 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
                 cell.themeLabel.text = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
                 cell.imageContainer.isHidden = true
                 cell.themeLabel.preferredMaxLayoutWidth = collectionView.frame.width - 32
+                cell.removeButton.isHidden = false
+                
+                let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+                cell.addGestureRecognizer(tapRecognizer)
 
+                
             } else {
                 let getColorTheme = ColorTheme.allCases[indexPath.row]
                 cell.removeButton.isHidden = true
@@ -80,7 +86,7 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
         
         if indexPath.section == 0 {
             let item = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
-            let itemSize = item.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24)
+            let itemSize = item.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 36)
             ])
             return itemSize
         } else {
@@ -100,6 +106,8 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
+            selectedTheme.remove(at: indexPath.row)
+            print("kons")
             
         }else {
             
@@ -110,6 +118,19 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
             
             selectedTheme.append(indexPath.row)
         }
+    }
+    
+    @objc func handleTap (_ sender: UITapGestureRecognizer) {
+//        let location = sender.location(in: themeCollectionView)
+//        if let indexPath = themeCollectionView.indexPathForItem(at: location) {
+//            guard let cell = themeCollectionView.cellForItem(at: indexPath) as? ThemeCollectionViewCell
+//            else {
+//                return
+//            }
+//            if cell.removeButton.frame.contains(location) {
+//                selectedTheme.remove(at: indexPath.row)
+//            }
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

@@ -21,6 +21,6 @@ class ThemeCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func removeButtonAction(_ sender: Any) {
-        self.removeFromSuperview()
+//        self.removeFromSuperview()
     }
 }
