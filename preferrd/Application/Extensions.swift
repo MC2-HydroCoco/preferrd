@@ -27,6 +27,117 @@ extension UIView {
     self.layer.shadowOffset = CGSize(width: 4, height: 4)
     self.layer.shadowRadius = 4
   }
+
+  func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+    let path = UIBezierPath(
+      roundedRect: bounds,
+      byRoundingCorners: corners,
+      cornerRadii: CGSize(width: radius, height: radius)
+    )
+    let mask = CAShapeLayer()
+    mask.path = path.cgPath
+    layer.mask = mask
+  }
+
+  func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
+    let border = CALayer()
+    border.backgroundColor = color.cgColor
+    border.opacity = 0.05
+    border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
+    self.layer.addSublayer(border)
+  }
+}
+
+extension UIViewController {
+  func popup(title: String, detail: String, handler: @escaping () -> Void) -> UIView {
+    // Setup popup window
+    let popup = UIView()
+    popup.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0, alpha: 0.7)
+    popup.layer.opacity = 0
+    popup.frame = self.view.bounds
+
+    // Setup popup elements
+    /// Title
+    let titleLabel: UILabel = {
+      let label = UILabel()
+      label.text = title
+      label.textColor = Constants.AppColors.dark
+      label.font = UIFont.boldSystemFont(ofSize: 24)
+      label.textAlignment = .center
+      return label
+    }()
+
+    /// Text
+    let detailLabel: UILabel = {
+      let label = UILabel()
+      label.text = detail
+      label.textColor = Constants.AppColors.dark
+      label.numberOfLines = 0
+      label.textAlignment = .center
+      return label
+    }()
+
+    /// Dismiss Button
+    let okayAction = UIAction(handler: { _ in
+      UIView.animate(withDuration: 0.35) {
+        popup.layer.opacity = 0
+      } completion: { _ in
+        popup.removeFromSuperview()
+        handler()
+      }
+    })
+
+    let okayButton: UIButton = {
+      let button = UIButton(primaryAction: okayAction)
+      button.setTitle("Okay", for: .normal)
+      button.setTitleColor(Constants.AppColors.light, for: .normal)
+      button.backgroundColor = Constants.AppColors.dark
+      button.applyShadow()
+      let padding: CGFloat = 12
+      button.contentEdgeInsets = UIEdgeInsets(
+        top: padding,
+        left: padding * 3,
+        bottom: padding,
+        right: padding * 3
+      )
+      return button
+    }()
+
+    // Setup container and Compile popup elements
+    let container: UIStackView = {
+      let view = UIStackView(arrangedSubviews: [titleLabel, detailLabel, okayButton])
+      let padding: CGFloat = 24
+      view.axis = .vertical
+      view.spacing = 20
+      view.alignment = .center
+      view.backgroundColor = Constants.AppColors.container
+      view.layer.cornerRadius = 20
+      view.isLayoutMarginsRelativeArrangement = true
+      view.translatesAutoresizingMaskIntoConstraints = false
+      view.directionalLayoutMargins = NSDirectionalEdgeInsets(
+        top: padding,
+        leading: padding,
+        bottom: padding,
+        trailing: padding
+      )
+      return view
+    }()
+
+    // Apply constraints
+    view.addSubview(popup)
+    popup.addSubview(container)
+    NSLayoutConstraint.activate([
+      container.widthAnchor.constraint(equalTo: popup.widthAnchor, multiplier: 0.8),
+      container.centerXAnchor.constraint(equalTo: popup.centerXAnchor),
+      container.centerYAnchor.constraint(equalTo: popup.centerYAnchor)
+    ])
+
+    UIView.animate(withDuration: 0.35) {
+      popup.layer.opacity = 1
+    }
+
+    return popup
+  }
 }
 
 extension UIColor {

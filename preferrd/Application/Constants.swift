@@ -14,6 +14,7 @@ struct Constants {
     static let highlight = UIColor(named: "Highlight")!
     static let dark = UIColor(named: "Dark")!
     static let light = UIColor(named: "Light")!
+    static let container = UIColor(named: "Container")!
   }
 
   static let colors = [

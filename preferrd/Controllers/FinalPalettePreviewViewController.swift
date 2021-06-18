@@ -9,7 +9,7 @@ import UIKit
 
 class FinalPalettePreviewViewController: UIViewController {
   // CoreData Helper
-  let manager = PaletteManager()
+  let paletteManager = PaletteManager.shared
 
   // Required Payload
   var palette = [UIColor]()
@@ -38,6 +38,16 @@ class FinalPalettePreviewViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "seeActionSheet" {
+      if let destination = segue.destination as? PaletteActionViewController,
+         let payload = sender as? [String: String] {
+        destination.payload = payload
+        destination.nav = navigationController
+      }
+    }
   }
 
   private func resetPalette() {
@@ -136,38 +146,6 @@ class FinalPalettePreviewViewController: UIViewController {
     }
   }
 
-  @objc func doneButtonTapped() {
-    if let background = previewBackground.backgroundColor,
-       let title      = previewTitle.textColor,
-       let body       = previewBody.textColor,
-       let button     = previewButton.backgroundColor,
-       let buttonText = previewButton.tintColor {
-
-      if let paletteToUpdate = paletteToUpdate {
-        manager.update(
-          palette: paletteToUpdate,
-          name: "My Palette",
-          backgroundHex: background.hex,
-          headlineHex: title.hex,
-          bodyHex: body.hex,
-          buttonBgHex: button.hex,
-          buttonTextHex: buttonText.hex
-        )
-      } else {
-        manager.add(
-          name: "My Palette",
-          backgroundHex: background.hex,
-          headlineHex: title.hex,
-          bodyHex: body.hex,
-          buttonBgHex: button.hex,
-          buttonTextHex: buttonText.hex
-        )
-      }
-
-      navigationController?.popToRootViewController(animated: true)
-    }
-  }
-
   @IBAction func discardChanges(_ sender: Any) {
     resetPalette()
     updateSlidersValue()
@@ -178,22 +156,69 @@ class FinalPalettePreviewViewController: UIViewController {
     updateHighlight()
   }
 
-  private func updateHighlight() {
+  private func resetHighligths(handler: (() -> Void)? = nil) {
     // Reset Highlight
     colorPalette.forEach { view in
       view.layer.borderWidth = 4
       view.layer.borderColor = UIColor.clear.cgColor
     }
+  }
 
-    // Apply new highlight
-    if adjustmentPanel.isHidden == false {
-      colorPalette[selectedColorIndex].layer.borderColor = Constants.AppColors.highlight.cgColor
+  private func updateHighlight() {
+    if self.adjustmentPanel.isHidden == false {
+      colorPalette[self.selectedColorIndex].layer.borderColor = Constants.AppColors.highlight.cgColor
     }
   }
 
   @IBAction func toggleAdjustment(_ sender: Any) {
-    self.adjustmentPanel.isHidden.toggle()
-    adjustColor()
-    updateHighlight()
+    if adjustmentPanel.isHidden {
+      adjustmentPanel.layer.opacity = 0
+      self.adjustmentPanel.isHidden.toggle()
+      UIView.animate(withDuration: 0.35) {
+        self.adjustmentPanel.layer.opacity = 1
+      }
+      resetPalette()
+      resetHighligths()
+      updateHighlight()
+      adjustColor()
+    } else {
+      resetHighligths()
+      UIView.animate(withDuration: 0.35) {
+        self.adjustmentPanel.layer.opacity = 0
+      } completion: { _ in
+        self.adjustmentPanel.isHidden.toggle()
+      }
+    }
+  }
+
+  @objc func doneButtonTapped() {
+    if let background = previewBackground.backgroundColor,
+       let title      = previewTitle.textColor,
+       let body       = previewBody.textColor,
+       let button     = previewButton.backgroundColor,
+       let buttonText = previewButton.tintColor {
+
+      if let paletteToUpdate = paletteToUpdate {
+        paletteManager.update(
+          palette: paletteToUpdate,
+          name: "My Palette",
+          backgroundHex: background.hex,
+          headlineHex: title.hex,
+          bodyHex: body.hex,
+          buttonBgHex: button.hex,
+          buttonTextHex: buttonText.hex
+        )
+        navigationController?.popToRootViewController(animated: true)
+      } else {
+        let payload = [
+          "background": background.hex,
+          "headline": title.hex,
+          "body": body.hex,
+          "button": button.hex,
+          "buttonText": buttonText.hex
+        ]
+        performSegue(withIdentifier: "seeActionSheet", sender: payload)
+      }
+    }
   }
 }
