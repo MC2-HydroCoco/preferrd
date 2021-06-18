@@ -15,6 +15,17 @@ class MainViewController: UIViewController {
     var prevCell: PaletteTableViewCell?
     var currCell: PaletteTableViewCell?
     
+    let textLayer: CATextLayer = {
+        let textLayer = CATextLayer()
+        textLayer.alignmentMode = .center
+        textLayer.fontSize = 17
+        textLayer.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        textLayer.string = "Remove"
+        textLayer.foregroundColor = UIColor.white.cgColor
+        textLayer.contentsScale = UIScreen.main.scale
+        textLayer.frame = CGRect(x: 0, y: 26, width: 96, height: 72)
+        return textLayer
+    }()
     var removeAction: CALayer = {
         let layer = CALayer()
         layer.cornerRadius = 12
@@ -37,13 +48,24 @@ class MainViewController: UIViewController {
         
         let nibCell = UINib(nibName: "\(PaletteTableViewCell.self)", bundle: nil)
         paletteTableView.register(nibCell, forCellReuseIdentifier: "paletteTableViewCell")
+        
+        setupRemoveAction()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        paletteManager.add(name: "Sample Palette", backgroundHex: "#FFFFFF", headlineHex: "#212121", bodyHex: "#303030", buttonBgHex: "#121212", buttonTextHex: "#FFFFFF")
         palettes = paletteManager.fetch()
     }
     
+    func setupRemoveAction() {
+        removeAction.addSublayer(textLayer)
+        
+        removeAction.opacity = 0
+    }
+    
+    // MARK: - Prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editPalette" {
             if let destination = segue.destination as? FinalPalettePreviewViewController,
@@ -73,8 +95,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let palette = palettes[indexPath.row]
         
         cell.nameLabel.text = palette.name
-        cell.nameLabel.textColor = Constants.AppColors.dark
-        cell.nameLabel.superview?.backgroundColor = Constants.AppColors.light
         cell.backgroundColorView.backgroundColor = UIColor(hex: palette.backgroundHex!)
         cell.headlineColorView.backgroundColor = UIColor(hex: palette.headlineHex!)
         cell.bodyColorView.backgroundColor = UIColor(hex: palette.bodyHex!)
@@ -84,6 +104,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleGesture))
         gestureRecognizer.delegate = self
         cell.addGestureRecognizer(gestureRecognizer)
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        cell.addGestureRecognizer(tapRecognizer)
         
         return cell
     }
@@ -130,6 +153,22 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 self.prevCell = cell
             default:
                 break
+            }
+        }
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: currCell)
+        if let currCell = currCell {
+            if removeAction.frame.contains(location) {
+                if let index = paletteTableView.indexPath(for: currCell) {
+                    removeAction.removeFromSuperlayer()
+                    DispatchQueue.main.async {
+//                        self.paletteTableView.deleteRows(at: [index], with: .right)
+                    }
+                    paletteManager.remove(palette: palettes[index.row])
+                    palettes = paletteManager.fetch()
+                }
             }
         }
     }
