@@ -16,6 +16,7 @@ class PalettePreviewViewController: UIViewController {
   private var selectedColorsIndex = [Int]()
   private var selectedColorIndex = -1
   private var hasSelected = false
+  private var popup: UIView? = nil
 
   // MARK: - Step
   private var currentStep = 0 {
@@ -64,6 +65,14 @@ class PalettePreviewViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    // Navigation Configuration
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      image: UIImage(systemName: "info.circle.fill"),
+      style: .plain,
+      target: self,
+      action: #selector(infoButtonTapped)
+    )
+
     // Testing Purpose:
     selectedCombination = ColorCombination
       .triadic
@@ -90,15 +99,21 @@ class PalettePreviewViewController: UIViewController {
     hidePreviewElements()
 
     // 3. Apply styling
-    ([
+    [
       previewBackground,
       previewButton,
       backButton,
       nextButton
-    ] + colorSet).forEach { element in
-      view?.layer.cornerRadius = 8
+    ].forEach { element in
       element?.applyShadow()
+      element?.layer.cornerRadius = 8
     }
+
+    colorSet.forEach { element in
+      element.applyShadow()
+      element.layer.cornerRadius = 6
+    }
+
     [
       backButton,
       nextButton
@@ -247,6 +262,22 @@ class PalettePreviewViewController: UIViewController {
       UIView.animate(withDuration: 0.75) {
         self.colorSet[index].isUserInteractionEnabled = true
         self.colorSet[index].layer.opacity = 1
+      }
+    }
+  }
+
+  @objc func infoButtonTapped() {
+    let step = allSteps[currentStep]
+    if let popup = popup {
+      UIView.animate(withDuration: 0.35) {
+        popup.layer.opacity = 0
+      } completion: { _ in
+        popup.removeFromSuperview()
+        self.popup = nil
+      }
+    } else {
+      popup = popup(title: step.title, detail: step.detail) {
+        self.popup = nil
       }
     }
   }

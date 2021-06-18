@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 struct PaletteManager {
+  static let shared = PaletteManager()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func fetch() -> [Palette] {

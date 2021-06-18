@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
       paletteTableView.reloadData()
     }
   }
-  let paletteManager = PaletteManager()
+  let paletteManager = PaletteManager.shared
 
   override func viewDidLoad() {
     super.viewDidLoad()
