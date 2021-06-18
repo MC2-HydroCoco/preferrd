@@ -13,6 +13,7 @@ class FinalPalettePreviewViewController: UIViewController {
 
   // Required Payload
   var palette = [UIColor]()
+  var paletteToUpdate: Palette?
 
   // Palette Preview Properties
   @IBOutlet weak var previewBackground: UIStackView!
@@ -77,13 +78,14 @@ class FinalPalettePreviewViewController: UIViewController {
 
     updateSlidersValue()
 
-    // Apply Design
+    // Apply Styling
     ([
       previewBackground,
       previewButton,
       applyButton
     ] + colorPalette).forEach { view in
       view?.layer.cornerRadius = 8
+      view?.applyShadow()
     }
 
     // Add tap gesture to each color in color palette
@@ -140,12 +142,28 @@ class FinalPalettePreviewViewController: UIViewController {
        let body       = previewBody.textColor,
        let button     = previewButton.backgroundColor,
        let buttonText = previewButton.tintColor {
-      manager.add(name: "My Palette",
-                  backgroundHex: background.hex,
-                  headlineHex: title.hex,
-                  bodyHex: body.hex,
-                  buttonBgHex: button.hex,
-                  buttonTextHex: buttonText.hex)
+
+      if let paletteToUpdate = paletteToUpdate {
+        manager.update(
+          palette: paletteToUpdate,
+          name: "My Palette",
+          backgroundHex: background.hex,
+          headlineHex: title.hex,
+          bodyHex: body.hex,
+          buttonBgHex: button.hex,
+          buttonTextHex: buttonText.hex
+        )
+      } else {
+        manager.add(
+          name: "My Palette",
+          backgroundHex: background.hex,
+          headlineHex: title.hex,
+          bodyHex: body.hex,
+          buttonBgHex: button.hex,
+          buttonTextHex: buttonText.hex
+        )
+      }
+
       navigationController?.popToRootViewController(animated: true)
     }
   }
@@ -169,7 +187,7 @@ class FinalPalettePreviewViewController: UIViewController {
 
     // Apply new highlight
     if adjustmentPanel.isHidden == false {
-      colorPalette[selectedColorIndex].layer.borderColor = Constants.AppColors.highlight?.cgColor
+      colorPalette[selectedColorIndex].layer.borderColor = Constants.AppColors.highlight.cgColor
     }
   }
 

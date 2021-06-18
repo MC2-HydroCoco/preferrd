@@ -16,7 +16,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNH-M0-UNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539.8550724637685" y="93.75"/>
+            <point key="canvasLocation" x="2540" y="-31"/>
+        </scene>
+        <!--FinalPalettePreview-->
+        <scene sceneID="IDS-NE-5ek">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FinalPalettePreview" id="mMb-Oo-RXK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uVm-Fw-YIt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bun-br-EUw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="220"/>
         </scene>
         <!--Main Menu-->
         <scene sceneID="Y7P-ty-lYX">
@@ -26,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="139" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-jW-Sye">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="139" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-jW-Sye">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -49,6 +59,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="paletteTableView" destination="Hby-jW-Sye" id="2T4-5x-Fh0"/>
+                        <segue destination="mMb-Oo-RXK" kind="show" identifier="editPalette" id="OLx-v1-eAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk6-bO-bj6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
