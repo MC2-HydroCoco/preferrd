@@ -18,6 +18,7 @@ extension String {
   }
 }
 
+// MARK: - UIView
 extension UIView {
   func applyShadow() {
     self.layer.cornerRadius = 12
