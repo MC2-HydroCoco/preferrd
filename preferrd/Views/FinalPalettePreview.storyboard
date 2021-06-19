@@ -62,6 +62,13 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOO-Nz-56h">
+                                                                <rect key="frame" x="345" y="0.0" width="21" height="23"/>
+                                                                <state key="normal" image="slider.horizontal.3" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="toggleAdjustment:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a1s-DT-yQe"/>
+                                                                </connections>
+                                                            </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kdy-0g-Nly">
                                                                 <rect key="frame" x="313" y="0.0" width="53" height="23"/>
                                                                 <subviews>

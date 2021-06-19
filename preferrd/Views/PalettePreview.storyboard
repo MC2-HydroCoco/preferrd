@@ -284,10 +284,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--FinalPalettePreview-->
+        <!--Main-->
         <scene sceneID="rjd-eU-EPC">
             <objects>
-                <viewControllerPlaceholder storyboardName="FinalPalettePreview" id="wOo-pb-q6r" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" id="wOo-pb-q6r" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="PsV-3d-rny"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbH-E4-vTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
