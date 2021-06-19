@@ -50,6 +50,8 @@
                                             </stackView>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curated colors based on your previous color selection:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="v5l-dh-ju9">
                                                 <rect key="frame" x="24" y="238" width="342" height="0.0"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="12" bottom="12" trailing="12"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -58,14 +60,14 @@
                                                 <rect key="frame" x="24" y="249.99999999999997" width="342" height="306.33333333333326"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="r5f-ru-dZV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="306.33333333333331"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="306.33333333333331"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAa-uO-nvM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="147.33333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="147.33333333333334"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzn-HP-OUb">
-                                                                <rect key="frame" x="0.0" y="159.33333333333331" width="76.666666666666671" height="147"/>
+                                                                <rect key="frame" x="0.0" y="159.33333333333331" width="58.666666666666664" height="147"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                         </subviews>
@@ -74,90 +76,110 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-fn-Nnd">
-                                                        <rect key="frame" x="88.666666666666671" y="0.0" width="253.33333333333331" height="306.33333333333331"/>
+                                                        <rect key="frame" x="70.666666666666657" y="0.0" width="271.33333333333337" height="306.33333333333331"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Un9-90-bub">
-                                                                <rect key="frame" x="0.0" y="0.0" width="253.33333333333334" height="51.666666666666664"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="271.33333333333331" height="51.666666666666664"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fY-nD-nJr">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSI-65-Mva">
-                                                                        <rect key="frame" x="88.333333333333314" y="0.0" width="76.666666666666686" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="70.999999999999986" y="0.0" width="58.666666666666671" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtP-eB-FKs">
-                                                                        <rect key="frame" x="177" y="0.0" width="76.333333333333314" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="141.66666666666669" y="0.0" width="59" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIK-eg-EKF">
+                                                                        <rect key="frame" x="212.66666666666663" y="0.0" width="58.666666666666686" height="51.666666666666664"/>
+                                                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                                     </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nfj-AN-as8">
-                                                                <rect key="frame" x="0.0" y="63.666666666666686" width="253.33333333333334" height="51.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="63.666666666666686" width="271.33333333333331" height="51.666666666666657"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVi-46-o5B">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-RA-s5O">
-                                                                        <rect key="frame" x="88.333333333333314" y="0.0" width="76.666666666666686" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="70.999999999999986" y="0.0" width="58.666666666666671" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSY-rG-bxc">
-                                                                        <rect key="frame" x="177" y="0.0" width="76.333333333333314" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="141.66666666666669" y="0.0" width="59" height="51.666666666666664"/>
+                                                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-VI-Kgb">
+                                                                        <rect key="frame" x="212.66666666666663" y="0.0" width="58.666666666666686" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kom-YK-92x">
-                                                                <rect key="frame" x="0.0" y="127.33333333333333" width="253.33333333333334" height="51.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="127.33333333333333" width="271.33333333333331" height="51.666666666666671"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJk-ro-IXb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxp-1Y-5ow">
-                                                                        <rect key="frame" x="88.333333333333314" y="0.0" width="76.666666666666686" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="70.999999999999986" y="0.0" width="58.666666666666671" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-xA-oLK">
-                                                                        <rect key="frame" x="177" y="0.0" width="76.333333333333314" height="51.666666666666664"/>
-                                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                        <rect key="frame" x="141.66666666666669" y="0.0" width="59" height="51.666666666666664"/>
+                                                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-c5-8gc">
+                                                                        <rect key="frame" x="212.66666666666663" y="0.0" width="58.666666666666686" height="51.666666666666664"/>
+                                                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                                     </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nbO-LI-beG">
-                                                                <rect key="frame" x="0.0" y="191" width="253.33333333333334" height="51.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="191" width="271.33333333333331" height="51.666666666666657"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-eL-st2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTV-m6-1zp">
-                                                                        <rect key="frame" x="88.333333333333314" y="0.0" width="76.666666666666686" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="70.999999999999986" y="0.0" width="58.666666666666671" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvQ-jB-4Qy">
-                                                                        <rect key="frame" x="177" y="0.0" width="76.333333333333314" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="141.66666666666669" y="0.0" width="59" height="51.666666666666664"/>
+                                                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7L-Df-FtZ">
+                                                                        <rect key="frame" x="212.66666666666663" y="0.0" width="58.666666666666686" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3C1-lX-8Al">
-                                                                <rect key="frame" x="0.0" y="254.6666666666666" width="253.33333333333334" height="51.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="254.6666666666666" width="271.33333333333331" height="51.666666666666657"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZe-WH-rSG">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Aq-hk-j3U">
-                                                                        <rect key="frame" x="88.333333333333314" y="0.0" width="76.666666666666686" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="70.999999999999986" y="0.0" width="58.666666666666671" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVx-Cm-0yU">
-                                                                        <rect key="frame" x="177" y="0.0" width="76.333333333333314" height="51.666666666666664"/>
+                                                                        <rect key="frame" x="141.66666666666669" y="0.0" width="59" height="51.666666666666664"/>
                                                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNG-m1-6C9">
+                                                                        <rect key="frame" x="212.66666666666663" y="0.0" width="58.666666666666686" height="51.666666666666664"/>
+                                                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                                     </view>
                                                                 </subviews>
                                                             </stackView>
@@ -233,23 +255,28 @@
                         <outlet property="previewButton" destination="gLz-iO-DiS" id="pEr-pF-Wqo"/>
                         <outlet property="previewTitle" destination="SE5-Mo-Vob" id="0Pe-K2-k1J"/>
                         <outlet property="scrollView" destination="0CY-ya-3Yj" id="SdW-yq-o2l"/>
-                        <outletCollection property="colorSet" destination="XAa-uO-nvM" collectionClass="NSMutableArray" id="KEi-EQ-xLl"/>
-                        <outletCollection property="colorSet" destination="kzn-HP-OUb" collectionClass="NSMutableArray" id="vVF-at-zGc"/>
-                        <outletCollection property="colorSet" destination="8fY-nD-nJr" collectionClass="NSMutableArray" id="T1s-dz-uO9"/>
-                        <outletCollection property="colorSet" destination="eSI-65-Mva" collectionClass="NSMutableArray" id="lsh-Y1-epb"/>
-                        <outletCollection property="colorSet" destination="dtP-eB-FKs" collectionClass="NSMutableArray" id="TKL-3F-K95"/>
-                        <outletCollection property="colorSet" destination="fVi-46-o5B" collectionClass="NSMutableArray" id="cKV-tk-oNL"/>
-                        <outletCollection property="colorSet" destination="5fO-RA-s5O" collectionClass="NSMutableArray" id="MGP-yp-ulz"/>
-                        <outletCollection property="colorSet" destination="nSY-rG-bxc" collectionClass="NSMutableArray" id="RkF-Dv-5eX"/>
-                        <outletCollection property="colorSet" destination="rJk-ro-IXb" collectionClass="NSMutableArray" id="q0G-hi-hiC"/>
-                        <outletCollection property="colorSet" destination="Oxp-1Y-5ow" collectionClass="NSMutableArray" id="fnb-mt-elF"/>
-                        <outletCollection property="colorSet" destination="tHP-xA-oLK" collectionClass="NSMutableArray" id="uJy-1U-LuQ"/>
-                        <outletCollection property="colorSet" destination="Iab-eL-st2" collectionClass="NSMutableArray" id="uU6-1O-vN6"/>
-                        <outletCollection property="colorSet" destination="PTV-m6-1zp" collectionClass="NSMutableArray" id="wSs-2W-3xE"/>
-                        <outletCollection property="colorSet" destination="HvQ-jB-4Qy" collectionClass="NSMutableArray" id="KA5-ic-BOl"/>
-                        <outletCollection property="colorSet" destination="qZe-WH-rSG" collectionClass="NSMutableArray" id="Zuv-b4-zhj"/>
-                        <outletCollection property="colorSet" destination="2Aq-hk-j3U" collectionClass="NSMutableArray" id="CfF-tP-N45"/>
-                        <outletCollection property="colorSet" destination="NVx-Cm-0yU" collectionClass="NSMutableArray" id="lnz-Yp-8lg"/>
+                        <outletCollection property="colorSet" destination="XAa-uO-nvM" collectionClass="NSMutableArray" id="Rod-XT-A6k"/>
+                        <outletCollection property="colorSet" destination="kzn-HP-OUb" collectionClass="NSMutableArray" id="jBK-MR-98q"/>
+                        <outletCollection property="colorSet" destination="8fY-nD-nJr" collectionClass="NSMutableArray" id="Y7L-N6-Zti"/>
+                        <outletCollection property="colorSet" destination="eSI-65-Mva" collectionClass="NSMutableArray" id="vE9-WN-2Nh"/>
+                        <outletCollection property="colorSet" destination="dtP-eB-FKs" collectionClass="NSMutableArray" id="Lo7-MG-ckJ"/>
+                        <outletCollection property="colorSet" destination="HIK-eg-EKF" collectionClass="NSMutableArray" id="z0Q-xW-KdF"/>
+                        <outletCollection property="colorSet" destination="fVi-46-o5B" collectionClass="NSMutableArray" id="tbE-is-mVJ"/>
+                        <outletCollection property="colorSet" destination="5fO-RA-s5O" collectionClass="NSMutableArray" id="8AW-H9-NeD"/>
+                        <outletCollection property="colorSet" destination="nSY-rG-bxc" collectionClass="NSMutableArray" id="IRf-N2-vc2"/>
+                        <outletCollection property="colorSet" destination="mnY-VI-Kgb" collectionClass="NSMutableArray" id="6mQ-Tt-s4H"/>
+                        <outletCollection property="colorSet" destination="rJk-ro-IXb" collectionClass="NSMutableArray" id="hor-Fx-BLi"/>
+                        <outletCollection property="colorSet" destination="Oxp-1Y-5ow" collectionClass="NSMutableArray" id="58I-yp-it9"/>
+                        <outletCollection property="colorSet" destination="tHP-xA-oLK" collectionClass="NSMutableArray" id="7aX-Th-VC5"/>
+                        <outletCollection property="colorSet" destination="cU4-c5-8gc" collectionClass="NSMutableArray" id="SeC-qz-9sH"/>
+                        <outletCollection property="colorSet" destination="Iab-eL-st2" collectionClass="NSMutableArray" id="8K6-g9-xbZ"/>
+                        <outletCollection property="colorSet" destination="PTV-m6-1zp" collectionClass="NSMutableArray" id="9LX-rS-lvd"/>
+                        <outletCollection property="colorSet" destination="HvQ-jB-4Qy" collectionClass="NSMutableArray" id="8PX-A0-Eh0"/>
+                        <outletCollection property="colorSet" destination="d7L-Df-FtZ" collectionClass="NSMutableArray" id="mJL-hm-wfx"/>
+                        <outletCollection property="colorSet" destination="qZe-WH-rSG" collectionClass="NSMutableArray" id="zks-yc-2Uh"/>
+                        <outletCollection property="colorSet" destination="2Aq-hk-j3U" collectionClass="NSMutableArray" id="n9W-0A-ayK"/>
+                        <outletCollection property="colorSet" destination="NVx-Cm-0yU" collectionClass="NSMutableArray" id="HUM-gg-ygC"/>
+                        <outletCollection property="colorSet" destination="RNG-m1-6C9" collectionClass="NSMutableArray" id="gYj-pc-Cyp"/>
                         <segue destination="wOo-pb-q6r" kind="show" identifier="seeFinalPreview" id="GfA-vn-HyI"/>
                     </connections>
                 </viewController>
@@ -271,6 +298,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
