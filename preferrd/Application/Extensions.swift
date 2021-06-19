@@ -4,6 +4,7 @@
 //
 //  Created by Christianto Budisaputra on 29/05/21.
 //
+// swiftlint:disable function_body_length
 
 import Foundation
 import UIKit

@@ -4,6 +4,7 @@
 //
 //  Created by Christianto Budisaputra on 15/06/21.
 //
+//  swiftlint:disable type_body_length
 
 import UIKit
 
@@ -16,7 +17,7 @@ class PalettePreviewViewController: UIViewController {
   private var selectedColorsIndex = [Int]()
   private var selectedColorIndex = -1
   private var hasSelected = false
-  private var popup: UIView? = nil
+  private var popup: UIView?
 
   // MARK: - Step
   private var currentStep = 0 {
