@@ -8,7 +8,6 @@
 import UIKit
 
 class ThemeCollectionViewCell: UICollectionViewCell {
-
   @IBOutlet weak var themeContainer: UIView!
   @IBOutlet weak var themeLabel: UILabel!
   @IBOutlet weak var removeButton: UIButton!
