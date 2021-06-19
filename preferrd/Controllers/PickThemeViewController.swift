@@ -61,6 +61,7 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
                 cell.imageOverlay.layer.backgroundColor = UIColor(hex: "#DEDEDE").cgColor
                 cell.themeLabel.text = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
                 cell.imageContainer.isHidden = true
+                cell.imageOverlay.layer.cornerRadius = 12
                 cell.themeLabel.preferredMaxLayoutWidth = collectionView.frame.width - 32
                 cell.removeButton.isHidden = false
                 
@@ -72,6 +73,7 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
                 let getColorTheme = ColorTheme.allCases[indexPath.row]
                 cell.removeButton.isHidden = true
                 cell.themeContainer.layer.cornerRadius = 12
+                cell.imageOverlay.layer.cornerRadius = 12
                 cell.themeLabel.text = getColorTheme.rawValue
                 cell.imageContainer.image = getColorTheme.getImage()
                 
