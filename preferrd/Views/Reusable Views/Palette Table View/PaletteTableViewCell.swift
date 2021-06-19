@@ -29,7 +29,7 @@ class PaletteTableViewCell: UITableViewCell {
       buttonBgView,
       buttonTextView
     ].style(for: .palette)
-    
+
     nameLabel.textColor = Constants.AppColors.dark
     paletteBackgroundView.backgroundColor = Constants.AppColors.light
   }
