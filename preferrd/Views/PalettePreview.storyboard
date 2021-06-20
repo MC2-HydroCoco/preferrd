@@ -194,6 +194,7 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="XAa-uO-nvM" firstAttribute="width" secondItem="8fY-nD-nJr" secondAttribute="width" id="0MV-tX-qFo"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="upH-fz-wB3"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EdU-hr-zgc">
@@ -242,7 +243,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0CY-ya-3Yj" secondAttribute="trailing" id="2k2-8v-Dai"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0CY-ya-3Yj" secondAttribute="bottom" id="6H3-Pl-OrZ"/>
                             <constraint firstItem="0CY-ya-3Yj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hxj-fY-4z1"/>
-                            <constraint firstItem="DYF-to-e2a" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" multiplier="0.4" id="OJK-sg-pAM"/>
+                            <constraint firstItem="DYF-to-e2a" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" multiplier="0.4" priority="750" id="OJK-sg-pAM"/>
                             <constraint firstItem="0CY-ya-3Yj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="VRI-fe-xvy"/>
                         </constraints>
                     </view>

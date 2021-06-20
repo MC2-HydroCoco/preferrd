@@ -8,29 +8,51 @@
 import UIKit
 
 class ColorCombinationTableViewCell: UITableViewCell {
+  // Required Payload
+  var baseColor: UIColor!
+  var colorCombination: ColorCombination!
+  weak var delegate: UIViewController!
 
-    @IBOutlet weak var colorCombinationBakcground: UIView!
-    @IBOutlet weak var colorBox1: UIView!
-    @IBOutlet weak var colorBox2: UIView!
-    @IBOutlet weak var colorBox3: UIView!
-    @IBOutlet weak var colorBox4: UIView!
-    @IBOutlet weak var colorBox5: UIView!
-    @IBOutlet weak var colorCombinationName: UILabel!
+  // Cell Properties
+  var popup: UIView?
+  @IBOutlet var colorSet: [UIView]!
+  @IBOutlet weak var combinationNameLabel: UILabel!
+  @IBOutlet weak var combinationContainer: UIStackView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        colorCombinationBakcground.layer.cornerRadius = 12
-        colorBox1.layer.cornerRadius = 12
-        colorBox2.layer.cornerRadius = 12
-        colorBox3.layer.cornerRadius = 12
-        colorBox4.layer.cornerRadius = 12
-        colorBox5.layer.cornerRadius = 12
+  override func layoutSubviews() {
+    super.layoutSubviews()
+
+    // Name combination
+    combinationNameLabel.text = colorCombination.rawValue
+
+    // Display combination colors
+    if let colorCombination = colorCombination {
+      let combination = colorCombination.getCombination(from: baseColor)
+      combination.enumerated().forEach { (index, color) in
+        colorSet[index].backgroundColor = color
+      }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    // Apply styling
+    combinationContainer.applyShadow()
+    colorSet.forEach { $0.applyShadow() }
+  }
 
+  @IBAction func showCombinationInfo(_ sender: Any) {
+    if let popup = popup {
+      UIView.animate(withDuration: 0.35) {
+        popup.layer.opacity = 0
+      } completion: { _ in
+        popup.removeFromSuperview()
+        self.popup = nil
+      }
+    } else {
+      popup = delegate.popup(
+        title: colorCombination.rawValue,
+        detail: colorCombination.description
+      ) {
+        self.popup = nil
+      }
     }
-    @IBAction func colorCombinationInformation(_ sender: UIButton) {
-    }
+  }
 }

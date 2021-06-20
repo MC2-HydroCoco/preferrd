@@ -4,11 +4,13 @@
 //
 //  Created by Christianto Budisaputra on 15/06/21.
 //
-//  swiftlint:disable type_body_length
 
 import UIKit
 
 class PalettePreviewViewController: UIViewController {
+  // Required Payload
+  var selectedCombination = [UIColor]()
+
   // MARK: - Properties
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var backButton: UIButton!
@@ -59,7 +61,6 @@ class PalettePreviewViewController: UIViewController {
   private var allPreviewComponents = [UIView]()
 
   // MARK: - Color Set
-  var selectedCombination = [UIColor]()
   @IBOutlet var colorSet: [UIView]!
 
   // MARK: - Overrides
@@ -73,11 +74,6 @@ class PalettePreviewViewController: UIViewController {
       target: self,
       action: #selector(infoButtonTapped)
     )
-
-    // Testing Purpose:
-    selectedCombination = ColorCombination
-      .triadic
-      .getCombination(from: UIColor(hex: "#52b69a"))
 
     setupView()
   }

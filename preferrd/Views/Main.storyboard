@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ColorCombinations-->
+        <!--PickColorCombination-->
         <scene sceneID="f49-58-bXq">
             <objects>
-                <viewControllerPlaceholder storyboardName="ColorCombinations" id="2Ik-Os-dpd" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="PickColorCombination" id="2Ik-Os-dpd" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="UOV-r6-uey"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNH-M0-UNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
