@@ -8,18 +8,18 @@
 import UIKit
 
 class ThemeCollectionViewCell: UICollectionViewCell {
+  @IBOutlet weak var themeContainer: UIView!
+  @IBOutlet weak var themeLabel: UILabel!
+  @IBOutlet weak var removeButton: UIButton!
+  @IBOutlet weak var imageContainer: UIImageView!
+  @IBOutlet weak var imageOverlay: UIView!
 
-    @IBOutlet weak var themeContainer: UIView!
-    @IBOutlet weak var themeLabel: UILabel!
-    @IBOutlet weak var removeButton: UIButton!
-    @IBOutlet weak var imageContainer: UIImageView!
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    @IBAction func removeButtonAction(_ sender: Any) {
-        self.removeFromSuperview()
-    }
+  @IBAction func removeButtonAction(_ sender: Any) {
+    //        self.removeFromSuperview()
+  }
 }

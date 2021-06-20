@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Palette {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Palette> {
@@ -25,6 +24,6 @@ extension Palette {
 
 }
 
-extension Palette : Identifiable {
+extension Palette: Identifiable {
 
 }
