@@ -18,7 +18,7 @@
 import Foundation
 import UIKit
 
-enum ColorCombination: String {
+enum ColorCombination: String, CaseIterable {
   case analogous          = "Analogous",
        accentedAnalogous  = "Accented Analogous",
        complementary      = "Complementary",
