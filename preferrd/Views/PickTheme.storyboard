@@ -5,14 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Pick Theme-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Pick Theme" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController title="Pick Theme" id="Y6W-OH-hqX" customClass="PickThemeViewController" customModule="preferrd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,19 +20,19 @@
                                 <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="snO-nS-WSN" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="737.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="668"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-xq-Trx">
-                                                <rect key="frame" x="24" y="0.0" width="171" height="737.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-xq-Trx">
+                                                <rect key="frame" x="24" y="0.0" width="171" height="668"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkH-TJ-EXf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkH-TJ-EXf" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-yT-qrP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Relaxing" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-yT-qrP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ6-rn-xDu">
-                                                                <rect key="frame" x="65" y="0.0" width="41.5" height="128.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relaxing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ6-rn-xDu">
+                                                                <rect key="frame" x="53.5" y="0.0" width="64.5" height="117.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -49,17 +48,21 @@
                                                             <constraint firstItem="AQ6-rn-xDu" firstAttribute="centerY" secondItem="RkH-TJ-EXf" secondAttribute="centerY" id="deo-q6-K18"/>
                                                             <constraint firstItem="wZ8-yT-qrP" firstAttribute="height" secondItem="RkH-TJ-EXf" secondAttribute="height" id="dl6-H4-fOa"/>
                                                             <constraint firstItem="wZ8-yT-qrP" firstAttribute="top" secondItem="RkH-TJ-EXf" secondAttribute="top" multiplier="0.2" id="lNG-sP-K7u"/>
-                                                            <constraint firstAttribute="width" secondItem="RkH-TJ-EXf" secondAttribute="height" multiplier="4:3" id="xBk-4Y-7Cj"/>
+                                                            <constraint firstAttribute="width" secondItem="RkH-TJ-EXf" secondAttribute="height" multiplier="16:11" id="xBk-4Y-7Cj"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="wZ8-yT-qrP" id="nFT-L1-zda"/>
+                                                            <outlet property="themeLabel" destination="AQ6-rn-xDu" id="ryX-2c-pcN"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-r5-7Hf">
-                                                        <rect key="frame" x="0.0" y="152.5" width="171" height="128"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-r5-7Hf" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="137.5" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="lVx-Eo-Iuz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Playful" translatesAutoresizingMaskIntoConstraints="NO" id="lVx-Eo-Iuz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihP-QR-J6V">
-                                                                <rect key="frame" x="65" y="53.5" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihP-QR-J6V">
+                                                                <rect key="frame" x="60" y="48.5" width="51" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -74,15 +77,19 @@
                                                             <constraint firstItem="lVx-Eo-Iuz" firstAttribute="leading" secondItem="Md8-r5-7Hf" secondAttribute="leading" id="k2b-12-ifX"/>
                                                             <constraint firstAttribute="trailing" secondItem="lVx-Eo-Iuz" secondAttribute="trailing" id="l3c-6G-cZ9"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="lVx-Eo-Iuz" id="yN6-wT-ySo"/>
+                                                            <outlet property="themeLabel" destination="ihP-QR-J6V" id="MqI-j4-Pdg"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwI-7q-65i">
-                                                        <rect key="frame" x="0.0" y="304.5" width="171" height="128.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwI-7q-65i" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="275" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="myu-Ad-NuW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Modern" translatesAutoresizingMaskIntoConstraints="NO" id="myu-Ad-NuW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-N0-iAt">
-                                                                <rect key="frame" x="65" y="54" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-N0-iAt">
+                                                                <rect key="frame" x="56" y="48.5" width="59.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -97,15 +104,19 @@
                                                             <constraint firstItem="myu-Ad-NuW" firstAttribute="top" secondItem="JwI-7q-65i" secondAttribute="top" multiplier="0.2" id="fk2-D4-7FG"/>
                                                             <constraint firstItem="myu-Ad-NuW" firstAttribute="leading" secondItem="JwI-7q-65i" secondAttribute="leading" id="gzO-AK-zNl"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="myu-Ad-NuW" id="sBO-54-EM3"/>
+                                                            <outlet property="themeLabel" destination="JtH-N0-iAt" id="F2V-bs-fnT"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-Mv-P9p">
-                                                        <rect key="frame" x="0.0" y="457" width="171" height="128"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-Mv-P9p" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="412.5" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="ffm-Zb-bPi">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fresh" translatesAutoresizingMaskIntoConstraints="NO" id="ffm-Zb-bPi">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLv-Je-N7P">
-                                                                <rect key="frame" x="65" y="53.5" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLv-Je-N7P">
+                                                                <rect key="frame" x="64.5" y="48.5" width="42.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -120,15 +131,19 @@
                                                             <constraint firstAttribute="trailing" secondItem="ffm-Zb-bPi" secondAttribute="trailing" id="uLc-17-s2Q"/>
                                                             <constraint firstAttribute="bottom" secondItem="ffm-Zb-bPi" secondAttribute="bottom" id="ueW-zk-4bF"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="ffm-Zb-bPi" id="RAo-ca-itS"/>
+                                                            <outlet property="themeLabel" destination="LLv-Je-N7P" id="KD6-e8-NJm"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grg-Up-5y7">
-                                                        <rect key="frame" x="0.0" y="609" width="171" height="128.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grg-Up-5y7" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="550.5" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-al-gDa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Feminine" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-al-gDa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxl-aN-9G1">
-                                                                <rect key="frame" x="65" y="54" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feminine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxl-aN-9G1">
+                                                                <rect key="frame" x="51" y="48.5" width="69" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -143,6 +158,10 @@
                                                             <constraint firstItem="kxl-aN-9G1" firstAttribute="centerY" secondItem="grg-Up-5y7" secondAttribute="centerY" id="ssp-eE-ACm"/>
                                                             <constraint firstItem="kxl-aN-9G1" firstAttribute="centerX" secondItem="grg-Up-5y7" secondAttribute="centerX" id="whq-QN-Lh2"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="aQz-al-gDa" id="QVM-zw-Gfj"/>
+                                                            <outlet property="themeLabel" destination="kxl-aN-9G1" id="jw3-tg-fGL"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -153,17 +172,17 @@
                                                     <constraint firstItem="Md8-r5-7Hf" firstAttribute="height" secondItem="RkH-TJ-EXf" secondAttribute="height" id="l1p-uI-0HS"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qdf-L3-k2v">
-                                                <rect key="frame" x="219" y="0.0" width="171" height="737.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qdf-L3-k2v">
+                                                <rect key="frame" x="219" y="0.0" width="171" height="668"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kth-jK-FKI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kth-jK-FKI" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="6BN-dp-dRm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vintage" translatesAutoresizingMaskIntoConstraints="NO" id="6BN-dp-dRm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-dY-50a">
-                                                                <rect key="frame" x="65" y="0.0" width="41.5" height="128.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vintage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-dY-50a">
+                                                                <rect key="frame" x="56.5" y="0.0" width="58.5" height="117.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -180,15 +199,19 @@
                                                             <constraint firstItem="6BN-dp-dRm" firstAttribute="height" secondItem="Kth-jK-FKI" secondAttribute="height" id="po2-l0-bvh"/>
                                                             <constraint firstItem="UYq-dY-50a" firstAttribute="height" secondItem="Kth-jK-FKI" secondAttribute="height" id="rJr-wL-70L"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="6BN-dp-dRm" id="ojv-ZX-KOn"/>
+                                                            <outlet property="themeLabel" destination="UYq-dY-50a" id="STt-Y7-HO9"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJg-op-VcT">
-                                                        <rect key="frame" x="0.0" y="152.5" width="171" height="128"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJg-op-VcT" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="137.5" width="171" height="117.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="InW-AN-cTr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztB-S6-I9x">
-                                                                <rect key="frame" x="65" y="53.5" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventurous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztB-S6-I9x">
+                                                                <rect key="frame" x="37.5" y="48.5" width="96.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -203,15 +226,19 @@
                                                             <constraint firstItem="InW-AN-cTr" firstAttribute="top" secondItem="eJg-op-VcT" secondAttribute="top" multiplier="0.2" id="wCl-Zi-OCV"/>
                                                             <constraint firstItem="ztB-S6-I9x" firstAttribute="centerY" secondItem="eJg-op-VcT" secondAttribute="centerY" id="zfX-3w-LdC"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="InW-AN-cTr" id="v0a-uH-TY7"/>
+                                                            <outlet property="themeLabel" destination="ztB-S6-I9x" id="hfZ-jD-TNt"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-m1-SCc">
-                                                        <rect key="frame" x="0.0" y="304.5" width="171" height="128.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-m1-SCc" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="275" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="3uu-CB-h8g">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nature" translatesAutoresizingMaskIntoConstraints="NO" id="3uu-CB-h8g">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66B-Jd-WJl">
-                                                                <rect key="frame" x="65" y="54" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66B-Jd-WJl">
+                                                                <rect key="frame" x="60" y="48.5" width="51.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -226,15 +253,19 @@
                                                             <constraint firstItem="66B-Jd-WJl" firstAttribute="centerX" secondItem="MWk-m1-SCc" secondAttribute="centerX" id="veR-7e-yPD"/>
                                                             <constraint firstItem="3uu-CB-h8g" firstAttribute="top" secondItem="MWk-m1-SCc" secondAttribute="top" multiplier="0.2" id="yjP-zD-kn9"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="3uu-CB-h8g" id="fwb-kM-JAn"/>
+                                                            <outlet property="themeLabel" destination="66B-Jd-WJl" id="t0o-Qu-AzD"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBB-19-CTE">
-                                                        <rect key="frame" x="0.0" y="457" width="171" height="128"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBB-19-CTE" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="412.5" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="5u7-zc-BaB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Elegant" translatesAutoresizingMaskIntoConstraints="NO" id="5u7-zc-BaB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-II-v7K">
-                                                                <rect key="frame" x="65" y="53.5" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elegant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-II-v7K">
+                                                                <rect key="frame" x="57" y="48.5" width="57" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -249,15 +280,19 @@
                                                             <constraint firstItem="5u7-zc-BaB" firstAttribute="top" secondItem="NBB-19-CTE" secondAttribute="top" multiplier="0.2" id="nUL-xG-ZCm"/>
                                                             <constraint firstItem="5u7-zc-BaB" firstAttribute="leading" secondItem="NBB-19-CTE" secondAttribute="leading" id="x43-Uw-nYH"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="5u7-zc-BaB" id="Por-5d-kJA"/>
+                                                            <outlet property="themeLabel" destination="9EA-II-v7K" id="RCx-P9-K4g"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lh-a1-USY">
-                                                        <rect key="frame" x="0.0" y="609" width="171" height="128.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lh-a1-USY" customClass="ThemeView" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="550.5" width="171" height="117.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adventurous" translatesAutoresizingMaskIntoConstraints="NO" id="8UY-sr-fXN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="128.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Masculine" translatesAutoresizingMaskIntoConstraints="NO" id="8UY-sr-fXN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="117.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytd-rK-yDy">
-                                                                <rect key="frame" x="65" y="54" width="41.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masculine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytd-rK-yDy">
+                                                                <rect key="frame" x="47" y="48.5" width="77" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -272,6 +307,10 @@
                                                             <constraint firstItem="ytd-rK-yDy" firstAttribute="centerX" secondItem="3lh-a1-USY" secondAttribute="centerX" id="d7R-Yo-1ga"/>
                                                             <constraint firstAttribute="trailing" secondItem="8UY-sr-fXN" secondAttribute="trailing" id="rMw-05-6Ra"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="themeImageView" destination="8UY-sr-fXN" id="BOF-YX-eqx"/>
+                                                            <outlet property="themeLabel" destination="ytd-rK-yDy" id="Hxq-Ya-87n"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -304,22 +343,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="c4C-bR-kgU"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="prr-Uz-JuC">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a04-um-Vvm">
+                                    <size key="itemSize" width="128" height="32"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cmQ-Rt-awJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oht-Mv-UQg">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -334,14 +364,47 @@
                             <constraint firstItem="gMZ-gs-UwY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="xr7-2E-CIM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="themeCollectionView" destination="gMZ-gs-UwY" id="ER2-T5-crU"/>
+                        <outletCollection property="themeSet" destination="RkH-TJ-EXf" collectionClass="NSMutableArray" id="xYA-VK-rXO"/>
+                        <outletCollection property="themeSet" destination="Kth-jK-FKI" collectionClass="NSMutableArray" id="taR-JS-Zav"/>
+                        <outletCollection property="themeSet" destination="Md8-r5-7Hf" collectionClass="NSMutableArray" id="EQc-HF-m2K"/>
+                        <outletCollection property="themeSet" destination="eJg-op-VcT" collectionClass="NSMutableArray" id="y5c-GM-VS8"/>
+                        <outletCollection property="themeSet" destination="JwI-7q-65i" collectionClass="NSMutableArray" id="dK1-ku-i6E"/>
+                        <outletCollection property="themeSet" destination="MWk-m1-SCc" collectionClass="NSMutableArray" id="d5b-Dz-DXZ"/>
+                        <outletCollection property="themeSet" destination="1Yu-Mv-P9p" collectionClass="NSMutableArray" id="NwG-Ni-I5V"/>
+                        <outletCollection property="themeSet" destination="NBB-19-CTE" collectionClass="NSMutableArray" id="zt4-Zv-HG1"/>
+                        <outletCollection property="themeSet" destination="grg-Up-5y7" collectionClass="NSMutableArray" id="cUz-9l-4Es"/>
+                        <outletCollection property="themeSet" destination="3lh-a1-USY" collectionClass="NSMutableArray" id="Ebh-i1-ZXH"/>
+                        <segue destination="iJa-Yp-j4Z" kind="show" identifier="pickBaseColor" id="p0Q-Rz-Gdc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="87.723214285714278"/>
         </scene>
+        <!--PickBaseColor-->
+        <scene sceneID="Y2d-Bo-6La">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PickBaseColor" id="iJa-Yp-j4Z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hP4-aR-yRT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcc-dw-uok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="88"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Adventurous" width="3508" height="2480"/>
+        <image name="Adventurous" width="407" height="288"/>
+        <image name="Elegant" width="408" height="288"/>
+        <image name="Feminine" width="408" height="289"/>
+        <image name="Fresh" width="423" height="289"/>
+        <image name="Masculine" width="407" height="288"/>
+        <image name="Modern" width="409" height="289"/>
+        <image name="Nature" width="407" height="288"/>
+        <image name="Playful" width="408" height="288"/>
+        <image name="Relaxing" width="411" height="290"/>
+        <image name="Vintage" width="408" height="288"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -169,9 +169,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
       if removeAction.frame.contains(location) {
         if let index = paletteTableView.indexPath(for: currCell) {
           removeAction.removeFromSuperlayer()
-          DispatchQueue.main.async {
-            //                        self.paletteTableView.deleteRows(at: [index], with: .right)
-          }
           paletteManager.remove(palette: palettes[index.row])
           palettes = paletteManager.fetch()
         }
