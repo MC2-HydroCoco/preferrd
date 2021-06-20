@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160582C3267B410200D2B10B /* RelatedColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160582C2267B410200D2B10B /* RelatedColorsViewController.swift */; };
+		160582CB267B434200D2B10B /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160582C9267B434200D2B10B /* TagsCollectionViewCell.swift */; };
+		160582CC267B434200D2B10B /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160582CA267B434200D2B10B /* TagsCollectionViewCell.xib */; };
+		160582CE267C78A700D2B10B /* FinalPalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160582CD267C78A700D2B10B /* FinalPalettePreview.storyboard */; };
 		16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */; };
 		16DEB7EE26774A9500407D48 /* ColorCombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */; };
 		1C5B79462679CAF80036A559 /* Preferrd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79442679CAF80036A559 /* Preferrd.xcdatamodeld */; };
@@ -59,6 +63,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160582C2267B410200D2B10B /* RelatedColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedColorsViewController.swift; sourceTree = "<group>"; };
+		160582C9267B434200D2B10B /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		160582CA267B434200D2B10B /* TagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsCollectionViewCell.xib; sourceTree = "<group>"; };
+		160582CD267C78A700D2B10B /* FinalPalettePreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalPalettePreview.storyboard; sourceTree = "<group>"; };
 		16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorCombinations.storyboard; sourceTree = "<group>"; };
 		16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationViewController.swift; sourceTree = "<group>"; };
 		1C5B79452679CAF80036A559 /* Preferrd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Preferrd.xcdatamodel; sourceTree = "<group>"; };
@@ -124,9 +132,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160582C4267B427300D2B10B /* Tags View */ = {
+			isa = PBXGroup;
+			children = (
+				160582C9267B434200D2B10B /* TagsCollectionViewCell.swift */,
+				160582CA267B434200D2B10B /* TagsCollectionViewCell.xib */,
+			);
+			path = "Tags View";
+			sourceTree = "<group>";
+		};
 		279A51CF26721C24007A559E /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
+				160582C4267B427300D2B10B /* Tags View */,
 				27C2685726734BFB000D2D10 /* Information Pop Up View */,
 				279A51D626722C49007A559E /* Color Combination View */,
 				83B53B0F2673614900BED257 /* Theme Collection View */,
@@ -272,13 +290,14 @@
 			isa = PBXGroup;
 			children = (
 				8321CD452660EE5C0094519F /* MainViewController.swift */,
+				16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */,
 				CC654F0D26735812004C7C8A /* PickThemeViewController.swift */,
 				1C7989B3267882AC004D6138 /* TestMain.swift */,
 				839AA88A267738C00054C50F /* OldMain.swift */,
-				16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */,
 				279454CF2678B1F600BFB69F /* PickColorCombinationViewController.swift */,
 				839266932677C426007865A3 /* PalettePreviewViewController.swift */,
 				83ADD69F267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift */,
+				160582C2267B410200D2B10B /* RelatedColorsViewController.swift */,
 				834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */,
 			);
 			path = Controllers;
@@ -361,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C2685B26734C69000D2D10 /* InformationPopUpViewViewController.xib in Resources */,
+				160582CC267B434200D2B10B /* TagsCollectionViewCell.xib in Resources */,
 				16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */,
 				CC654F0C26735284004C7C8A /* PickTheme.storyboard in Resources */,
 				839266922677BB57007865A3 /* PalettePreview.storyboard in Resources */,
@@ -418,6 +438,7 @@
 				83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */,
 				1C5B79462679CAF80036A559 /* Preferrd.xcdatamodeld in Sources */,
 				1C5B79492679F2EE0036A559 /* Palette+CoreDataClass.swift in Sources */,
+				160582C3267B410200D2B10B /* RelatedColorsViewController.swift in Sources */,
 				839266962677D2A9007865A3 /* PreviewStep.swift in Sources */,
 				1C7989B4267882AC004D6138 /* TestMain.swift in Sources */,
 				83897DDE266BFB8000AB4913 /* Constants.swift in Sources */,
@@ -438,6 +459,7 @@
 				839266942677C426007865A3 /* PalettePreviewViewController.swift in Sources */,
 				8304D0A7266EA64300EBABB5 /* Color.swift in Sources */,
 				1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */,
+				160582CB267B434200D2B10B /* TagsCollectionViewCell.swift in Sources */,
 				1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */,
 				27C2685A26734C69000D2D10 /* InformationPopUpViewViewController.swift in Sources */,
 			);
