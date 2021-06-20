@@ -16,6 +16,7 @@ class PaletteActionViewController: UIViewController {
   @IBOutlet weak var headline: UIStackView!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var saveAction: UIStackView!
+  @IBOutlet weak var lucuButton: UIView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,11 +27,13 @@ class PaletteActionViewController: UIViewController {
 
   override func viewWillLayoutSubviews() {
     super.viewWillLayoutSubviews()
+    lucuButton.layer.cornerRadius = 4
     headline.roundCorners(corners: [.topLeft, .topRight], radius: 16)
-    headline.addBottomBorderWithColor(
-      color: Constants.AppColors.dark,
-      width: 1
-    )
+//    headline.addBottomBorderWithColor(
+//      color: Constants.AppColors.dark,
+//      height: 0.5
+//    )
+    headline.addBottomBorder(color: Constants.AppColors.dark)
   }
 
   @objc func savePalette() {

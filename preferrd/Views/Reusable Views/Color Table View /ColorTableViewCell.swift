@@ -14,15 +14,11 @@ class ColorTableViewCell: UITableViewCell {
     @IBOutlet weak var colorName: UILabel!
     @IBOutlet weak var colorHex: UILabel!
     @IBOutlet weak var colorBackground: UIView!
-    
     @IBOutlet var colorCollection: UICollectionView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         colorBackground.layer.cornerRadius = 12
         colorBox.layer.cornerRadius = 12
-        
-        
     }
 
     @IBAction func colorInformation(_ sender: UIButton) {

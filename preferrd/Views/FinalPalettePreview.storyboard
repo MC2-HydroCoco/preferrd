@@ -434,6 +434,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="4sA-tf-4Sf" id="opc-m1-Oj2"/>
                         <outlet property="headline" destination="aOM-UB-xQq" id="DxZ-GF-wJl"/>
+                        <outlet property="lucuButton" destination="sKu-nL-2mm" id="n8H-Fk-o7b"/>
                         <outlet property="saveAction" destination="cgA-OL-T29" id="1sP-Av-MvG"/>
                     </connections>
                 </viewController>

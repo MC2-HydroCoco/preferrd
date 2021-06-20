@@ -40,12 +40,40 @@ extension UIView {
     layer.mask = mask
   }
 
-  func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
-    let border = CALayer()
-    border.backgroundColor = color.cgColor
-    border.opacity = 0.05
-    border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
-    self.layer.addSublayer(border)
+  func addBottomBorder(color: UIColor = UIColor.red, margins: CGFloat = 0, borderLineSize: CGFloat = 1) {
+    let border = UIView()
+    border.layer.opacity = 0.05
+    border.backgroundColor = color
+    border.translatesAutoresizingMaskIntoConstraints = false
+    self.addSubview(border)
+    border.addConstraint(NSLayoutConstraint(
+                          item: border,
+                          attribute: .height,
+                          relatedBy: .equal,
+                          toItem: nil,
+                          attribute: .height,
+                          multiplier: 1, constant: borderLineSize))
+    self.addConstraint(NSLayoutConstraint(
+                        item: border,
+                        attribute: .bottom,
+                        relatedBy: .equal,
+                        toItem: self,
+                        attribute: .bottom,
+                        multiplier: 1, constant: 0))
+    self.addConstraint(NSLayoutConstraint(
+                        item: border,
+                        attribute: .leading,
+                        relatedBy: .equal,
+                        toItem: self,
+                        attribute: .leading,
+                        multiplier: 1, constant: margins))
+    self.addConstraint(NSLayoutConstraint(
+                        item: border,
+                        attribute: .trailing,
+                        relatedBy: .equal,
+                        toItem: self,
+                        attribute: .trailing,
+                        multiplier: 1, constant: margins))
   }
 }
 
