@@ -8,40 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Color Combinations-->
+        <!--Color Combination View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Color Combinations" id="Y6W-OH-hqX" customClass="ColorCombinationsViewController" customModule="preferrd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ColorCombinationViewController" customModule="preferrd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Combinations for Blue" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxh-9O-7GW">
-                                <rect key="frame" x="20" y="125" width="366" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Combinations for Blue" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxh-9O-7GW">
+                                <rect key="frame" x="20" y="44" width="325" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="PaD-US-UgS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOz-fo-DNA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Color Combinations" id="AS8-iv-aTq"/>
-                                </items>
-                            </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ELn-Rr-pgf">
-                                <rect key="frame" x="20" y="258" width="374" height="563"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FPx-h7-wh5">
+                                <rect key="frame" x="0.0" y="220" width="414" height="642"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R4k-lr-Zbf">
+                                <rect key="frame" x="0.0" y="112" width="414" height="108"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="0qK-LD-dum"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fOz-fo-DNA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lh1-AS-9fs"/>
-                            <constraint firstItem="fOz-fo-DNA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="w7B-ms-h4C"/>
-                            <constraint firstItem="fOz-fo-DNA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xzp-fC-qpq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sxh-9O-7GW" secondAttribute="trailing" constant="69" id="6Vu-eb-5g3"/>
+                            <constraint firstItem="sxh-9O-7GW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="6Zy-aa-vnC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FPx-h7-wh5" secondAttribute="trailing" id="CZ5-Zy-gfO"/>
+                            <constraint firstItem="R4k-lr-Zbf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Fli-T6-VCQ"/>
+                            <constraint firstItem="FPx-h7-wh5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NzQ-Ez-TFR"/>
+                            <constraint firstItem="FPx-h7-wh5" firstAttribute="top" secondItem="R4k-lr-Zbf" secondAttribute="bottom" id="Osa-Hl-3g3"/>
+                            <constraint firstItem="R4k-lr-Zbf" firstAttribute="top" secondItem="sxh-9O-7GW" secondAttribute="bottom" id="RYJ-JO-xV1"/>
+                            <constraint firstItem="sxh-9O-7GW" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="bHt-vQ-Uk3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FPx-h7-wh5" secondAttribute="bottom" id="fH8-ga-xuq"/>
+                            <constraint firstItem="R4k-lr-Zbf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="t2h-Wc-SEM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="combinationColorTableView" destination="FPx-h7-wh5" id="Aix-6g-mpX"/>
+                        <outlet property="relatedColorTableView" destination="R4k-lr-Zbf" id="RUh-6Q-beL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
