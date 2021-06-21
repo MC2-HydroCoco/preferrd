@@ -89,8 +89,8 @@
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <connections>
-                                                            <outlet property="tagLabel" destination="Akc-xB-BiM" id="NXI-ac-rdi"/>
-                                                            <outlet property="tagLabelContainer" destination="Vdv-BX-dRa" id="3Gu-np-iAT"/>
+                                                            <outlet property="tagLabel" destination="Akc-xB-BiM" id="H4c-jS-qM3"/>
+                                                            <outlet property="tagLabelContainer" destination="Vdv-BX-dRa" id="kkq-Uq-AzR"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -121,14 +121,6 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="colorBackground" destination="H2p-sc-9uM" id="HIK-BZ-L4p"/>
-                            <outlet property="colorBox" destination="ZUv-7d-7DP" id="2k1-Jr-a0P"/>
-                            <outlet property="colorCollection" destination="Rdp-35-NsJ" id="ODK-VF-pCS"/>
-                            <outlet property="colorHex" destination="pgc-xS-fI0" id="jRh-Gv-Xqs"/>
-                            <outlet property="colorInfoButton" destination="RwT-id-glj" id="Yda-TX-fQp"/>
-                            <outlet property="colorName" destination="60I-1E-b3b" id="VcO-1K-JBg"/>
-                        </connections>
                     </view>
                 </subviews>
                 <constraints>
@@ -140,9 +132,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="colorBackground" destination="AZ9-qa-9UG" id="25s-HU-ikK"/>
+                <outlet property="colorBg" destination="AZ9-qa-9UG" id="Okf-87-TpL"/>
                 <outlet property="colorBox" destination="67s-HE-oAA" id="zUG-ra-3OP"/>
-                <outlet property="colorCollection" destination="wmx-e3-5Oy" id="QMH-Vd-shs"/>
+                <outlet property="colorCollection" destination="wmx-e3-5Oy" id="1d8-Sl-AvX"/>
                 <outlet property="colorHex" destination="3AY-8H-5Cp" id="MEF-S3-ECZ"/>
                 <outlet property="colorInfoButton" destination="5b1-wi-eWh" id="Okh-eb-EG7"/>
                 <outlet property="colorName" destination="FLp-7Z-NAT" id="y6k-8d-CEt"/>

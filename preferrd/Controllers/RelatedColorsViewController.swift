@@ -64,7 +64,7 @@ extension RelatedColorsViewController: UICollectionViewDelegate, UITableViewDele
 
     if let cell = tableView.cellForRow(at: indexPath) as? ColorTableViewCell {
 
-      cell.colorBackground.backgroundColor = colorBlack
+      cell.colorBg.backgroundColor = colorBlack
       cell.colorName.textColor = .white
       cell.colorHex.textColor = .white
       cell.colorInfoButton.tintColor = .white

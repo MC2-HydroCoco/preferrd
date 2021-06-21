@@ -25,14 +25,7 @@ class PickThemeViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextTapped))
         
-        let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
-        themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
-        
-        themeCollectionView.delegate = self
-        themeCollectionView.dataSource = self
-        themeCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        
-        themeCollectionView.allowsMultipleSelection = true
+        setupThemeCollectionView()
         
         setupThemeSet()
     }
@@ -41,13 +34,20 @@ class PickThemeViewController: UIViewController {
         performSegue(withIdentifier: "pickBaseColor", sender: self)
     }
     
+    func setupThemeCollectionView() {
+        let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
+        themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
+        
+        themeCollectionView.delegate = self
+        themeCollectionView.dataSource = self
+    }
+    
     func setupThemeSet() {
         themeSet.enumerated().forEach{ (index, view) in
             view.tag = index
             
             // Set style
             view.layer.cornerRadius = 12
-//            view.roundCorners(corners: .allCorners, radius: 12)
             
             // Set tap gesture
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectTheme))
@@ -71,13 +71,13 @@ class PickThemeViewController: UIViewController {
         if segue.identifier == "pickBaseColor" {
             if let destination = segue.destination as? PickBaseColorViewController {
                 destination.themes = selectedThemes
+                
             }
         }
     }
 }
 
-extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewDelegate,
-                                   UICollectionViewDelegateFlowLayout {
+extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return selectedThemes.count
     }
