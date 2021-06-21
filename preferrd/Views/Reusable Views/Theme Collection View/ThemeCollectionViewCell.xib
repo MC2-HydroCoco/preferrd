@@ -43,7 +43,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="seo-In-AAV" firstAttribute="top" secondItem="0RP-qS-FAx" secondAttribute="top" constant="8" id="E8M-5w-HXA"/>
                             <constraint firstItem="6SC-hz-cFg" firstAttribute="leading" secondItem="0RP-qS-FAx" secondAttribute="leading" id="JH2-sT-5Vb"/>
@@ -78,8 +78,8 @@
     </objects>
     <resources>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

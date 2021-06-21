@@ -16,6 +16,9 @@
 		1C5B79492679F2EE0036A559 /* Palette+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79472679F2EE0036A559 /* Palette+CoreDataClass.swift */; };
 		1C5B794A2679F2EE0036A559 /* Palette+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79482679F2EE0036A559 /* Palette+CoreDataProperties.swift */; };
 		1C5B794C267A10D00036A559 /* PaletteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B794B267A10D00036A559 /* PaletteManager.swift */; };
+		1C6633CF267FBC5000A1036E /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6633CE267FBC5000A1036E /* ThemeView.swift */; };
+		1C6633D1267FCCFD00A1036E /* PickBaseColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6633D0267FCCFD00A1036E /* PickBaseColor.storyboard */; };
+		1C6633D3267FCE3500A1036E /* PickBaseColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */; };
 		1C7989B4267882AC004D6138 /* TestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B3267882AC004D6138 /* TestMain.swift */; };
 		1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B526789754004D6138 /* BaseColorGroup.swift */; };
 		1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B92678AB60004D6138 /* StringHelper.swift */; };
@@ -72,6 +75,9 @@
 		1C5B79472679F2EE0036A559 /* Palette+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Palette+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1C5B79482679F2EE0036A559 /* Palette+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Palette+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1C5B794B267A10D00036A559 /* PaletteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteManager.swift; sourceTree = "<group>"; };
+		1C6633CE267FBC5000A1036E /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		1C6633D0267FCCFD00A1036E /* PickBaseColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickBaseColor.storyboard; sourceTree = "<group>"; };
+		1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickBaseColorViewController.swift; sourceTree = "<group>"; };
 		1C7989B3267882AC004D6138 /* TestMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMain.swift; sourceTree = "<group>"; };
 		1C7989B526789754004D6138 /* BaseColorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColorGroup.swift; sourceTree = "<group>"; };
 		1C7989B92678AB60004D6138 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 			children = (
 				CCCA6C0D26721C5700D7D3AF /* ThemeCollectionViewCell.swift */,
 				CCCA6C0E26721C5700D7D3AF /* ThemeCollectionViewCell.xib */,
+				1C6633CE267FBC5000A1036E /* ThemeView.swift */,
 			);
 			path = "Theme Collection View";
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 				839266912677BB57007865A3 /* PalettePreview.storyboard */,
 				837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */,
 				83168C4D267F9ADA008302EC /* PickTheme.storyboard */,
+				1C6633D0267FCCFD00A1036E /* PickBaseColor.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 				160582C2267B410200D2B10B /* RelatedColorsViewController.swift */,
 				834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */,
 				835B7A0C267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift */,
+				1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 				27C2685B26734C69000D2D10 /* InformationPopUpViewViewController.xib in Resources */,
 				160582CC267B434200D2B10B /* TagsCollectionViewCell.xib in Resources */,
 				16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */,
+				1C6633D1267FCCFD00A1036E /* PickBaseColor.storyboard in Resources */,
 				839266922677BB57007865A3 /* PalettePreview.storyboard in Resources */,
 				839AA89126773A9F0054C50F /* InputBaseColor.storyboard in Resources */,
 				8321CD4E2660EE5D0094519F /* Assets.xcassets in Resources */,
@@ -442,9 +452,11 @@
 				160582C3267B410200D2B10B /* RelatedColorsViewController.swift in Sources */,
 				839266962677D2A9007865A3 /* PreviewStep.swift in Sources */,
 				1C7989B4267882AC004D6138 /* TestMain.swift in Sources */,
+				1C6633D3267FCE3500A1036E /* PickBaseColorViewController.swift in Sources */,
 				83897DDE266BFB8000AB4913 /* Constants.swift in Sources */,
 				279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */,
 				16DEB7EE26774A9500407D48 /* ColorCombinationViewController.swift in Sources */,
+				1C6633CF267FBC5000A1036E /* ThemeView.swift in Sources */,
 				83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */,
 				835E751A267471D2005496EF /* ColorSet.swift in Sources */,
 				CC654F0E26735812004C7C8A /* PickThemeViewController.swift in Sources */,

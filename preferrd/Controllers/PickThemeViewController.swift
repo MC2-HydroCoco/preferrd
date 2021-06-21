@@ -12,18 +12,18 @@ class PickThemeViewController: UIViewController {
     
     @IBOutlet weak var themeCollectionView: UICollectionView!
     
-    @IBOutlet var themeSet: [UIView]!
+    @IBOutlet var themeSet: [ThemeView]!
     
-    var selectedTheme = [Int]() {
+    var selectedThemes = [ColorTheme]() {
         didSet {
             themeCollectionView.reloadData()
         }
     }
     
-    var arrayOfColorTheme = [ColorTheme]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextTapped))
         
         let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
         themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
@@ -37,9 +37,41 @@ class PickThemeViewController: UIViewController {
         setupThemeSet()
     }
     
+    @objc func nextTapped() {
+        performSegue(withIdentifier: "pickBaseColor", sender: self)
+    }
+    
     func setupThemeSet() {
-        for themeView in themeSet {
-            themeView.layer.cornerRadius = 12
+        themeSet.enumerated().forEach{ (index, view) in
+            view.tag = index
+            
+            // Set style
+            view.layer.cornerRadius = 12
+//            view.roundCorners(corners: .allCorners, radius: 12)
+            
+            // Set tap gesture
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectTheme))
+            view.addGestureRecognizer(tapGesture)
+        }
+    }
+    
+    @objc func selectTheme(_ sender: UITapGestureRecognizer) {
+        if let senderView = sender.view as? ThemeView {
+            senderView.toggleSelect()
+            if senderView.isSelected {
+                selectedThemes.append(ColorTheme.allCases[senderView.tag])
+            } else {
+                selectedThemes.removeAll(where: {ColorTheme.allCases[senderView.tag] == $0})
+            }
+        }
+    }
+    
+    // MARK: - Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pickBaseColor" {
+            if let destination = segue.destination as? PickBaseColorViewController {
+                destination.themes = selectedThemes
+            }
         }
     }
 }
@@ -47,7 +79,7 @@ class PickThemeViewController: UIViewController {
 extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewDelegate,
                                    UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return selectedTheme.count
+        return selectedThemes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -56,12 +88,9 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
             for: indexPath) as? ThemeCollectionViewCell {
             
             cell.themeContainer.layer.cornerRadius = 12
-            cell.imageOverlay.layer.backgroundColor = UIColor(hex: "#DEDEDE").cgColor
-            cell.themeLabel.text = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
+            cell.themeLabel.text = selectedThemes[indexPath.row].rawValue
             cell.imageContainer.isHidden = true
-            cell.imageOverlay.layer.cornerRadius = 12
-            cell.themeLabel.preferredMaxLayoutWidth = collectionView.frame.width - 32
-            cell.removeButton.isHidden = false
+            cell.removeButton.isHidden = true
             
             let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
             cell.addGestureRecognizer(tapRecognizer)
@@ -76,31 +105,23 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let item = ColorTheme.allCases[selectedTheme[indexPath.row]].rawValue
-        let itemSize = item.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 36)
+        let item = selectedThemes[indexPath.row].rawValue
+        let itemSize = item.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32)
         ])
         return itemSize
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedTheme.remove(at: indexPath.row)
-        print("kons")
-    }
-    
     @objc func handleTap (_ sender: UITapGestureRecognizer) {
-        //        let location = sender.location(in: themeCollectionView)
-        //        if let indexPath = themeCollectionView.indexPathForItem(at: location) {
-        //            guard let cell = themeCollectionView.cellForItem(at: indexPath) as? ThemeCollectionViewCell
-        //            else {
-        //                return
-        //            }
-        //            if cell.removeButton.frame.contains(location) {
-        //                selectedTheme.remove(at: indexPath.row)
-        //            }
-        //        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
+        let location = sender.location(in: themeCollectionView)
+        if let indexPath = themeCollectionView.indexPathForItem(at: location) {
+            for view in themeSet {
+                if selectedThemes[indexPath.row].rawValue == view.themeLabel.text {
+                    view.toggleSelect()
+                    break
+                }
+            }
+            
+            selectedThemes.remove(at: indexPath.row)
+        }
     }
 }
