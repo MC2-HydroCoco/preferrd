@@ -19,6 +19,10 @@ class PickThemeViewController: UIViewController {
             themeCollectionView.reloadData()
         }
     }
+    var selectMaxed: Bool = false
+    
+    var relatedColors = [Color]()
+    let colorManager = ColorManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +61,38 @@ class PickThemeViewController: UIViewController {
     
     @objc func selectTheme(_ sender: UITapGestureRecognizer) {
         if let senderView = sender.view as? ThemeView {
+            if selectMaxed && !senderView.isSelected {
+                return
+            }
+            
             senderView.toggleSelect()
+            
             if senderView.isSelected {
                 selectedThemes.append(ColorTheme.allCases[senderView.tag])
+                if selectedThemes.count > 2 {
+                    selectMaxed = true
+                    disableAll()
+                }
             } else {
                 selectedThemes.removeAll(where: {ColorTheme.allCases[senderView.tag] == $0})
+                selectMaxed = false
+                enableAll()
+            }
+        }
+    }
+    
+    func disableAll() {
+        for view in themeSet {
+            if view.isSelected == false {
+                view.themeImageView.alpha = 0.4
+            }
+        }
+    }
+    
+    func enableAll() {
+        for view in themeSet {
+            if view.isSelected == false {
+                view.themeImageView.alpha = 1
             }
         }
     }
@@ -71,7 +102,7 @@ class PickThemeViewController: UIViewController {
         if segue.identifier == "pickBaseColor" {
             if let destination = segue.destination as? PickBaseColorViewController {
                 destination.themes = selectedThemes
-                
+                destination.relatedColors = self.relatedColors
             }
         }
     }
@@ -122,6 +153,8 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
             }
             
             selectedThemes.remove(at: indexPath.row)
+            selectMaxed = false
+            enableAll()
         }
     }
 }
