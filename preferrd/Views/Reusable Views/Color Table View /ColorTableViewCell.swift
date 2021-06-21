@@ -27,6 +27,8 @@ class ColorTableViewCell: UITableViewCell {
     super.layoutSubviews()
     setupStyling()
     setupBaseColor()
+    // 3 JAM DEBUG CUMA GARA" GA RELOAD DATA. TOLONG AKU YA ALLAH
+    relatedTagsCollectionView.reloadData()
   }
 
   func setupStyling() {
@@ -58,12 +60,10 @@ class ColorTableViewCell: UITableViewCell {
 
 extension ColorTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    print("debug:", baseColor.name, baseColor.relatedTags, baseColor.relatedTags.count)
-    return Int(min(baseColor.relatedTags.count, 2))
+    return baseColor.relatedTags.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    print("debug: Masuk!")
     if let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: "relatedTags",
         for: indexPath) as? RelatedTagsCollectionViewCell {

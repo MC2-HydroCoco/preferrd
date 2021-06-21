@@ -44,6 +44,7 @@
 		839266922677BB57007865A3 /* PalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839266912677BB57007865A3 /* PalettePreview.storyboard */; };
 		839266942677C426007865A3 /* PalettePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839266932677C426007865A3 /* PalettePreviewViewController.swift */; };
 		839266962677D2A9007865A3 /* PreviewStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839266952677D2A9007865A3 /* PreviewStep.swift */; };
+		83A943AC268113D400CC3A73 /* ColorCombinationTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A943AB268113D400CC3A73 /* ColorCombinationTagCollectionViewCell.swift */; };
 		83ADD6A0267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADD69F267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift */; };
 		83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */; };
 		83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D22DBE266623AC0009B9AF /* ColorHelper.swift */; };
@@ -94,6 +95,7 @@
 		839266912677BB57007865A3 /* PalettePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PalettePreview.storyboard; sourceTree = "<group>"; };
 		839266932677C426007865A3 /* PalettePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettePreviewViewController.swift; sourceTree = "<group>"; };
 		839266952677D2A9007865A3 /* PreviewStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStep.swift; sourceTree = "<group>"; };
+		83A943AB268113D400CC3A73 /* ColorCombinationTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		83ADD69F267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPalettePreviewViewController.swift; sourceTree = "<group>"; };
 		83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombination.swift; sourceTree = "<group>"; };
 		83D22DBE266623AC0009B9AF /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				279454CF2678B1F600BFB69F /* PickColorCombinationViewController.swift */,
 				839266932677C426007865A3 /* PalettePreviewViewController.swift */,
 				83ADD69F267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift */,
+				83A943AB268113D400CC3A73 /* ColorCombinationTagCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
 				83DD4D88266E81CD00BC2EC4 /* ColorTheme.swift in Sources */,
+				83A943AC268113D400CC3A73 /* ColorCombinationTagCollectionViewCell.swift in Sources */,
 				83052DB3267378CE000B0A36 /* PaletteTableViewCell.swift in Sources */,
 				279A51D926722C76007A559E /* ColorCombinationTableViewCell.swift in Sources */,
 				834C807D267CFE0D005D2336 /* PaletteActionViewController.swift in Sources */,
@@ -554,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
+				DEVELOPMENT_TEAM = 8KKWD6QU49;
 				INFOPLIST_FILE = preferrd/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -574,7 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
+				DEVELOPMENT_TEAM = 8KKWD6QU49;
 				INFOPLIST_FILE = preferrd/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (

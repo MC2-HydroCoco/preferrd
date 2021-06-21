@@ -46,8 +46,9 @@ class PaletteActionViewController: UIViewController {
       textField.text = "My Palette"
     }
     let okAction = UIAlertAction(title: "Save", style: .default) { _ in
+      let name = alert.textFields![0].text
       self.paletteManager.add(
-        name: alert.textFields![0].text!,
+        name: name == "" || name == nil ? "My Palette" : name!,
         backgroundHex: self.payload["background"]!,
         headlineHex: self.payload["headline"]!,
         bodyHex: self.payload["body"]!,

@@ -73,7 +73,7 @@ extension PickColorCombinationViewController: UICollectionViewDataSource, UIColl
     if let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: "relatedTag",
       for: indexPath
-    ) as? RelatedTagsCollectionViewCell {
+    ) as? ColorCombinationTagCollectionViewCell {
       cell.tagLabel.text = baseColor.relatedTags[indexPath.item].rawValue
       return cell
     }

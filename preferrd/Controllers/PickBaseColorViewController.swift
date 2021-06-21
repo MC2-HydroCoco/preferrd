@@ -50,10 +50,6 @@ class PickBaseColorViewController: UIViewController {
       forCellReuseIdentifier: "colorTableViewCell"
     )
 
-    relatedColors = themes.reduce([Color]()) { (accumulator, theme) in
-      accumulator + ColorTheme.getRelatedColors(for: theme)
-    }
-
     colorTableView.delegate = self
     colorTableView.dataSource = self
   }

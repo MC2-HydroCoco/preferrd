@@ -30,32 +30,32 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-eL-mNb">
-                                        <rect key="frame" x="123.5" y="16" width="185.5" height="91.5"/>
+                                        <rect key="frame" x="123.5" y="16" width="226.5" height="91.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heX-bR-M5c">
-                                                <rect key="frame" x="0.0" y="0.0" width="185.5" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="226.5" height="25"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" name="Light"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Hex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na8-y9-5Fc">
-                                                <rect key="frame" x="0.0" y="33" width="185.5" height="25.5"/>
+                                                <rect key="frame" x="0.0" y="33" width="226.5" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" name="Light"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x3s-je-hnM">
-                                                <rect key="frame" x="0.0" y="66.5" width="185.5" height="25"/>
+                                                <rect key="frame" x="0.0" y="66.5" width="226.5" height="25"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KIG-JZ-AL3">
                                                     <size key="itemSize" width="128" height="24"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="relatedTag" id="7KM-JL-3ra" customClass="RelatedTagCollectionViewCell" customModule="preferrd" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="2" width="72.5" height="21.5"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="relatedTag" id="7KM-JL-3ra" customClass="ColorCombinationTagCollectionViewCell" customModule="preferrd" customModuleProvider="target">
+                                                        <rect key="frame" x="1" y="2" width="72.5" height="21.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NQv-5K-yHZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="72.5" height="21.5"/>
@@ -85,16 +85,16 @@
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <connections>
-                                                            <outlet property="tagLabel" destination="v2U-qN-9rP" id="t36-yc-iF0"/>
-                                                            <outlet property="tagLabelContainer" destination="l4V-95-WKK" id="Kiu-Pj-yFt"/>
+                                                            <outlet property="tagLabel" destination="v2U-qN-9rP" id="Q7p-to-MX5"/>
+                                                            <outlet property="tagLabelContainer" destination="l4V-95-WKK" id="hQ4-8D-Z1S"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1e-FG-TZq">
-                                        <rect key="frame" x="325" y="16" width="25" height="91.5"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1e-FG-TZq">
+                                        <rect key="frame" x="350" y="16" width="0.0" height="91.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="tintColor" name="Light"/>
                                         <state key="normal">
