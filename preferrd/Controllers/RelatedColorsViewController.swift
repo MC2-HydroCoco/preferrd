@@ -94,6 +94,8 @@ extension RelatedColorsViewController: UICollectionViewDataSource, UITableViewDa
   // Banyaknya yang digenerate
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return selectedTheme.count
+    
+    
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
