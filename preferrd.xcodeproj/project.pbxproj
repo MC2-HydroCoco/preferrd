@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160582C3267B410200D2B10B /* RelatedColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160582C2267B410200D2B10B /* RelatedColorsViewController.swift */; };
-		160582CB267B434200D2B10B /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160582C9267B434200D2B10B /* TagsCollectionViewCell.swift */; };
-		160582CC267B434200D2B10B /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160582CA267B434200D2B10B /* TagsCollectionViewCell.xib */; };
-		16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */; };
-		16DEB7EE26774A9500407D48 /* ColorCombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */; };
 		1C5B79462679CAF80036A559 /* Preferrd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79442679CAF80036A559 /* Preferrd.xcdatamodeld */; };
 		1C5B79492679F2EE0036A559 /* Palette+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79472679F2EE0036A559 /* Palette+CoreDataClass.swift */; };
 		1C5B794A2679F2EE0036A559 /* Palette+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B79482679F2EE0036A559 /* Palette+CoreDataProperties.swift */; };
@@ -19,7 +14,6 @@
 		1C6633CF267FBC5000A1036E /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6633CE267FBC5000A1036E /* ThemeView.swift */; };
 		1C6633D1267FCCFD00A1036E /* PickBaseColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6633D0267FCCFD00A1036E /* PickBaseColor.storyboard */; };
 		1C6633D3267FCE3500A1036E /* PickBaseColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */; };
-		1C7989B4267882AC004D6138 /* TestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B3267882AC004D6138 /* TestMain.swift */; };
 		1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B526789754004D6138 /* BaseColorGroup.swift */; };
 		1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B92678AB60004D6138 /* StringHelper.swift */; };
 		1C7E8F602680CEE700985DC6 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E8F5F2680CEE700985DC6 /* ColorManager.swift */; };
@@ -28,15 +22,12 @@
 		279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279A51D126721C3C007A559E /* ColorTableViewCell.xib */; };
 		279A51D926722C76007A559E /* ColorCombinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */; };
 		279A51DA26722C76007A559E /* ColorCombinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279A51D826722C76007A559E /* ColorCombinationTableViewCell.xib */; };
-		27C2685A26734C69000D2D10 /* InformationPopUpViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2685826734C69000D2D10 /* InformationPopUpViewViewController.swift */; };
-		27C2685B26734C69000D2D10 /* InformationPopUpViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C2685926734C69000D2D10 /* InformationPopUpViewViewController.xib */; };
 		8304D0A7266EA64300EBABB5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D0A6266EA64300EBABB5 /* Color.swift */; };
 		83052DB3267378CE000B0A36 /* PaletteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83052DB2267378CE000B0A36 /* PaletteTableViewCell.swift */; };
 		83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83052DB426737903000B0A36 /* PaletteTableViewCell.xib */; };
-		83052DBB267379DE000B0A36 /* PreviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83052DBA267379DE000B0A36 /* PreviewsView.swift */; };
-		83052DBD267379F4000B0A36 /* Views.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83052DBC267379F4000B0A36 /* Views.xib */; };
 		83168C4E267F9ADA008302EC /* PickTheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83168C4D267F9ADA008302EC /* PickTheme.storyboard */; };
-		83171EDE26714C60001999F7 /* RelatedColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83171EDD26714C60001999F7 /* RelatedColorCell.swift */; };
+		831804A42680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831804A22680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift */; };
+		831804A52680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831804A32680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib */; };
 		8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD412660EE5C0094519F /* AppDelegate.swift */; };
 		8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD432660EE5C0094519F /* SceneDelegate.swift */; };
 		8321CD462660EE5C0094519F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD452660EE5C0094519F /* MainViewController.swift */; };
@@ -47,16 +38,12 @@
 		834005142661691D0061724B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834005132661691D0061724B /* Extensions.swift */; };
 		834C807D267CFE0D005D2336 /* PaletteActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */; };
 		835B7A0B267F243500FC98D4 /* PickColorCombination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835B7A0A267F243500FC98D4 /* PickColorCombination.storyboard */; };
-		835B7A0D267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B7A0C267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift */; };
 		835E751A267471D2005496EF /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E7519267471D2005496EF /* ColorSet.swift */; };
 		837809A4267B1B3D007BBD17 /* FinalPalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */; };
 		83897DDE266BFB8000AB4913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83897DDD266BFB8000AB4913 /* Constants.swift */; };
 		839266922677BB57007865A3 /* PalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839266912677BB57007865A3 /* PalettePreview.storyboard */; };
 		839266942677C426007865A3 /* PalettePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839266932677C426007865A3 /* PalettePreviewViewController.swift */; };
 		839266962677D2A9007865A3 /* PreviewStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839266952677D2A9007865A3 /* PreviewStep.swift */; };
-		839AA889267737A50054C50F /* RelatedColors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839AA888267737A50054C50F /* RelatedColors.storyboard */; };
-		839AA88B267738C00054C50F /* OldMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839AA88A267738C00054C50F /* OldMain.swift */; };
-		839AA89126773A9F0054C50F /* InputBaseColor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839AA89026773A9F0054C50F /* InputBaseColor.storyboard */; };
 		83ADD6A0267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADD69F267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift */; };
 		83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */; };
 		83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D22DBE266623AC0009B9AF /* ColorHelper.swift */; };
@@ -67,11 +54,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		160582C2267B410200D2B10B /* RelatedColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedColorsViewController.swift; sourceTree = "<group>"; };
-		160582C9267B434200D2B10B /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
-		160582CA267B434200D2B10B /* TagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsCollectionViewCell.xib; sourceTree = "<group>"; };
-		16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorCombinations.storyboard; sourceTree = "<group>"; };
-		16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationViewController.swift; sourceTree = "<group>"; };
 		1C5B79452679CAF80036A559 /* Preferrd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Preferrd.xcdatamodel; sourceTree = "<group>"; };
 		1C5B79472679F2EE0036A559 /* Palette+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Palette+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1C5B79482679F2EE0036A559 /* Palette+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Palette+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -79,7 +61,6 @@
 		1C6633CE267FBC5000A1036E /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		1C6633D0267FCCFD00A1036E /* PickBaseColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickBaseColor.storyboard; sourceTree = "<group>"; };
 		1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickBaseColorViewController.swift; sourceTree = "<group>"; };
-		1C7989B3267882AC004D6138 /* TestMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMain.swift; sourceTree = "<group>"; };
 		1C7989B526789754004D6138 /* BaseColorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColorGroup.swift; sourceTree = "<group>"; };
 		1C7989B92678AB60004D6138 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		1C7E8F5F2680CEE700985DC6 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
@@ -88,15 +69,12 @@
 		279A51D126721C3C007A559E /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
 		279A51D726722C76007A559E /* ColorCombinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombinationTableViewCell.swift; sourceTree = "<group>"; };
 		279A51D826722C76007A559E /* ColorCombinationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCombinationTableViewCell.xib; sourceTree = "<group>"; };
-		27C2685826734C69000D2D10 /* InformationPopUpViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPopUpViewViewController.swift; sourceTree = "<group>"; };
-		27C2685926734C69000D2D10 /* InformationPopUpViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationPopUpViewViewController.xib; sourceTree = "<group>"; };
 		8304D0A6266EA64300EBABB5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		83052DB2267378CE000B0A36 /* PaletteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteTableViewCell.swift; sourceTree = "<group>"; };
 		83052DB426737903000B0A36 /* PaletteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaletteTableViewCell.xib; sourceTree = "<group>"; };
-		83052DBA267379DE000B0A36 /* PreviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewsView.swift; sourceTree = "<group>"; };
-		83052DBC267379F4000B0A36 /* Views.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Views.xib; sourceTree = "<group>"; };
 		83168C4D267F9ADA008302EC /* PickTheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickTheme.storyboard; sourceTree = "<group>"; };
-		83171EDD26714C60001999F7 /* RelatedColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedColorCell.swift; sourceTree = "<group>"; };
+		831804A22680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedTagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		831804A32680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedTagsCollectionViewCell.xib; sourceTree = "<group>"; };
 		8321CD3E2660EE5C0094519F /* preferrd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = preferrd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8321CD412660EE5C0094519F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8321CD432660EE5C0094519F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,16 +88,12 @@
 		834005132661691D0061724B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteActionViewController.swift; sourceTree = "<group>"; };
 		835B7A0A267F243500FC98D4 /* PickColorCombination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickColorCombination.storyboard; sourceTree = "<group>"; };
-		835B7A0C267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		835E7519267471D2005496EF /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalPalettePreview.storyboard; sourceTree = "<group>"; };
 		83897DDD266BFB8000AB4913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		839266912677BB57007865A3 /* PalettePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PalettePreview.storyboard; sourceTree = "<group>"; };
 		839266932677C426007865A3 /* PalettePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettePreviewViewController.swift; sourceTree = "<group>"; };
 		839266952677D2A9007865A3 /* PreviewStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStep.swift; sourceTree = "<group>"; };
-		839AA888267737A50054C50F /* RelatedColors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RelatedColors.storyboard; sourceTree = "<group>"; };
-		839AA88A267738C00054C50F /* OldMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldMain.swift; sourceTree = "<group>"; };
-		839AA89026773A9F0054C50F /* InputBaseColor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputBaseColor.storyboard; sourceTree = "<group>"; };
 		83ADD69F267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPalettePreviewViewController.swift; sourceTree = "<group>"; };
 		83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCombination.swift; sourceTree = "<group>"; };
 		83D22DBE266623AC0009B9AF /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
@@ -140,25 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		160582C4267B427300D2B10B /* Tags View */ = {
-			isa = PBXGroup;
-			children = (
-				160582C9267B434200D2B10B /* TagsCollectionViewCell.swift */,
-				160582CA267B434200D2B10B /* TagsCollectionViewCell.xib */,
-			);
-			path = "Tags View";
-			sourceTree = "<group>";
-		};
 		279A51CF26721C24007A559E /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
-				160582C4267B427300D2B10B /* Tags View */,
-				27C2685726734BFB000D2D10 /* Information Pop Up View */,
+				8318049D2680E23F005C85EC /* Related Tag */,
 				279A51D626722C49007A559E /* Color Combination View */,
 				83B53B0F2673614900BED257 /* Theme Collection View */,
 				279A51D526722C37007A559E /* Color Table View  */,
 				83052DB626737933000B0A36 /* Palette Table View */,
-				83052DBE26737A07000B0A36 /* Previews */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -181,15 +144,6 @@
 			path = "Color Combination View";
 			sourceTree = "<group>";
 		};
-		27C2685726734BFB000D2D10 /* Information Pop Up View */ = {
-			isa = PBXGroup;
-			children = (
-				27C2685826734C69000D2D10 /* InformationPopUpViewViewController.swift */,
-				27C2685926734C69000D2D10 /* InformationPopUpViewViewController.xib */,
-			);
-			path = "Information Pop Up View";
-			sourceTree = "<group>";
-		};
 		83052DB626737933000B0A36 /* Palette Table View */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,13 +153,13 @@
 			path = "Palette Table View";
 			sourceTree = "<group>";
 		};
-		83052DBE26737A07000B0A36 /* Previews */ = {
+		8318049D2680E23F005C85EC /* Related Tag */ = {
 			isa = PBXGroup;
 			children = (
-				83052DBA267379DE000B0A36 /* PreviewsView.swift */,
-				83052DBC267379F4000B0A36 /* Views.xib */,
+				831804A22680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift */,
+				831804A32680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib */,
 			);
-			path = Previews;
+			path = "Related Tag";
 			sourceTree = "<group>";
 		};
 		8321CD352660EE5C0094519F = {
@@ -272,17 +226,13 @@
 			isa = PBXGroup;
 			children = (
 				279A51CF26721C24007A559E /* Reusable Views */,
-				8321CD582660F3570094519F /* Main.storyboard */,
 				8321CD5A2660F3710094519F /* LaunchScreen.storyboard */,
+				8321CD582660F3570094519F /* Main.storyboard */,
 				83168C4D267F9ADA008302EC /* PickTheme.storyboard */,
-				83171EDD26714C60001999F7 /* RelatedColorCell.swift */,
-				839AA89026773A9F0054C50F /* InputBaseColor.storyboard */,
-				16DEB7E726773DAD00407D48 /* ColorCombinations.storyboard */,
+				1C6633D0267FCCFD00A1036E /* PickBaseColor.storyboard */,
 				835B7A0A267F243500FC98D4 /* PickColorCombination.storyboard */,
-				839AA888267737A50054C50F /* RelatedColors.storyboard */,
 				839266912677BB57007865A3 /* PalettePreview.storyboard */,
 				837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */,
-				1C6633D0267FCCFD00A1036E /* PickBaseColor.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,18 +249,13 @@
 		83EA28892668E6FA00D7D788 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */,
 				8321CD452660EE5C0094519F /* MainViewController.swift */,
-				16DEB7ED26774A9500407D48 /* ColorCombinationViewController.swift */,
 				CC654F0D26735812004C7C8A /* PickThemeViewController.swift */,
-				1C7989B3267882AC004D6138 /* TestMain.swift */,
-				839AA88A267738C00054C50F /* OldMain.swift */,
+				1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */,
 				279454CF2678B1F600BFB69F /* PickColorCombinationViewController.swift */,
 				839266932677C426007865A3 /* PalettePreviewViewController.swift */,
 				83ADD69F267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift */,
-				160582C2267B410200D2B10B /* RelatedColorsViewController.swift */,
-				834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */,
-				835B7A0C267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift */,
-				1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -392,22 +337,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C2685B26734C69000D2D10 /* InformationPopUpViewViewController.xib in Resources */,
-				160582CC267B434200D2B10B /* TagsCollectionViewCell.xib in Resources */,
-				16DEB7E826773DAD00407D48 /* ColorCombinations.storyboard in Resources */,
 				1C6633D1267FCCFD00A1036E /* PickBaseColor.storyboard in Resources */,
 				839266922677BB57007865A3 /* PalettePreview.storyboard in Resources */,
-				839AA89126773A9F0054C50F /* InputBaseColor.storyboard in Resources */,
 				8321CD4E2660EE5D0094519F /* Assets.xcassets in Resources */,
 				279A51DA26722C76007A559E /* ColorCombinationTableViewCell.xib in Resources */,
 				8321CD5E2660F3AB0094519F /* Localizable.strings in Resources */,
 				CCCA6C1026721C5700D7D3AF /* ThemeCollectionViewCell.xib in Resources */,
 				8321CD5B2660F3710094519F /* LaunchScreen.storyboard in Resources */,
+				831804A52680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib in Resources */,
 				83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */,
-				83052DBD267379F4000B0A36 /* Views.xib in Resources */,
 				8321CD592660F3570094519F /* Main.storyboard in Resources */,
 				83168C4E267F9ADA008302EC /* PickTheme.storyboard in Resources */,
-				839AA889267737A50054C50F /* RelatedColors.storyboard in Resources */,
 				837809A4267B1B3D007BBD17 /* FinalPalettePreview.storyboard in Resources */,
 				279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */,
 				835B7A0B267F243500FC98D4 /* PickColorCombination.storyboard in Resources */,
@@ -447,39 +387,31 @@
 				CCCA6C0F26721C5700D7D3AF /* ThemeCollectionViewCell.swift in Sources */,
 				8321CD462660EE5C0094519F /* MainViewController.swift in Sources */,
 				83ADD6A0267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift in Sources */,
-				839AA88B267738C00054C50F /* OldMain.swift in Sources */,
 				279454D02678B1F600BFB69F /* PickColorCombinationViewController.swift in Sources */,
 				1C7E8F602680CEE700985DC6 /* ColorManager.swift in Sources */,
 				83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */,
 				1C5B79462679CAF80036A559 /* Preferrd.xcdatamodeld in Sources */,
 				1C5B79492679F2EE0036A559 /* Palette+CoreDataClass.swift in Sources */,
-				160582C3267B410200D2B10B /* RelatedColorsViewController.swift in Sources */,
 				839266962677D2A9007865A3 /* PreviewStep.swift in Sources */,
-				1C7989B4267882AC004D6138 /* TestMain.swift in Sources */,
 				1C6633D3267FCE3500A1036E /* PickBaseColorViewController.swift in Sources */,
 				83897DDE266BFB8000AB4913 /* Constants.swift in Sources */,
 				279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */,
-				16DEB7EE26774A9500407D48 /* ColorCombinationViewController.swift in Sources */,
 				1C6633CF267FBC5000A1036E /* ThemeView.swift in Sources */,
 				83BDB9AC266F8EF400CC8DEE /* ColorCombination.swift in Sources */,
 				835E751A267471D2005496EF /* ColorSet.swift in Sources */,
 				CC654F0E26735812004C7C8A /* PickThemeViewController.swift in Sources */,
-				83052DBB267379DE000B0A36 /* PreviewsView.swift in Sources */,
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
-				835B7A0D267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
 				83DD4D88266E81CD00BC2EC4 /* ColorTheme.swift in Sources */,
 				83052DB3267378CE000B0A36 /* PaletteTableViewCell.swift in Sources */,
 				279A51D926722C76007A559E /* ColorCombinationTableViewCell.swift in Sources */,
 				834C807D267CFE0D005D2336 /* PaletteActionViewController.swift in Sources */,
 				1C5B794C267A10D00036A559 /* PaletteManager.swift in Sources */,
-				83171EDE26714C60001999F7 /* RelatedColorCell.swift in Sources */,
 				839266942677C426007865A3 /* PalettePreviewViewController.swift in Sources */,
 				8304D0A7266EA64300EBABB5 /* Color.swift in Sources */,
 				1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */,
-				160582CB267B434200D2B10B /* TagsCollectionViewCell.swift in Sources */,
 				1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */,
-				27C2685A26734C69000D2D10 /* InformationPopUpViewViewController.swift in Sources */,
+				831804A42680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

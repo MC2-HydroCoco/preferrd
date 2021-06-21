@@ -13,12 +13,8 @@ class ThemeCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var removeButton: UIButton!
   @IBOutlet weak var imageContainer: UIImageView!
 
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    // Initialization code
-  }
-
-  @IBAction func removeButtonAction(_ sender: Any) {
-    //        self.removeFromSuperview()
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    themeContainer.layer.cornerRadius = 8
   }
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ljg-dU-XZs" customClass="RelatedTagsCollectionViewCell" customModule="preferrd" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="24"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="tl5-Ol-LKG">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="24"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-Ij-NW5">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2d1-2A-8i4">
+                                <rect key="frame" x="8" y="48" width="134" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" name="Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Container"/>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="4" leading="8" bottom="4" trailing="8"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Eja-Ij-NW5" secondAttribute="bottom" id="Ayx-ZI-obd"/>
+                    <constraint firstItem="Eja-Ij-NW5" firstAttribute="top" secondItem="tl5-Ol-LKG" secondAttribute="top" id="BQa-8a-7eW"/>
+                    <constraint firstAttribute="trailing" secondItem="Eja-Ij-NW5" secondAttribute="trailing" id="Jo5-mB-Vln"/>
+                    <constraint firstItem="Eja-Ij-NW5" firstAttribute="leading" secondItem="tl5-Ol-LKG" secondAttribute="leading" id="wiR-BP-YGf"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="150" height="117"/>
+            <connections>
+                <outlet property="tagContainer" destination="Eja-Ij-NW5" id="YDM-6O-zdv"/>
+                <outlet property="tagLabel" destination="2d1-2A-8i4" id="HR5-gV-cfW"/>
+            </connections>
+            <point key="canvasLocation" x="257.97101449275362" y="148.66071428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Container">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dark">
+            <color red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
