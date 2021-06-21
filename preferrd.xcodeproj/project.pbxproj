@@ -16,6 +16,7 @@
 		1C6633D3267FCE3500A1036E /* PickBaseColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */; };
 		1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B526789754004D6138 /* BaseColorGroup.swift */; };
 		1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7989B92678AB60004D6138 /* StringHelper.swift */; };
+		1C7E8F602680CEE700985DC6 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E8F5F2680CEE700985DC6 /* ColorManager.swift */; };
 		279454D02678B1F600BFB69F /* PickColorCombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279454CF2678B1F600BFB69F /* PickColorCombinationViewController.swift */; };
 		279A51D226721C3C007A559E /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A51D026721C3C007A559E /* ColorTableViewCell.swift */; };
 		279A51D326721C3C007A559E /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279A51D126721C3C007A559E /* ColorTableViewCell.xib */; };
@@ -62,6 +63,7 @@
 		1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickBaseColorViewController.swift; sourceTree = "<group>"; };
 		1C7989B526789754004D6138 /* BaseColorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColorGroup.swift; sourceTree = "<group>"; };
 		1C7989B92678AB60004D6138 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
+		1C7E8F5F2680CEE700985DC6 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		279454CF2678B1F600BFB69F /* PickColorCombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickColorCombinationViewController.swift; sourceTree = "<group>"; };
 		279A51D026721C3C007A559E /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		279A51D126721C3C007A559E /* ColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				1C5B79482679F2EE0036A559 /* Palette+CoreDataProperties.swift */,
 				1C5B794B267A10D00036A559 /* PaletteManager.swift */,
 				8304D0A6266EA64300EBABB5 /* Color.swift */,
+				1C7E8F5F2680CEE700985DC6 /* ColorManager.swift */,
 				83DD4D87266E81CD00BC2EC4 /* ColorTheme.swift */,
 				1C7989B526789754004D6138 /* BaseColorGroup.swift */,
 				83BDB9AB266F8EF400CC8DEE /* ColorCombination.swift */,
@@ -385,6 +388,7 @@
 				8321CD462660EE5C0094519F /* MainViewController.swift in Sources */,
 				83ADD6A0267A3D2A00D80CD9 /* FinalPalettePreviewViewController.swift in Sources */,
 				279454D02678B1F600BFB69F /* PickColorCombinationViewController.swift in Sources */,
+				1C7E8F602680CEE700985DC6 /* ColorManager.swift in Sources */,
 				83D22DBF266623AC0009B9AF /* ColorHelper.swift in Sources */,
 				1C5B79462679CAF80036A559 /* Preferrd.xcdatamodeld in Sources */,
 				1C5B79492679F2EE0036A559 /* Palette+CoreDataClass.swift in Sources */,
