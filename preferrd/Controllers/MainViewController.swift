@@ -16,15 +16,12 @@ class MainViewController: UIViewController {
     var currCell: PaletteTableViewCell?
     
     let symbolLayer: CALayer = {
-        let textLayer = CALayer()
-        textLayer.contents = UIImage(systemName: "trash.fill")
-//        textLayer.fontSize = 17
-//        textLayer.font = UIFont.systemFont(ofSize: 17, weight: .bold)
-//        textLayer.string = "􀈒"
-//        textLayer.foregroundColor = UIColor.white.cgColor
-        textLayer.contentsScale = UIScreen.main.scale
-        textLayer.frame = CGRect(x: 0, y: 0, width: 96, height: 117)
-        return textLayer
+        let symbolLayer = CALayer()
+        symbolLayer.contents = UIImage(named: "trash")?.cgImage
+        symbolLayer.contentsGravity = .center
+//        symbolLayer.contentsScale = UIScreen.main.scale
+        symbolLayer.frame = CGRect(x: 0, y: 0, width: 96, height: 117)
+        return symbolLayer
     }()
     var removeAction: CALayer = {
         let layer = CALayer()
