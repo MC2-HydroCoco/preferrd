@@ -121,6 +121,14 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="colorBackground" destination="H2p-sc-9uM" id="HIK-BZ-L4p"/>
+                            <outlet property="colorBox" destination="ZUv-7d-7DP" id="2k1-Jr-a0P"/>
+                            <outlet property="colorCollection" destination="Rdp-35-NsJ" id="ODK-VF-pCS"/>
+                            <outlet property="colorHex" destination="pgc-xS-fI0" id="jRh-Gv-Xqs"/>
+                            <outlet property="colorInfoButton" destination="RwT-id-glj" id="Yda-TX-fQp"/>
+                            <outlet property="colorName" destination="60I-1E-b3b" id="VcO-1K-JBg"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>

@@ -14,7 +14,7 @@ class ColorTableViewCell: UITableViewCell {
             colorCollection.reloadData()
         }
     }
-
+    
     @IBOutlet var colorInfoButton: UIButton!
     @IBOutlet weak var colorBox: UIView!
     @IBOutlet weak var colorName: UILabel!
@@ -23,6 +23,10 @@ class ColorTableViewCell: UITableViewCell {
     @IBOutlet var colorCollection: UICollectionView!
     
     override func awakeFromNib() {
+        
+        print("fandikaa\(thisCellColor(colorText: "Alabaster"))")
+        
+        
         super.awakeFromNib()
         setupBaseColor()
     }
@@ -33,12 +37,8 @@ class ColorTableViewCell: UITableViewCell {
         
         colorCollection.delegate = self
         colorCollection.dataSource = self
+//      colorCollection.register(tagNib, forCellWithReuseIdentifier: "colorCollectionCell")
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//    }
 }
 
 extension ColorTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -56,6 +56,4 @@ extension ColorTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
         }
         return UICollectionViewCell()
     }
-    
-    
 }
