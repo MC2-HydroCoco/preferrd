@@ -46,7 +46,8 @@ class PickThemeViewController: UIViewController {
             view.tag = index
             
             // Set style
-            view.roundCorners(corners: .allCorners, radius: 12)
+            view.layer.cornerRadius = 12
+//            view.roundCorners(corners: .allCorners, radius: 12)
             
             // Set tap gesture
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectTheme))
