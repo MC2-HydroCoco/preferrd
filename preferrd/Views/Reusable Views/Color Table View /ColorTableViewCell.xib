@@ -10,14 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw" customClass="ColorTableViewCell" customModule="preferrd" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw">
             <rect key="frame" x="0.0" y="0.0" width="364" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="364" height="108"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZ9-qa-9UG">
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZ9-qa-9UG" customClass="ColorTableViewCell" customModule="preferrd" customModuleProvider="target">
                         <rect key="frame" x="2" y="0.0" width="360" height="108"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60I-1E-b3b">
@@ -54,7 +54,7 @@
                                     <action selector="colorInformation:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3tZ-pl-sPc"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-35-NsJ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-35-NsJ" customClass="ColorTagsCollectionView">
                                 <rect key="frame" x="104" y="62" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,6 +84,14 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="colorBackground" destination="H2p-sc-9uM" id="HIK-BZ-L4p"/>
+                            <outlet property="colorBox" destination="ZUv-7d-7DP" id="2k1-Jr-a0P"/>
+                            <outlet property="colorCollection" destination="Rdp-35-NsJ" id="ODK-VF-pCS"/>
+                            <outlet property="colorHex" destination="pgc-xS-fI0" id="jRh-Gv-Xqs"/>
+                            <outlet property="colorInfoButton" destination="RwT-id-glj" id="Yda-TX-fQp"/>
+                            <outlet property="colorName" destination="60I-1E-b3b" id="VcO-1K-JBg"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>
@@ -93,12 +101,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="colorBackground" destination="AZ9-qa-9UG" id="25s-HU-ikK"/>
-                <outlet property="colorBox" destination="ZUv-7d-7DP" id="75T-yF-pKM"/>
-                <outlet property="colorCollection" destination="Rdp-35-NsJ" id="TWh-Xw-nzF"/>
-                <outlet property="colorHex" destination="pgc-xS-fI0" id="ErC-5e-9lw"/>
-                <outlet property="colorInfoButton" destination="RwT-id-glj" id="4kD-SA-kZv"/>
-                <outlet property="colorName" destination="60I-1E-b3b" id="6wP-8x-17e"/>
+                <outlet property="selectedBackgroundView" destination="AZ9-qa-9UG" id="XsP-Lt-eCf"/>
             </connections>
             <point key="canvasLocation" x="-13.043478260869566" y="143.97321428571428"/>
         </tableViewCell>

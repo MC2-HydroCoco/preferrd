@@ -7,34 +7,29 @@
 
 import UIKit
 
-class ColorTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+func thisCellColor(colorText:String) -> [Color] {
+    Constants.colors.filter{$0.name.contains("\(colorText)")}
+}
+
+let colorTags = ["a", "b"]
+
+
+
+
+
+class ColorTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource  {
     
     
 //    func generateTag(colorName: String) -> [String] {
 //        var tagColor = Color.
 //    }
-//    
+//
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        // banyaknya tag in integer
-        return 3
-        
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colorCollectionCell", for: indexPath) as? TagsCollectionViewCell {
-            
-            // label tag text generate dari tagnya color
-            
-            cell.tagLabel.text = "fandika"
-            return cell
-        }
-        return UICollectionViewCell()
-    }
-    
+    // generate color detail dari colorName
+    //
+    var color: Color!
 
+    
     @IBOutlet var colorInfoButton: UIButton!
     @IBOutlet weak var colorBox: UIView!
     @IBOutlet weak var colorName: UILabel!
@@ -43,6 +38,10 @@ class ColorTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     @IBOutlet var colorCollection: UICollectionView!
     
     override func awakeFromNib() {
+        
+        print("fandikaa\(thisCellColor(colorText: "Alabaster"))")
+        
+        
         super.awakeFromNib()
         colorBackground.layer.cornerRadius = 12
         colorBox.layer.cornerRadius = 12
@@ -64,6 +63,29 @@ class ColorTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     let tagNib = UINib(nibName: "\(TagsCollectionViewCell.self)", bundle: nil)
     
     
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return color.relatedTags.count
+        
+        // banyaknya tag in integer
+//        return thisCellColor(colorText: colorName.text).
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colorCollectionCell", for: indexPath) as? TagsCollectionViewCell {
+            
+            // label tag text generate dari tagnya color
+            cell.tagLabel.text = color.relatedTags[indexPath.row].rawValue
+            
+            return cell
+        }
+        return UICollectionViewCell()
+    }
     
     
 }
