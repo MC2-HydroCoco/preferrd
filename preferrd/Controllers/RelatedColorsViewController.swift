@@ -69,6 +69,9 @@ extension RelatedColorsViewController: UICollectionViewDelegate, UITableViewDele
       cell.colorHex.textColor = .white
       cell.colorInfoButton.tintColor = .white
       print("you tapped tablecell \(indexPath)")
+        
+        
+        
     }
   }
 
@@ -94,6 +97,8 @@ extension RelatedColorsViewController: UICollectionViewDataSource, UITableViewDa
   // Banyaknya yang digenerate
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return selectedTheme.count
+    
+    
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,6 +116,7 @@ extension RelatedColorsViewController: UICollectionViewDataSource, UITableViewDa
       cell.colorName.text = relatedColors[indexPath.row].name
       cell.colorHex.text = relatedColors[indexPath.row].hex
       cell.colorBox.backgroundColor = UIColor(hex: relatedColors[indexPath.row].hex)
+    
 
       cell.selectionStyle = .none
 
