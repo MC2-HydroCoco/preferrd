@@ -171,11 +171,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                     palettes = paletteManager.fetch()
                 }
             }
+            else if currCell.paletteBackgroundView.frame.contains(location) {
+                if let index = paletteTableView.indexPath(for: currCell) {
+                    UIView.animate(withDuration: 0.3) {
+                        self.removeAction.opacity = 0
+                    }
+                    performSegue(withIdentifier: "editPalette", sender: palettes[index.row])
+                }
+            }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "editPalette", sender: palettes[indexPath.row])
     }
 }
 
