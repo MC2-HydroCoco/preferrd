@@ -13,6 +13,6 @@ class RelatedTagCollectionViewCell: UICollectionViewCell {
 
   override func layoutSubviews() {
     super.layoutSubviews()
-    tagLabelContainer.applyShadow()
+//    tagLabelContainer.applyShadow()
   }
 }

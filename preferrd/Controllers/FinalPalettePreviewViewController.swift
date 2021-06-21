@@ -12,7 +12,7 @@ class FinalPalettePreviewViewController: UIViewController {
   let paletteManager = PaletteManager.shared
 
   // Required Payload
-  var palette = [UIColor]()
+  var palette: [UIColor] = [.red, .blue, .brown, .cyan, .yellow]
   var paletteToUpdate: Palette?
 
   // Palette Preview Properties
@@ -116,6 +116,7 @@ class FinalPalettePreviewViewController: UIViewController {
   @objc func selectColor(_ sender: UITapGestureRecognizer) {
     if let sender = sender.view {
       selectedColorIndex = sender.tag
+      resetHighligths()
       updateHighlight()
       updateSlidersValue()
     }
