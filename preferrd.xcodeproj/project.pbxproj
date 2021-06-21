@@ -25,6 +25,8 @@
 		83052DB3267378CE000B0A36 /* PaletteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83052DB2267378CE000B0A36 /* PaletteTableViewCell.swift */; };
 		83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83052DB426737903000B0A36 /* PaletteTableViewCell.xib */; };
 		83168C4E267F9ADA008302EC /* PickTheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83168C4D267F9ADA008302EC /* PickTheme.storyboard */; };
+		831804A42680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831804A22680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift */; };
+		831804A52680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831804A32680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib */; };
 		8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD412660EE5C0094519F /* AppDelegate.swift */; };
 		8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD432660EE5C0094519F /* SceneDelegate.swift */; };
 		8321CD462660EE5C0094519F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321CD452660EE5C0094519F /* MainViewController.swift */; };
@@ -35,7 +37,6 @@
 		834005142661691D0061724B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834005132661691D0061724B /* Extensions.swift */; };
 		834C807D267CFE0D005D2336 /* PaletteActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */; };
 		835B7A0B267F243500FC98D4 /* PickColorCombination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835B7A0A267F243500FC98D4 /* PickColorCombination.storyboard */; };
-		835B7A0D267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B7A0C267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift */; };
 		835E751A267471D2005496EF /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E7519267471D2005496EF /* ColorSet.swift */; };
 		837809A4267B1B3D007BBD17 /* FinalPalettePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */; };
 		83897DDE266BFB8000AB4913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83897DDD266BFB8000AB4913 /* Constants.swift */; };
@@ -70,6 +71,8 @@
 		83052DB2267378CE000B0A36 /* PaletteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteTableViewCell.swift; sourceTree = "<group>"; };
 		83052DB426737903000B0A36 /* PaletteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaletteTableViewCell.xib; sourceTree = "<group>"; };
 		83168C4D267F9ADA008302EC /* PickTheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickTheme.storyboard; sourceTree = "<group>"; };
+		831804A22680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedTagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		831804A32680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedTagsCollectionViewCell.xib; sourceTree = "<group>"; };
 		8321CD3E2660EE5C0094519F /* preferrd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = preferrd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8321CD412660EE5C0094519F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8321CD432660EE5C0094519F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 		834005132661691D0061724B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteActionViewController.swift; sourceTree = "<group>"; };
 		835B7A0A267F243500FC98D4 /* PickColorCombination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickColorCombination.storyboard; sourceTree = "<group>"; };
-		835B7A0C267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		835E7519267471D2005496EF /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalPalettePreview.storyboard; sourceTree = "<group>"; };
 		83897DDD266BFB8000AB4913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		279A51CF26721C24007A559E /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
+				8318049D2680E23F005C85EC /* Related Tag */,
 				279A51D626722C49007A559E /* Color Combination View */,
 				83B53B0F2673614900BED257 /* Theme Collection View */,
 				279A51D526722C37007A559E /* Color Table View  */,
@@ -146,6 +149,15 @@
 				83052DB426737903000B0A36 /* PaletteTableViewCell.xib */,
 			);
 			path = "Palette Table View";
+			sourceTree = "<group>";
+		};
+		8318049D2680E23F005C85EC /* Related Tag */ = {
+			isa = PBXGroup;
+			children = (
+				831804A22680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift */,
+				831804A32680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib */,
+			);
+			path = "Related Tag";
 			sourceTree = "<group>";
 		};
 		8321CD352660EE5C0094519F = {
@@ -236,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */,
-				835B7A0C267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift */,
 				8321CD452660EE5C0094519F /* MainViewController.swift */,
 				CC654F0D26735812004C7C8A /* PickThemeViewController.swift */,
 				1C6633D2267FCE3500A1036E /* PickBaseColorViewController.swift */,
@@ -330,6 +341,7 @@
 				8321CD5E2660F3AB0094519F /* Localizable.strings in Resources */,
 				CCCA6C1026721C5700D7D3AF /* ThemeCollectionViewCell.xib in Resources */,
 				8321CD5B2660F3710094519F /* LaunchScreen.storyboard in Resources */,
+				831804A52680E3FC005C85EC /* RelatedTagsCollectionViewCell.xib in Resources */,
 				83052DB526737903000B0A36 /* PaletteTableViewCell.xib in Resources */,
 				8321CD592660F3570094519F /* Main.storyboard in Resources */,
 				83168C4E267F9ADA008302EC /* PickTheme.storyboard in Resources */,
@@ -385,7 +397,6 @@
 				835E751A267471D2005496EF /* ColorSet.swift in Sources */,
 				CC654F0E26735812004C7C8A /* PickThemeViewController.swift in Sources */,
 				8321CD422660EE5C0094519F /* AppDelegate.swift in Sources */,
-				835B7A0D267F406D00FC98D4 /* RelatedTagCollectionViewCell.swift in Sources */,
 				8321CD442660EE5C0094519F /* SceneDelegate.swift in Sources */,
 				83DD4D88266E81CD00BC2EC4 /* ColorTheme.swift in Sources */,
 				83052DB3267378CE000B0A36 /* PaletteTableViewCell.swift in Sources */,
@@ -396,6 +407,7 @@
 				8304D0A7266EA64300EBABB5 /* Color.swift in Sources */,
 				1C7989B626789754004D6138 /* BaseColorGroup.swift in Sources */,
 				1C7989BA2678AB60004D6138 /* StringHelper.swift in Sources */,
+				831804A42680E3FC005C85EC /* RelatedTagsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

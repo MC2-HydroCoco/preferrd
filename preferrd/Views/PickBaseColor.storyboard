@@ -8,21 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base Color-->
+        <!--Pick Base Color-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Base Color" id="Y6W-OH-hqX" customClass="PickBaseColorViewController" customModule="preferrd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pick Base Color" id="Y6W-OH-hqX" customClass="PickBaseColorViewController" customModule="preferrd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ls1-Jd-56l">
-                                <rect key="frame" x="24" y="68" width="366" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="24" y="56" width="366" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="aT5-yZ-VRR"/>
+                                    <constraint firstAttribute="height" constant="50" id="aT5-yZ-VRR"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oGs-Ga-Thk">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oGs-Ga-Thk">
                                     <size key="itemSize" width="128" height="32"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,8 +30,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-HR-exV">
-                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-HR-exV">
+                                <rect key="frame" x="0.0" y="130" width="414" height="732"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -39,7 +39,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="j6R-HR-exV" secondAttribute="trailing" id="1zG-es-ocT"/>
-                            <constraint firstItem="Ls1-Jd-56l" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="30C-wT-j7I"/>
+                            <constraint firstItem="Ls1-Jd-56l" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="30C-wT-j7I"/>
                             <constraint firstItem="j6R-HR-exV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4MZ-hW-9aT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ls1-Jd-56l" secondAttribute="trailing" constant="24" id="OFB-hx-PMb"/>
                             <constraint firstItem="Ls1-Jd-56l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="WCa-l4-1Mk"/>

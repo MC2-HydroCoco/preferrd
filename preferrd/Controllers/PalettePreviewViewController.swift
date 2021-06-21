@@ -4,6 +4,7 @@
 //
 //  Created by Christianto Budisaputra on 15/06/21.
 //
+// swiftlint:disable type_body_length
 
 import UIKit
 
@@ -78,6 +79,11 @@ class PalettePreviewViewController: UIViewController {
     setupView()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setupColorSet()
+  }
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "seeFinalPreview" {
       if let finalPreviewViewController = segue.destination as? FinalPalettePreviewViewController,
@@ -103,7 +109,6 @@ class PalettePreviewViewController: UIViewController {
       nextButton
     ].forEach { element in
       element?.applyShadow()
-      element?.layer.cornerRadius = 8
     }
 
     colorSet.forEach { element in
@@ -118,7 +123,9 @@ class PalettePreviewViewController: UIViewController {
       button?.backgroundColor = UIColor(named: "Dark")
       button?.tintColor = UIColor(named: "Light")
     }
+  }
 
+  private func setupColorSet() {
     // 4. Apply colors to color set
     ColorSet
       .generate(from: selectedCombination)

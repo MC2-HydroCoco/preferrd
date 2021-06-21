@@ -30,7 +30,6 @@ class PickThemeViewController: UIViewController {
     )
 
     setupThemeCollectionView()
-
     setupThemeSet()
   }
 
@@ -91,7 +90,6 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
         withReuseIdentifier: "themeCollectionViewCell",
         for: indexPath) as? ThemeCollectionViewCell {
 
-      cell.themeContainer.layer.cornerRadius = 12
       cell.themeLabel.text = selectedThemes[indexPath.row].rawValue
       cell.imageContainer.isHidden = true
       cell.removeButton.isHidden = true
@@ -102,17 +100,6 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
 
     }
     return UICollectionViewCell()
-  }
-
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    sizeForItemAt indexPath: IndexPath
-  ) -> CGSize {
-    let item = selectedThemes[indexPath.row].rawValue
-    let itemSize = item.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32)
-    ])
-    return itemSize
   }
 
   @objc func handleTap (_ sender: UITapGestureRecognizer) {

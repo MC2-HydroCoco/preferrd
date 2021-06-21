@@ -20,26 +20,24 @@ class PickBaseColorViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    navigationItem.rightBarButtonItem = UIBarButtonItem(
-      title: "Next",
-      style: .done,
-      target: self,
-      action: #selector(nextTapped)
-    )
-
-    relatedColors.append(Constants.colors[1])
+//    navigationItem.rightBarButtonItem = UIBarButtonItem(
+//      title: "Next",
+//      style: .done,
+//      target: self,
+//      action: #selector(nextTapped)
+//    )
 
     setupThemeCollectionView()
     setupColorTableView()
   }
 
-  @objc func nextTapped() {
-    performSegue(withIdentifier: "pickColorCombination", sender: self)
-  }
-
   func setupThemeCollectionView() {
     let nibCell = UINib(nibName: "\(ThemeCollectionViewCell.self)", bundle: nil)
-    themeCollectionView.register(nibCell, forCellWithReuseIdentifier: "themeCollectionViewCell")
+
+    themeCollectionView.register(
+      nibCell,
+      forCellWithReuseIdentifier: "themeCollectionViewCell"
+    )
 
     themeCollectionView.delegate = self
     themeCollectionView.dataSource = self
@@ -47,7 +45,14 @@ class PickBaseColorViewController: UIViewController {
 
   func setupColorTableView() {
     let nibCell = UINib(nibName: "\(ColorTableViewCell.self)", bundle: nil)
-    colorTableView.register(nibCell, forCellReuseIdentifier: "colorTableViewCell")
+    colorTableView.register(
+      nibCell,
+      forCellReuseIdentifier: "colorTableViewCell"
+    )
+
+    relatedColors = themes.reduce([Color]()) { (accumulator, theme) in
+      accumulator + ColorTheme.getRelatedColors(for: theme)
+    }
 
     colorTableView.delegate = self
     colorTableView.dataSource = self
@@ -56,13 +61,19 @@ class PickBaseColorViewController: UIViewController {
   // MARK: - Prepare
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "pickColorCombination" {
-      if let destination = segue.destination as? PickColorCombinationViewController {
-        destination.baseColor = selectedColor
+      if let destination = segue.destination as? PickColorCombinationViewController,
+         let color = sender as? Color {
+        destination.baseColor = color
       }
     }
   }
+
+//  @objc func nextTapped() {
+//    performSegue(withIdentifier: "pickColorCombination", sender: self)
+//  }
 }
 
+// MARK: - Related Tags Collection View
 extension PickBaseColorViewController: UICollectionViewDataSource, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return themes.count
@@ -72,46 +83,33 @@ extension PickBaseColorViewController: UICollectionViewDataSource, UICollectionV
     if let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: "themeCollectionViewCell",
         for: indexPath) as? ThemeCollectionViewCell {
-      cell.themeContainer.layer.cornerRadius = 12
       cell.themeLabel.text = themes[indexPath.row].rawValue
       cell.imageContainer.isHidden = true
       cell.removeButton.isHidden = true
-
       return cell
     }
     return UICollectionViewCell()
   }
-
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    sizeForItemAt indexPath: IndexPath
-  ) -> CGSize {
-    let item = themes[indexPath.row].rawValue
-    let itemSize = item.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 32)
-    ])
-    return itemSize
-  }
 }
 
+// MARK: - Related Colors Table View
 extension PickBaseColorViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return relatedColors.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if let cell = tableView.dequeueReusableCell(
-        withIdentifier: "colorTableViewCell",
-        for: indexPath
-    ) as? ColorTableViewCell {
-      cell.baseColor = relatedColors[indexPath.row]
-
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "colorTableViewCell") as? ColorTableViewCell {
+      cell.baseColor        = relatedColors[indexPath.row]
+      cell.selectionStyle   = .none
       return cell
     }
     return UITableViewCell()
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    selectedColor = relatedColors[indexPath.row]
+//    selectedColor = relatedColors[indexPath.row]
+    print(relatedColors[indexPath.item])
+    performSegue(withIdentifier: "pickColorCombination", sender: relatedColors[indexPath.item])
   }
 }

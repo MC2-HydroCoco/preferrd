@@ -10,7 +10,7 @@ import UIKit
 class PickColorCombinationViewController: UIViewController {
 
   // Required Payload
-  var baseColor: Color! = Constants.colors[1]
+  var baseColor: Color!
 
   // Base Color View
   @IBOutlet weak var baseColorBackground: UIStackView!
@@ -73,7 +73,7 @@ extension PickColorCombinationViewController: UICollectionViewDataSource, UIColl
     if let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: "relatedTag",
       for: indexPath
-    ) as? RelatedTagCollectionViewCell {
+    ) as? RelatedTagsCollectionViewCell {
       cell.tagLabel.text = baseColor.relatedTags[indexPath.item].rawValue
       return cell
     }
@@ -92,10 +92,12 @@ extension PickColorCombinationViewController: UITableViewDelegate, UITableViewDa
     if let cell = tableView.dequeueReusableCell(
         withIdentifier: "colorCombinationCell"
     ) as? ColorCombinationTableViewCell {
-      cell.selectionStyle = .none
-      cell.baseColor = UIColor(hex: baseColor.hex)
-      cell.colorCombination = ColorCombination.allCases[indexPath.row]
-      cell.delegate = self
+
+      cell.selectionStyle    = .none
+      cell.baseColor         = UIColor(hex: baseColor.hex)
+      cell.colorCombination  = ColorCombination.allCases[indexPath.row]
+      cell.delegate          = self
+
       return cell
     }
     return UITableViewCell()

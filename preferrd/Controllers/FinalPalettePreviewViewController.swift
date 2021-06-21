@@ -94,7 +94,6 @@ class FinalPalettePreviewViewController: UIViewController {
       previewButton,
       applyButton
     ] + colorPalette).forEach { view in
-      view?.layer.cornerRadius = 8
       view?.applyShadow()
     }
 
