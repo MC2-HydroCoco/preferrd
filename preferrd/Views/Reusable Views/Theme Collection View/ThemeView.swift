@@ -18,9 +18,9 @@ class ThemeView: UIView {
     isSelected.toggle()
 
     if isSelected {
-      themeImageView.alpha = 0.4
+      themeImageView.alpha = 0.2
     } else {
-      themeImageView.alpha = 1
+        themeImageView.alpha = 0.6
     }
   }
 }

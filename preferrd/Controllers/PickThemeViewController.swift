@@ -63,6 +63,7 @@ class PickThemeViewController: UIViewController {
 
       // Set style
       view.layer.cornerRadius = 12
+      view.themeImageView.alpha = 0.6
 
       // Set tap gesture
       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectTheme))
@@ -94,13 +95,13 @@ class PickThemeViewController: UIViewController {
 
   func disableAll() {
     for view in themeSet where view.isSelected == false {
-      view.themeImageView.alpha = 0.4
+      view.themeImageView.alpha = 0.2
     }
   }
 
   func enableAll() {
     for view in themeSet where view.isSelected == false {
-      view.themeImageView.alpha = 1
+        view.themeImageView.alpha = 0.6
     }
   }
 
