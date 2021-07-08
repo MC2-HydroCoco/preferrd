@@ -21,10 +21,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="9d2-bx-djN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="428"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O4u-Or-TIJ">
-                                                <rect key="frame" x="24" y="24" width="366" height="210.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="O4u-Or-TIJ">
+                                                <rect key="frame" x="24" y="24" width="366" height="234.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYC-sJ-KWr">
                                                         <rect key="frame" x="24" y="24" width="318" height="30"/>
@@ -33,7 +33,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnj-Dq-21b">
-                                                        <rect key="frame" x="24" y="54" width="318" height="90.5"/>
+                                                        <rect key="frame" x="24" y="66" width="318" height="90.5"/>
                                                         <string key="text">While the bodycopy, can be a little bit less contrast from headlines, but still have high contrast than the background, and here make sure the weight of the font is lighter.
 </string>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -41,7 +41,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WND-6T-1Kg">
-                                                        <rect key="frame" x="24" y="144.5" width="318" height="42"/>
+                                                        <rect key="frame" x="24" y="168.5" width="318" height="42"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <inset key="contentEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
                                                         <state key="normal" title="Button"/>
@@ -51,7 +51,7 @@
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dRS-6z-Z7R">
-                                                <rect key="frame" x="24" y="258.5" width="366" height="145.5"/>
+                                                <rect key="frame" x="24" y="282.5" width="366" height="145.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-ed-Ku8">
                                                         <rect key="frame" x="0.0" y="0.0" width="366" height="23"/>

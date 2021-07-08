@@ -85,12 +85,14 @@
 		8321CD582660F3570094519F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8321CD5A2660F3710094519F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8321CD5D2660F3AB0094519F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8321CD5F2660F3B90094519F /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		834005132661691D0061724B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		834C807C267CFE0D005D2336 /* PaletteActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteActionViewController.swift; sourceTree = "<group>"; };
 		835B7A0A267F243500FC98D4 /* PickColorCombination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickColorCombination.storyboard; sourceTree = "<group>"; };
 		835E7519267471D2005496EF /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		837809A3267B1B3D007BBD17 /* FinalPalettePreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalPalettePreview.storyboard; sourceTree = "<group>"; };
+		838172E42697330C00BA41A9 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		838172E52697331100BA41A9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		838172E62697331800BA41A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		83897DDD266BFB8000AB4913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		839266912677BB57007865A3 /* PalettePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PalettePreview.storyboard; sourceTree = "<group>"; };
 		839266932677C426007865A3 /* PalettePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettePreviewViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,8 @@
 				en,
 				Base,
 				id,
+				it,
+				"pt-BR",
 			);
 			mainGroup = 8321CD352660EE5C0094519F;
 			productRefGroup = 8321CD3F2660EE5C0094519F /* Products */;
@@ -426,7 +430,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				8321CD5D2660F3AB0094519F /* Base */,
-				8321CD5F2660F3B90094519F /* id */,
+				838172E42697330C00BA41A9 /* id */,
+				838172E52697331100BA41A9 /* it */,
+				838172E62697331800BA41A9 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

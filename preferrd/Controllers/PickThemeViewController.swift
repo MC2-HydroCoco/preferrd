@@ -26,7 +26,7 @@ class PickThemeViewController: UIViewController {
     super.viewDidLoad()
 
     navigationItem.rightBarButtonItem = UIBarButtonItem(
-      title: "Next",
+      title: "nav.next".localized,
       style: .done,
       target: self,
       action: #selector(nextTapped)
@@ -140,7 +140,7 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
   @objc func handleTap (_ sender: UITapGestureRecognizer) {
     let location = sender.location(in: themeCollectionView)
     if let indexPath = themeCollectionView.indexPathForItem(at: location) {
-      for view in themeSet where selectedThemes[indexPath.row].rawValue == view.themeLabel.text {
+      for view in themeSet where selectedThemes[indexPath.row].locale == view.themeLabel.text {
         view.toggleSelect()
         break
       }

@@ -59,7 +59,7 @@ class PickColorCombinationViewController: UIViewController {
   }
 
   @IBAction func showBaseColorDetail(_ sender: Any) {
-    print("Detail:", baseColor.colorDescription)
+    print("detail".localized, baseColor.colorDescription)
   }
 }
 
@@ -74,7 +74,7 @@ extension PickColorCombinationViewController: UICollectionViewDataSource, UIColl
       withReuseIdentifier: "relatedTag",
       for: indexPath
     ) as? ColorCombinationTagCollectionViewCell {
-      cell.tagLabel.text = baseColor.relatedTags[indexPath.item].rawValue
+      cell.tagLabel.text = baseColor.relatedTags[indexPath.item].locale
       return cell
     }
     return UICollectionViewCell()
