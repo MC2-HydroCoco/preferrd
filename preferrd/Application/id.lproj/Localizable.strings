@@ -10,6 +10,7 @@
 "nav.back" = "Kembali";
 "detail" = "Rincian:";
 "main.title" = "Palet";
+
 "theme.title" = "Tema";
 "theme.relaxing" = "Santai";
 "theme.vintage" = "Antik";
@@ -21,6 +22,7 @@
 "theme.elegant" = "Anggun";
 "theme.feminine" = "Feminin";
 "theme.masculine" = "Maskulin";
+
 "base.title" = "Warna Dasar";
 
 "combination.title" = "Kombinasi Warna";
@@ -44,7 +46,7 @@
 "preview.detail.button_text" = "Teks Tombol seperti halnya bodycopy, perlu memiliki kontras yang tinggi antara bentuk dan teks tombol, jadi seperti sebelumnya, jika warna bentuk tombol cerah pilih teks berwarna gelap dan sebaliknya.";
 
 "preview.body.title" = "Judul";
-"preview.body.text" = "Teks mungkin memerlukan kontras yang lebih tinggi dari warna latar belakang. Teks juga membutuhkan kontras yang lebih tinggi jika font kurang mudah dibaca.";
+"preview.body.text" = "Teks mungkin memerlukan kontras yang lebih tinggi dari warna latar belakang. Ini juga membutuhkan kontras yang lebih tinggi jika bobot font kurang mudah dibaca.";
 "preview.body.button" = "Panggilan untuk bertindak";
 
 "final_preview.title" = "Penyesuaian Palet";
@@ -53,9 +55,14 @@
 "final_preview.color.body" = "Teks";
 "final_preview.color.button" = "Tombol";
 "final_preview.color.button_txt" = "Teks Tombol";
+"final_preview.adjustment.title" = "Sesuaikan Palet";
+"final_preview.adjustment.saturation" = "Saturasi";
+"final_preview.adjustment.brightness" = "Kecerahan";
+"final_preview.adjustment.apply" = "Terapkan";
 
 "palette_action.title" = "Apa yang harus dilakukan dengan palet?";
 "palette_action.save" = "Simpan Palet";
 "palette_action.save.title" = "Palet Baru";
 "palette_action.save.body" = "Masukkan nama untuk palet ini.";
 "palette_action.cancel" = "Batalkan";
+"palette_action.alert.save" = "Simpan";

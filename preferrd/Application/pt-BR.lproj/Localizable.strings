@@ -10,6 +10,7 @@
 "nav.back" = "Voltar";
 "detail" = "Detalhe:";
 "main.title" = "Paletas";
+
 "theme.title" = "Tema";
 "theme.relaxing" = "Relaxamento";
 "theme.vintage" = "Vintage";
@@ -21,6 +22,7 @@
 "theme.elegant" = "Elegante";
 "theme.feminine" = "Feminino";
 "theme.masculine" = "Masculino";
+
 "base.title" = "Cor de base";
 
 "combination.title" = "Combinação de cores";
@@ -53,9 +55,14 @@
 "final_preview.color.body" = "Corpo";
 "final_preview.color.button" = "Botão";
 "final_preview.color.button_txt" = "Texto do Botão";
+"final_preview.adjustment.title" = "Ajustar a Paleta";
+"final_preview.adjustment.saturation" = "Saturação";
+"final_preview.adjustment.brightness" = "Brilho";
+"final_preview.adjustment.apply" = "Candidate-se";
 
 "palette_action.title" = "O que fazer com a paleta?";
 "palette_action.save" = "Salvar a Paleta";
 "palette_action.save.title" = "Nova Paleta";
 "palette_action.save.body" = "Digite um nome para esta paleta.";
 "palette_action.cancel" = "Cancelar";
+"palette_action.alert.save" = "Salvar";

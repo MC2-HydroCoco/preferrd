@@ -10,6 +10,7 @@
 "nav.back" = "Indietro";
 "detail" = "Dettaglio:";
 "main.title" = "Palette";
+
 "theme.title" = "Tema";
 "theme.relaxing" = "Rilassante";
 "theme.vintage" = "Vintage";
@@ -21,6 +22,7 @@
 "theme.elegant" = "Elegante";
 "theme.feminine" = "Femminile";
 "theme.masculine" = "Maschile";
+
 "base.title" = "Colore di base";
 
 "combination.title" = "Combinazione di colori";
@@ -53,9 +55,14 @@
 "final_preview.color.body" = "Corpo";
 "final_preview.color.button" = "Pulsante";
 "final_preview.color.button_txt" = "Testo del pulsante";
+"final_preview.adjustment.title" = "Regolare la tavolozza";
+"final_preview.adjustment.saturation" = "Saturazione";
+"final_preview.adjustment.brightness" = "Luminosità";
+"final_preview.adjustment.apply" = "Applica";
 
 "palette_action.title" = "Cosa fare con la tavolozza?";
 "palette_action.save" = "Salva la tavolozza";
 "palette_action.save.title" = "Nuova tavolozza";
 "palette_action.save.body" = "Inserisci un nome per questa tavolozza.";
 "palette_action.cancel" = "Cancella";
+"palette_action.alert.save" = "Salva";
