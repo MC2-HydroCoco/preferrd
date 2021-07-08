@@ -1,11 +1,11 @@
-/* Localizable.strings
-  preferrd
-
-  Created by Christianto Budisaputra on 28/05/21. */
-/* Localizable.strings
+/*
+ Localizable.strings
  preferrd
 
-  Created by Christianto Budisaputra on 28/05/21. */
+  Created by Christianto Budisaputra on 28/05/21.
+  
+*/
+
 "nav.next" = "Next";
 "nav.back" = "Back";
 "detail" = "Detail:";
@@ -32,8 +32,9 @@
 "combination.detail.monochromatic" = "Monochromatic colors are all the colors of a single hue. Monochromatic color schemes are derived from a single base hue and extended using its shades, tones and tints.";
 "combination.detail.compound" = "This combination is made up of one color and the colors on either side of the complement. This strategy adds more variety than complementary color schemes by including three hues, without being too jarring or too bold.";
 "combination.detail.triadic" = "A triadic color scheme is comprised of three colors evenly spaced on the color wheel. The two most basic triadic palettes are the primary colors red, blue, and yellow and the secondary hues orange, purple, and green.";
-/* MARK: -Preview
-Steps Title */
+
+// MARK: -Preview
+// Steps Title
 "preview.title.background" = "Background Color";
 "preview.title.title" = "Title Color";
 "preview.title.body" = "Body Color";
@@ -61,8 +62,8 @@ Steps Title */
 "final_preview.color.button_txt" = "Button Text";
 
 // MARK: -Palette Action
-"palette_action.title" = "What to do with the palette?";
-"palette_action.save" = "Save The Palette";
-"palette_action.save.title" = "New Palette";
-"palette_action.save.body" = "Enter a name for this palette.";
-"palette_action.cancel" = "Cancel";
+"palette_action.title" = "What to do with the palette?"
+"palette_action.save" = "Save The Palette"
+"palette_action.save.title" = "New Palette"
+"palette_action.save.body" = "Enter a name for this palette."
+"palette_action.cancel" = "Cancel"

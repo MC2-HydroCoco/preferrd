@@ -1,7 +1,11 @@
-/* Localizable.strings
-  preferrd
+/*
+ Localizable.strings
+ preferrd
 
-  Created by Christianto Budisaputra on 28/05/21. */
+  Created by Christianto Budisaputra on 28/05/21.
+  
+*/
+
 "nav.next" = "Próximo";
 "nav.back" = "Voltar";
 "detail" = "Detalhe:";

@@ -26,7 +26,7 @@ class PickThemeViewController: UIViewController {
     super.viewDidLoad()
 
     navigationItem.rightBarButtonItem = UIBarButtonItem(
-      title: "Next",
+      title: "nav.next".localized,
       style: .done,
       target: self,
       action: #selector(nextTapped)
@@ -63,6 +63,7 @@ class PickThemeViewController: UIViewController {
 
       // Set style
       view.layer.cornerRadius = 12
+      view.themeImageView.alpha = 0.6
 
       // Set tap gesture
       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectTheme))
@@ -94,13 +95,13 @@ class PickThemeViewController: UIViewController {
 
   func disableAll() {
     for view in themeSet where view.isSelected == false {
-      view.themeImageView.alpha = 0.4
+      view.themeImageView.alpha = 0.2
     }
   }
 
   func enableAll() {
     for view in themeSet where view.isSelected == false {
-      view.themeImageView.alpha = 1
+        view.themeImageView.alpha = 0.6
     }
   }
 
@@ -139,7 +140,7 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
   @objc func handleTap (_ sender: UITapGestureRecognizer) {
     let location = sender.location(in: themeCollectionView)
     if let indexPath = themeCollectionView.indexPathForItem(at: location) {
-      for view in themeSet where selectedThemes[indexPath.row].rawValue == view.themeLabel.text {
+      for view in themeSet where selectedThemes[indexPath.row].locale == view.themeLabel.text {
         view.toggleSelect()
         break
       }

@@ -23,6 +23,9 @@ class PaletteActionViewController: UIViewController {
     cancelButton.applyShadow()
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(savePalette))
     saveAction.addGestureRecognizer(tapGesture)
+
+    // Localize
+    cancelButton.titleLabel?.text = "palette_action.cancel".localized
   }
 
   override func viewWillLayoutSubviews() {
@@ -38,12 +41,12 @@ class PaletteActionViewController: UIViewController {
 
   @objc func savePalette() {
     let alert = UIAlertController(
-      title: "New Palette",
-      message: "Enter a name for this palette.",
+      title: "palette_action.save.title".localized,
+      message: "palette_action.save.body".localized,
       preferredStyle: .alert
     )
     alert.addTextField { textField in
-      textField.text = "My Palette"
+      textField.text = ""
     }
     let okAction = UIAlertAction(title: "Save", style: .default) { _ in
       let name = alert.textFields![0].text

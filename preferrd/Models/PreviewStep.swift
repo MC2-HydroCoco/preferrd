@@ -9,40 +9,29 @@
 
 import Foundation
 
-enum PreviewStep: CaseIterable {
-  case background,
-       title,
-       body,
-       button,
-       buttonText
+enum PreviewStep: String, CaseIterable {
+  case background = "preview.title.background",
+       title      = "preview.title.title",
+       body       = "preview.title.body",
+       button     = "preview.title.button",
+       buttonText = "preview.title.button_text"
 
   var title: String {
-    switch self {
-    case .background:
-      return "Background Color"
-    case .title:
-      return "Title Color"
-    case .body:
-      return "Body Color"
-    case .button:
-      return "Button Color"
-    case .buttonText:
-      return "Button Text Color"
-    }
+    self.rawValue.localized
   }
 
   var detail: String {
     switch self {
     case .background:
-      return "A Background will establish the base and the accent color for your application, Make sure you make the most of it and it’s best to pick the lightest color or the darkest so the elements for the UI can be well distributed."
+      return "preview.detail.background".localized
     case .title:
-      return "A Headline, should have the biggest contrast than the background, and it should also have the biggest weight than captions and bodycopy so it can establish a good information Hierarchy."
+      return "preview.detail.title".localized
     case .body:
-      return "A body copy can have a slight difference with the title or headlines, but make sure they still have high contrast than the background."
+      return "preview.detail.body".localized
     case .button:
-      return "A Button shape color should have a big contrast with the background just like bodycopy, if the background is mainly dark color make sure the button shape is light colored and vice versa!"
+      return "preview.detail.button".localized
     case .buttonText:
-      return "A Button Text just like bodycopy, needs to have high contrast between shape and button text, so just like before, if the button shape color is bright choose a dark colored text and vice versa."
+      return "preview.detail.button_text".localized
     }
   }
 }

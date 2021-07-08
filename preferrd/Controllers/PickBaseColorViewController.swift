@@ -79,7 +79,7 @@ extension PickBaseColorViewController: UICollectionViewDataSource, UICollectionV
     if let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: "themeCollectionViewCell",
         for: indexPath) as? ThemeCollectionViewCell {
-      cell.themeLabel.text = themes[indexPath.row].rawValue
+      cell.themeLabel.text = themes[indexPath.row].locale
       cell.imageContainer.isHidden = true
       cell.removeButton.isHidden = true
       return cell

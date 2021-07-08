@@ -20,6 +20,10 @@ enum ColorTheme: String, CaseIterable {
        feminine     = "Feminine",
        masculine    = "Masculine"
 
+  var locale: String {
+    self.rawValue.localized
+  }
+
   func getImage() -> UIImage {
     switch self {
     case .adventurous:

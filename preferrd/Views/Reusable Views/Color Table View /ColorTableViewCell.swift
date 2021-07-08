@@ -67,7 +67,7 @@ extension ColorTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     if let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: "relatedTags",
         for: indexPath) as? RelatedTagsCollectionViewCell {
-      cell.tagLabel.text = baseColor.relatedTags[indexPath.item].rawValue
+      cell.tagLabel.text = baseColor.relatedTags[indexPath.item].locale
       return cell
     }
     return UICollectionViewCell()
