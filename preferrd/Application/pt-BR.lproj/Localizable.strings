@@ -2,4 +2,56 @@
   preferrd
 
   Created by Christianto Budisaputra on 28/05/21. */
+"nav.next" = "Próximo";
+"nav.back" = "Voltar";
+"detail" = "Detalhe:";
 "main.title" = "Paletas";
+"theme.title" = "Tema";
+"theme.relaxing" = "Relaxamento";
+"theme.vintage" = "Vintage";
+"theme.playful" = "Brincalhão";
+"theme.adventurous" = "Aventureiro";
+"theme.modern" = "Moderno";
+"theme.nature" = "Natureza";
+"theme.fresh" = "Fresco";
+"theme.elegant" = "Elegante";
+"theme.feminine" = "Feminino";
+"theme.masculine" = "Masculino";
+"base.title" = "Cor de base";
+
+"combination.title" = "Combinação de cores";
+"combination.detail.analogous" = "O agrupamento de cores tem semelhanças. Estes tipos de esquemas de cores têm relações próximas entre si, a gama de cores na roda de cores está lado a lado.";
+"combination.detail.accented_analogous" = "Um esquema análogo acentuado (também chamado de complementar análogo) é uma combinação dos esquemas de cores análogo e complementar. Consiste em cores que se encontram umas ao lado das outras na roda de cor e uma cor que é directamente oposta a estas.";
+"combination.detail.complementary" = "As cores complementares são pares de cores que, quando combinadas ou misturadas, cancelam-se mutuamente (perdem a tonalidade), produzindo uma cor em tons de cinza, como branco ou preto. Quando colocadas uma ao lado da outra, elas criam o contraste mais forte para essas duas cores. As cores complementares também podem ser chamadas de cores opostas.";
+"combination.detail.split_complementary" = "Split-complementary color, é uma mistura de uma cor primária e duas cores adjacentes ao seu complemento. Enquanto as cores complementares tendem a parecer baças, as cores complementares divididas são bem utilizadas para fins de contraste.";
+"combination.detail.monochromatic" = "As cores monocromáticas são todas as cores de uma só tonalidade. Os esquemas de cores monocromáticas são derivados de uma única tonalidade de base e estendidos usando suas tonalidades, tons e matizes.";
+"combination.detail.compound" = "Esta combinação é composta por uma cor e as cores de cada lado do complemento. Esta estratégia acrescenta mais variedade do que esquemas de cores complementares ao incluir três tonalidades, sem ser muito jarrante ou muito ousada.";
+"combination.detail.triadic" = "Um esquema de cores triádicas é composto por três cores uniformemente espaçadas na roda de cores. As duas paletas triádicas mais básicas são as cores primárias vermelho, azul e amarelo e os tons secundários laranja, roxo e verde.";
+"preview.title.background" = "Cor de fundo";
+"preview.title.title" = "Cor do título";
+"preview.title.body" = "Cor do corpo";
+"preview.title.button" = "Cor dos Botões";
+"preview.title.button_text" = "Botão Cor do Texto";
+
+"preview.detail.background" = "Um Background irá estabelecer a base e a cor do acento para a sua aplicação, Certifique-se de aproveitar ao máximo e é melhor escolher a cor mais clara ou a mais escura para que os elementos para a IU possam ser bem distribuídos.";
+"preview.detail.title" = "Um cabeçalho, deve ter o maior contraste do que o fundo, e também deve ter o maior peso do que as legendas e o bodycopy para que possa estabelecer uma boa Hierarquia de informação.";
+"preview.detail.body" = "Uma cópia corporal pode ter uma pequena diferença com o título ou manchetes, mas certifique-se de que eles ainda têm alto contraste do que o fundo.";
+"preview.detail.button" = "Uma cor em forma de botão deve ter um grande contraste com o fundo tal como a cor do corpo, se o fundo for principalmente escuro certifique-se que a forma do botão é de cor clara e vice versa!";
+"preview.detail.button_text" = "Um Texto de Botão, assim como um texto de botão, precisa ter alto contraste entre a forma e o texto de botão, assim como antes, se a cor da forma do botão for brilhante escolha um texto de cor escura e vice-versa.";
+
+"preview.body.title" = "O título";
+"preview.body.text" = "Uma cópia corporal pode exigir maior contraste com a cor de fundo. Também requer um maior contraste se o peso da fonte for menos legível.";
+"preview.body.button" = "Chamada para a Ação";
+
+"final_preview.title" = "Ajuste de palete";
+"final_preview.color.background" = "Antecedentes";
+"final_preview.color.title" = "Título";
+"final_preview.color.body" = "Corpo";
+"final_preview.color.button" = "Botão";
+"final_preview.color.button_txt" = "Texto do Botão";
+
+"palette_action.title" = "O que fazer com a paleta?";
+"palette_action.save" = "Salvar a Paleta";
+"palette_action.save.title" = "Nova Paleta";
+"palette_action.save.body" = "Digite um nome para esta paleta.";
+"palette_action.cancel" = "Cancelar";
