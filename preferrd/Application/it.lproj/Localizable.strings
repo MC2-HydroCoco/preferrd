@@ -1,7 +1,57 @@
-/* 
-  Localizable.strings
+/* Localizable.strings
   preferrd
 
-  Created by Christianto Budisaputra on 28/05/21.
-  
-*/
+  Created by Christianto Budisaputra on 28/05/21. */
+"nav.next" = "Prossimo";
+"nav.back" = "Indietro";
+"detail" = "Dettaglio:";
+"main.title" = "Palette";
+"theme.title" = "Tema";
+"theme.relaxing" = "Rilassante";
+"theme.vintage" = "Vintage";
+"theme.playful" = "Giocoso";
+"theme.adventurous" = "Avventuroso";
+"theme.modern" = "Moderno";
+"theme.nature" = "Natura";
+"theme.fresh" = "Fresco";
+"theme.elegant" = "Elegante";
+"theme.feminine" = "Femminile";
+"theme.masculine" = "Maschile";
+"base.title" = "Colore di base";
+
+"combination.title" = "Combinazione di colori";
+"combination.detail.analogous" = "Il raggruppamento dei colori ha delle somiglianze. Questi tipi di combinazione di colori hanno strette relazioni l'uno con l'altro, la gamma di colori nella ruota dei colori sono fianco a fianco.";
+"combination.detail.accented_analogous" = "Uno schema analogico accentato (chiamato anche complementare analogico) è una combinazione degli schemi di colore analogico e complementare. Consiste di colori che siedono uno accanto all'altro sulla ruota dei colori e un colore che è direttamente opposto a questi.";
+"combination.detail.complementary" = "I colori complementari sono coppie di colori che, se combinati o mescolati, si annullano a vicenda (perdono tonalità) producendo un colore in scala di grigi come il bianco o il nero. Quando sono posti uno accanto all'altro, creano il contrasto più forte per quei due colori. I colori complementari possono anche essere chiamati colori opposti.";
+"combination.detail.split_complementary" = "Il colore scomposto-complementare è un mix tra un colore primario e due colori adiacenti al suo complemento. Mentre i colori complementari tendono a sembrare noiosi, i colori complementari divisi sono usati bene per scopi di contrasto.";
+"combination.detail.monochromatic" = "I colori monocromatici sono tutti i colori di una sola tonalità. Gli schemi di colori monocromatici sono derivati da una singola tonalità di base ed estesi usando le sue sfumature, toni e tinte.";
+"combination.detail.compound" = "Questa combinazione è composta da un colore e dai colori su entrambi i lati del complemento. Questa strategia aggiunge più varietà degli schemi di colori complementari includendo tre tonalità, senza essere troppo stridente o troppo audace.";
+"combination.detail.triadic" = "Una combinazione di colori triadica è composta da tre colori uniformemente distanziati sulla ruota dei colori. Le due tavolozze triadiche più basilari sono i colori primari rosso, blu e giallo e le tinte secondarie arancione, viola e verde.";
+"preview.title.background" = "Colore di sfondo";
+"preview.title.title" = "Titolo Colore";
+"preview.title.body" = "Colore del corpo";
+"preview.title.button" = "Colore del pulsante";
+"preview.title.button_text" = "Colore del testo del pulsante";
+
+"preview.detail.background" = "Uno sfondo stabilirà la base e il colore d'accento per la tua applicazione, assicurati di sfruttarlo al massimo ed è meglio scegliere il colore più chiaro o il più scuro in modo che gli elementi per l'UI possano essere ben distribuiti.";
+"preview.detail.title" = "Un titolo, dovrebbe avere il maggior contrasto rispetto allo sfondo, e dovrebbe anche avere il maggior peso rispetto a didascalie e bodycopy in modo da poter stabilire una buona gerarchia di informazioni.";
+"preview.detail.body" = "Un body copy può avere una leggera differenza con il titolo o i titoli, ma assicuratevi che abbiano ancora un alto contrasto rispetto allo sfondo.";
+"preview.detail.button" = "Il colore della forma di un pulsante dovrebbe avere un grande contrasto con lo sfondo proprio come il bodycopy, se lo sfondo è principalmente di colore scuro assicurati che la forma del pulsante sia di colore chiaro e viceversa!";
+"preview.detail.button_text" = "Un Button Text proprio come la bodycopy, ha bisogno di avere un alto contrasto tra la forma e il testo del pulsante, quindi proprio come prima, se il colore della forma del pulsante è luminoso scegli un testo di colore scuro e viceversa.";
+
+"preview.body.title" = "Il titolo";
+"preview.body.text" = "Un body copy può richiedere un contrasto maggiore rispetto al colore dello sfondo. Richiede anche un contrasto più alto se il peso del carattere è meno leggibile.";
+"preview.body.button" = "Chiamata all'azione";
+
+"final_preview.title" = "Regolazione della tavolozza";
+"final_preview.color.background" = "Sfondo";
+"final_preview.color.title" = "Titolo";
+"final_preview.color.body" = "Corpo";
+"final_preview.color.button" = "Pulsante";
+"final_preview.color.button_txt" = "Testo del pulsante";
+
+"palette_action.title" = "Cosa fare con la tavolozza?";
+"palette_action.save" = "Salva la tavolozza";
+"palette_action.save.title" = "Nuova tavolozza";
+"palette_action.save.body" = "Inserisci un nome per questa tavolozza.";
+"palette_action.cancel" = "Cancella";
