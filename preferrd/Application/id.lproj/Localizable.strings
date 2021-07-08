@@ -5,3 +5,57 @@
   Created by Christianto Budisaputra on 28/05/21.
   
 */
+
+"nav.next" = "Lanjut";
+"nav.back" = "Kembali";
+"detail" = "Rincian:";
+"main.title" = "Palet";
+"theme.title" = "Tema";
+"theme.relaxing" = "Santai";
+"theme.vintage" = "Antik";
+"theme.playful" = "Ceria";
+"theme.adventurous" = "Petualang";
+"theme.modern" = "Modern";
+"theme.nature" = "Alam";
+"theme.fresh" = "Segar";
+"theme.elegant" = "Anggun";
+"theme.feminine" = "Feminin";
+"theme.masculine" = "Maskulin";
+"base.title" = "Warna Dasar";
+
+"combination.title" = "Kombinasi Warna";
+"combination.detail.analogous" = "Pengelompokan warna memiliki kesamaan. Jenis skema warna ini memiliki hubungan yang erat satu sama lain, rentang warna dalam roda warna berdampingan.";
+"combination.detail.accented_analogous" = "Skema analog beraksen (juga disebut komplementer analog) adalah kombinasi skema warna analog dan komplementer. Ini terdiri dari warna yang duduk bersebelahan pada roda warna dan warna yang berseberangan langsung dengan ini.";
+"combination.detail.complementary" = "Warna komplementer adalah pasangan warna yang bila digabungkan atau dicampur akan saling meniadakan (kehilangan rona) dengan menghasilkan warna skala abu-abu seperti putih atau hitam. Ketika ditempatkan bersebelahan, mereka menciptakan kontras terkuat untuk kedua warna tersebut. Warna komplementer bisa juga disebut warna berlawanan.";
+"combination.detail.split_complementary" = "Split-complementary color, merupakan perpaduan satu warna primer dan dua warna yang berdampingan dengan komplemennya. Sementara warna komplementer cenderung terlihat kusam, warna komplementer split digunakan dengan baik untuk tujuan kontras.";
+"combination.detail.monochromatic" = "Warna monokromatik adalah semua warna dari satu rona. Skema warna monokromatik berasal dari satu rona dasar dan diperluas menggunakan corak, nada, dan ronanya.";
+"combination.detail.compound" = "Kombinasi ini terdiri dari satu warna dan warna di kedua sisi komplemen. Strategi ini menambahkan lebih banyak variasi daripada skema warna pelengkap dengan memasukkan tiga warna, tanpa terlalu mencolok atau terlalu berani.";
+"combination.detail.triadic" = "Skema warna triadik terdiri dari tiga warna yang ditempatkan secara merata pada roda warna. Dua palet triadik paling dasar adalah warna primer merah, biru, dan kuning dan warna sekunder oranye, ungu, dan hijau.";
+"preview.title.background" = "Warna Latar Belakang";
+"preview.title.title" = "Warna Judul";
+"preview.title.body" = "Warna Teks";
+"preview.title.button" = "Warna Tombol";
+"preview.title.button_text" = "Warna Teks Tombol";
+
+"preview.detail.background" = "Latar Belakang akan menetapkan warna dasar dan aksen untuk aplikasi Anda, Pastikan Anda memanfaatkannya sebaik mungkin dan yang terbaik adalah memilih warna paling terang atau paling gelap sehingga elemen untuk UI dapat didistribusikan dengan baik.";
+"preview.detail.title" = "Judul, harus memiliki kontras terbesar dari latar belakang, dan juga harus memiliki bobot terbesar daripada teks dan bodycopy sehingga dapat membentuk Hirarki informasi yang baik.";
+"preview.detail.body" = "Teks dapat memiliki sedikit perbedaan dengan judul atau tajuk utama, tetapi pastikan teks masih memiliki kontras yang tinggi daripada latar belakang.";
+"preview.detail.button" = "Warna bentuk Tombol harus memiliki kontras yang besar dengan latar belakang seperti bodycopy, jika latar belakang sebagian besar berwarna gelap pastikan bentuk tombol berwarna terang dan sebaliknya!";
+"preview.detail.button_text" = "Teks Tombol seperti halnya bodycopy, perlu memiliki kontras yang tinggi antara bentuk dan teks tombol, jadi seperti sebelumnya, jika warna bentuk tombol cerah pilih teks berwarna gelap dan sebaliknya.";
+
+"preview.body.title" = "Judul";
+"preview.body.text" = "Teks mungkin memerlukan kontras yang lebih tinggi dari warna latar belakang. Teks juga membutuhkan kontras yang lebih tinggi jika font kurang mudah dibaca.";
+"preview.body.button" = "Panggilan untuk bertindak";
+
+"final_preview.title" = "Penyesuaian Palet";
+"final_preview.color.background" = "Latar Belakang";
+"final_preview.color.title" = "Judul";
+"final_preview.color.body" = "Teks";
+"final_preview.color.button" = "Tombol";
+"final_preview.color.button_txt" = "Teks Tombol";
+
+"palette_action.title" = "Apa yang harus dilakukan dengan palet?";
+"palette_action.save" = "Simpan Palet";
+"palette_action.save.title" = "Palet Baru";
+"palette_action.save.body" = "Masukkan nama untuk palet ini.";
+"palette_action.cancel" = "Batalkan";

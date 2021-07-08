@@ -19,10 +19,10 @@ struct ColorSet {
 
     baseColors.forEach { color in
       colorSet.append(contentsOf: [
-        color.getTint(distance: 5),
-        color.getTint(distance: 3),
+        color.getTint(distance: 5.5),
+        color.getTint(distance: 3.5),
         color,
-        color.getShade(distance: 3)
+        color.getShade(distance: 4.75)
       ])
     }
 

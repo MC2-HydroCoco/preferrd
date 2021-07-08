@@ -14,8 +14,10 @@ class PaletteActionViewController: UIViewController {
   let paletteManager = PaletteManager.shared
 
   @IBOutlet weak var headline: UIStackView!
+  @IBOutlet weak var headlineLabel: UILabel!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var saveAction: UIStackView!
+  @IBOutlet weak var saveActionLabel: UILabel!
   @IBOutlet weak var lucuButton: UIView!
 
   override func viewDidLoad() {
@@ -23,29 +25,34 @@ class PaletteActionViewController: UIViewController {
     cancelButton.applyShadow()
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(savePalette))
     saveAction.addGestureRecognizer(tapGesture)
+
+    // Localize
+    cancelButton.setTitle("palette_action.cancel".localized, for: .normal)
+    headlineLabel.text = "palette_action.title".localized
+    saveActionLabel.text = "palette_action.save".localized
   }
 
   override func viewWillLayoutSubviews() {
     super.viewWillLayoutSubviews()
     lucuButton.layer.cornerRadius = 4
     headline.roundCorners(corners: [.topLeft, .topRight], radius: 16)
-//    headline.addBottomBorderWithColor(
-//      color: Constants.AppColors.dark,
-//      height: 0.5
-//    )
+    //    headline.addBottomBorderWithColor(
+    //      color: Constants.AppColors.dark,
+    //      height: 0.5
+    //    )
     headline.addBottomBorder(color: Constants.AppColors.dark)
   }
 
   @objc func savePalette() {
     let alert = UIAlertController(
-      title: "New Palette",
-      message: "Enter a name for this palette.",
+      title: "palette_action.save.title".localized,
+      message: "palette_action.save.body".localized,
       preferredStyle: .alert
     )
     alert.addTextField { textField in
-      textField.text = "My Palette"
+      textField.text = ""
     }
-    let okAction = UIAlertAction(title: "Save", style: .default) { _ in
+    let okAction = UIAlertAction(title: "palette_action.alert.save".localized, style: .default) { _ in
       let name = alert.textFields![0].text
       self.paletteManager.add(
         name: name == "" || name == nil ? "My Palette" : name!,
@@ -59,7 +66,7 @@ class PaletteActionViewController: UIViewController {
         self.nav?.popToRootViewController(animated: true)
       }
     }
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+    let cancelAction = UIAlertAction(title: "palette_action.cancel".localized, style: .cancel) { _ in
       alert.dismiss(animated: true)
     }
 

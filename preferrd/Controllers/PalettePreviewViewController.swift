@@ -32,6 +32,10 @@ class PalettePreviewViewController: UIViewController {
       //      currentStepTitle.text = allSteps[currentStep].title
       title = allSteps[currentStep].title
 
+      UIView.animate(withDuration: 0.35) {
+        self.backButton.layer.opacity = self.currentStep == 0 ? 0.2 : 1
+      }
+
       switch currentStep {
       case 4:
         previewButton.tintColor = UIColor(hex: "#222222")
@@ -123,6 +127,16 @@ class PalettePreviewViewController: UIViewController {
       button?.backgroundColor = UIColor(named: "Dark")
       button?.tintColor = UIColor(named: "Light")
     }
+
+    backButton.layer.opacity = currentStep == 0 ? 0.2 : 1
+
+    // Localize
+    previewTitle.text = PreviewComponents.title.locale
+    previewBody.text  = PreviewComponents.text.locale
+    previewButton.setTitle(PreviewComponents.button.locale, for: .normal)
+
+    nextButton.setTitle("nav.next".localized, for: .normal)
+    backButton.setTitle("nav.back".localized, for: .normal)
   }
 
   private func setupColorSet() {
@@ -223,7 +237,22 @@ class PalettePreviewViewController: UIViewController {
   }
 
   private func updateColorSet() {
-    var curatedColorsIndex = [Int]()
+    var curatedColorsIndex = [Int]() {
+      didSet {
+        // Disable the next button
+        if curatedColorsIndex.count == 0 {
+          nextButton.isEnabled = false
+          UIView.animate(withDuration: 0.35) {
+            self.nextButton.layer.opacity = 0.2
+          }
+        } else {
+          nextButton.isEnabled = true
+          UIView.animate(withDuration: 0.35) {
+            self.nextButton.layer.opacity = 1
+          }
+        }
+      }
+    }
     let selectedBackgroundColor = colorSet[selectedColorsIndex[0]].backgroundColor!
 
     // Disable all colors in Color Set

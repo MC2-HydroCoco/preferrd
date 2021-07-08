@@ -20,6 +20,8 @@ class PickBaseColorViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    title = "base.title".localized
+
 //    navigationItem.rightBarButtonItem = UIBarButtonItem(
 //      title: "Next",
 //      style: .done,
@@ -79,7 +81,7 @@ extension PickBaseColorViewController: UICollectionViewDataSource, UICollectionV
     if let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: "themeCollectionViewCell",
         for: indexPath) as? ThemeCollectionViewCell {
-      cell.themeLabel.text = themes[indexPath.row].rawValue
+      cell.themeLabel.text = themes[indexPath.row].locale
       cell.imageContainer.isHidden = true
       cell.removeButton.isHidden = true
       return cell
@@ -105,7 +107,6 @@ extension PickBaseColorViewController: UITableViewDelegate, UITableViewDataSourc
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //    selectedColor = relatedColors[indexPath.row]
-    print(relatedColors[indexPath.item])
     performSegue(withIdentifier: "pickColorCombination", sender: relatedColors[indexPath.item])
   }
 }

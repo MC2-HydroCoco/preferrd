@@ -25,9 +25,19 @@ class FinalPalettePreviewViewController: UIViewController {
   @IBOutlet var colorPalette: [UIView]!
   @IBOutlet var colorPaletteHex: [UILabel]!
 
+  // Adjustment Properties Label
+  @IBOutlet weak var backgroundLabel: UILabel!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var bodyLabel: UILabel!
+  @IBOutlet weak var buttonLabel: UILabel!
+  @IBOutlet weak var buttonTextLabel: UILabel!
+
   // Adjustment Properties
   var selectedColorIndex = 0
   var initialPalette = [UIColor]()
+  @IBOutlet weak var adjustmentTitle: UILabel!
+  @IBOutlet weak var saturationLabel: UILabel!
+  @IBOutlet weak var brightnessLabel: UILabel!
   @IBOutlet weak var saturationSlider: UISlider!
   @IBOutlet weak var brightnessSlider: UISlider!
   @IBOutlet weak var saturationWarning: UIButton!
@@ -103,6 +113,26 @@ class FinalPalettePreviewViewController: UIViewController {
       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectColor))
       view.addGestureRecognizer(tapGesture)
     }
+
+    // Localize
+    title = "final_preview.title".localized
+    previewTitle.text = PreviewComponents.title.locale
+    previewBody.text = PreviewComponents.text.locale
+    previewButton.setTitle(PreviewComponents.button.locale, for: .normal)
+
+    backgroundLabel.text  = "final_preview.color.background".localized
+    titleLabel.text       = "final_preview.color.title".localized
+    bodyLabel.text        = "final_preview.color.body".localized
+    buttonLabel.text      = "final_preview.color.button".localized
+    buttonTextLabel.text  = "final_preview.color.button_txt".localized
+
+    applyButton.setTitle(
+      "final_preview.adjustment.apply".localized,
+      for: .normal
+    )
+    saturationLabel.text = "final_preview.adjustment.saturation".localized
+    brightnessLabel.text = "final_preview.adjustment.brightness".localized
+    adjustmentTitle.text = "final_preview.adjustment.title".localized
   }
 
   private func updateSlidersValue() {

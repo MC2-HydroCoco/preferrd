@@ -49,6 +49,8 @@ class MainViewController: UIViewController {
     paletteTableView.register(nibCell, forCellReuseIdentifier: "paletteTableViewCell")
 
     setupRemoveAction()
+
+    title = "main.title".localized
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -172,8 +174,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
           paletteManager.remove(palette: palettes[index.row])
           palettes = paletteManager.fetch()
         }
-      }
-      else if currCell.paletteBackgroundView.frame.contains(location) {
+      } else if currCell.paletteBackgroundView.frame.contains(location) {
           if let index = paletteTableView.indexPath(for: currCell) {
               UIView.animate(withDuration: 0.3) {
                   self.removeAction.opacity = 0

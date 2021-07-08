@@ -20,26 +20,26 @@
                                 <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="eav-P2-2md" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="3742" height="601.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="658.33333333333337"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7U0-rr-EIv" userLabel="Preview">
-                                                <rect key="frame" x="24" y="24" width="3694" height="145"/>
+                                                <rect key="frame" x="24" y="24" width="342" height="202"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE5-Mo-Vob">
-                                                        <rect key="frame" x="16" y="16" width="3662" height="30"/>
+                                                        <rect key="frame" x="16" y="16" width="310" height="30"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkF-DU-fbT">
-                                                        <rect key="frame" x="16" y="58" width="3662" height="17"/>
+                                                        <rect key="frame" x="16" y="58" width="310" height="74"/>
                                                         <string key="text">While the bodycopy, can be a little bit less contrast from headlines, but still have high contrast than the background, and here make sure the weight of the font is lighter.</string>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLz-iO-DiS">
-                                                        <rect key="frame" x="16" y="87" width="3662" height="42"/>
+                                                        <rect key="frame" x="16" y="144" width="310" height="42"/>
                                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                         <inset key="contentEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
                                                         <state key="normal" title="Button"/>
@@ -57,7 +57,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DYF-to-e2a" userLabel="Color Set">
-                                                <rect key="frame" x="24" y="192.99999999999997" width="3694" height="306.33333333333326"/>
+                                                <rect key="frame" x="24" y="249.99999999999997" width="342" height="306.33333333333326"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="r5f-ru-dZV">
                                                         <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="306.33333333333331"/>
@@ -198,10 +198,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EdU-hr-zgc">
-                                                <rect key="frame" x="24" y="523.33333333333337" width="3694" height="54"/>
+                                                <rect key="frame" x="24" y="580.33333333333337" width="342" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JM-3l-ehf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1841" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="54"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="12" minY="16" maxX="12" maxY="16"/>
@@ -211,7 +211,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4F-gf-Fh3">
-                                                        <rect key="frame" x="1853" y="0.0" width="1841" height="54"/>
+                                                        <rect key="frame" x="177" y="0.0" width="165" height="54"/>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="12" minY="16" maxX="12" maxY="16"/>
@@ -252,9 +252,9 @@
                         <outlet property="nextButton" destination="I4F-gf-Fh3" id="F7H-LJ-Lda"/>
                         <outlet property="notion" destination="v5l-dh-ju9" id="hRy-9p-SH2"/>
                         <outlet property="previewBackground" destination="7U0-rr-EIv" id="9Y9-09-O2d"/>
-                        <outlet property="previewBody" destination="MkF-DU-fbT" id="pkt-OF-TkN"/>
-                        <outlet property="previewButton" destination="gLz-iO-DiS" id="pEr-pF-Wqo"/>
-                        <outlet property="previewTitle" destination="SE5-Mo-Vob" id="0Pe-K2-k1J"/>
+                        <outlet property="previewBody" destination="MkF-DU-fbT" id="YWf-t8-y3L"/>
+                        <outlet property="previewButton" destination="gLz-iO-DiS" id="N26-aO-Pb0"/>
+                        <outlet property="previewTitle" destination="SE5-Mo-Vob" id="Qur-cx-FoQ"/>
                         <outlet property="scrollView" destination="0CY-ya-3Yj" id="SdW-yq-o2l"/>
                         <outletCollection property="colorSet" destination="XAa-uO-nvM" collectionClass="NSMutableArray" id="Rod-XT-A6k"/>
                         <outletCollection property="colorSet" destination="kzn-HP-OUb" collectionClass="NSMutableArray" id="jBK-MR-98q"/>

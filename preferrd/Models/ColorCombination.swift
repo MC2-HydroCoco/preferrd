@@ -13,7 +13,6 @@
  */
 
 // swiftlint:disable function_body_length
-// swiftlint:disable line_length
 
 import Foundation
 import UIKit
@@ -159,19 +158,19 @@ enum ColorCombination: String, CaseIterable {
   var description: String {
     switch self {
     case .analogous:
-      return "The color grouping has similarities. These color scheme types have close relationships to one another, the range of colors in the color wheel are side by side."
+      return "combination.detail.analogous".localized
     case .accentedAnalogous:
-      return "An accented analogous scheme (also called analogous complementary) is a combination of the analogous and complementary color schemes. It consists of colors which sit next to each other on the color wheel and a color that is directly opposite to these."
+      return "combination.detail.accented_analogous".localized
     case .complementary:
-      return "Complementary colors are pairs of colors which, when combined or mixed, cancel each other out (lose hue) by producing a grayscale color like white or black. When placed next to each other, they create the strongest contrast for those two colors. Complementary colors may also be called opposite colors."
+      return "combination.detail.complementary".localized
     case .splitComplementary:
-      return "split-complementary color, is a mix together one primary color and two colors adjacent to its complement. While complementary colors tend to look dull, split-complementary colors are used well for contrast purposes."
+      return "combination.detail.split_complementary".localized
     case .monochromatic:
-      return "Monochromatic colors are all the colors of a single hue. Monochromatic color schemes are derived from a single base hue and extended using its shades, tones and tints."
+      return "combination.detail.monochromatic".localized
     case .compound:
-      return "This combination is made up of one color and the colors on either side of the complement. This strategy adds more variety than complementary color schemes by including three hues, without being too jarring or too bold."
+      return "combination.detail.compound".localized
     case .triadic:
-      return "A triadic color scheme is comprised of three colors evenly spaced on the color wheel. The two most basic triadic palettes are the primary colors red, blue, and yellow and the secondary hues orange, purple, and green."
+      return "combination.detail.triadic".localized
     }
   }
 }

@@ -366,7 +366,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adventurousLabel" destination="ztB-S6-I9x" id="gUM-bB-N7U"/>
+                        <outlet property="elegantLabel" destination="9EA-II-v7K" id="tGW-Zb-9j0"/>
+                        <outlet property="feminineLabel" destination="kxl-aN-9G1" id="ZRZ-oI-2ZF"/>
+                        <outlet property="freshLabel" destination="LLv-Je-N7P" id="LZI-Np-LBd"/>
+                        <outlet property="masculineLabel" destination="ytd-rK-yDy" id="NNj-Jt-YnQ"/>
+                        <outlet property="modernLabel" destination="JtH-N0-iAt" id="kYI-Sn-aVi"/>
+                        <outlet property="natureLabel" destination="66B-Jd-WJl" id="WZt-LQ-n5I"/>
+                        <outlet property="playfulLabel" destination="ihP-QR-J6V" id="OJK-bT-o9H"/>
+                        <outlet property="relaxingLabel" destination="AQ6-rn-xDu" id="QpU-1U-wPF"/>
                         <outlet property="themeCollectionView" destination="gMZ-gs-UwY" id="ER2-T5-crU"/>
+                        <outlet property="vintageLabel" destination="UYq-dY-50a" id="3pj-FF-scj"/>
                         <outletCollection property="themeSet" destination="RkH-TJ-EXf" collectionClass="NSMutableArray" id="xYA-VK-rXO"/>
                         <outletCollection property="themeSet" destination="Kth-jK-FKI" collectionClass="NSMutableArray" id="taR-JS-Zav"/>
                         <outletCollection property="themeSet" destination="Md8-r5-7Hf" collectionClass="NSMutableArray" id="EQc-HF-m2K"/>

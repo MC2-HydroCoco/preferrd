@@ -12,6 +12,18 @@ class PickThemeViewController: UIViewController {
 
   @IBOutlet var themeSet: [ThemeView]!
 
+  // Themes Label
+  @IBOutlet weak var relaxingLabel: UILabel!
+  @IBOutlet weak var vintageLabel: UILabel!
+  @IBOutlet weak var playfulLabel: UILabel!
+  @IBOutlet weak var adventurousLabel: UILabel!
+  @IBOutlet weak var modernLabel: UILabel!
+  @IBOutlet weak var natureLabel: UILabel!
+  @IBOutlet weak var freshLabel: UILabel!
+  @IBOutlet weak var elegantLabel: UILabel!
+  @IBOutlet weak var feminineLabel: UILabel!
+  @IBOutlet weak var masculineLabel: UILabel!
+
   var selectedThemes = [ColorTheme]() {
     didSet {
       themeCollectionView.reloadData()
@@ -25,8 +37,10 @@ class PickThemeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    title = "theme.title".localized
+
     navigationItem.rightBarButtonItem = UIBarButtonItem(
-      title: "Next",
+      title: "nav.next".localized,
       style: .done,
       target: self,
       action: #selector(nextTapped)
@@ -69,6 +83,18 @@ class PickThemeViewController: UIViewController {
       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectTheme))
       view.addGestureRecognizer(tapGesture)
     }
+
+    // Localize Labels
+    relaxingLabel.text    = ColorTheme.relaxing.locale
+    vintageLabel.text     = ColorTheme.vintage.locale
+    playfulLabel.text     = ColorTheme.playful.locale
+    adventurousLabel.text = ColorTheme.adventurous.locale
+    natureLabel.text      = ColorTheme.nature.locale
+    modernLabel.text      = ColorTheme.modern.locale
+    freshLabel.text       = ColorTheme.fresh.locale
+    elegantLabel.text     = ColorTheme.elegant.locale
+    feminineLabel.text    = ColorTheme.feminine.locale
+    masculineLabel.text   = ColorTheme.masculine.locale
   }
 
   @objc func selectTheme(_ sender: UITapGestureRecognizer) {
@@ -101,7 +127,7 @@ class PickThemeViewController: UIViewController {
 
   func enableAll() {
     for view in themeSet where view.isSelected == false {
-        view.themeImageView.alpha = 0.6
+      view.themeImageView.alpha = 0.6
     }
   }
 
@@ -126,7 +152,7 @@ extension PickThemeViewController: UICollectionViewDataSource, UICollectionViewD
         withReuseIdentifier: "themeCollectionViewCell",
         for: indexPath) as? ThemeCollectionViewCell {
 
-      cell.themeLabel.text = selectedThemes[indexPath.row].rawValue
+      cell.themeLabel.text = selectedThemes[indexPath.row].locale
       cell.imageContainer.isHidden = true
       cell.removeButton.isHidden = true
 

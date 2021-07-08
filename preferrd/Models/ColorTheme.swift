@@ -9,16 +9,20 @@ import Foundation
 import UIKit
 
 enum ColorTheme: String, CaseIterable {
-  case relaxing     = "Relaxing",
-       vintage      = "Vintage",
-       playful      = "Playful",
-       adventurous  = "Adventurous",
-       modern       = "Modern",
-       nature       = "Nature",
-       fresh        = "Fresh",
-       elegant      = "Elegant",
-       feminine     = "Feminine",
-       masculine    = "Masculine"
+  case relaxing     = "theme.relaxing",
+       vintage      = "theme.vintage",
+       playful      = "theme.playful",
+       adventurous  = "theme.adventurous",
+       modern       = "theme.modern",
+       nature       = "theme.nature",
+       fresh        = "theme.fresh",
+       elegant      = "theme.elegant",
+       feminine     = "theme.feminine",
+       masculine    = "theme.masculine"
+
+  var locale: String {
+    self.rawValue.localized
+  }
 
   func getImage() -> UIImage {
     switch self {

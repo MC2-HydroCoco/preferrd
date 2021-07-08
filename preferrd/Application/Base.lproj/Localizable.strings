@@ -5,3 +5,73 @@
   Created by Christianto Budisaputra on 28/05/21.
   
 */
+
+"nav.next" = "Next";
+"nav.back" = "Back";
+"detail" = "Detail:";
+"main.title" = "Palettes";
+
+// MARK: Theme
+"theme.title" = "Theme";
+"theme.relaxing" = "Relaxing";
+"theme.vintage" = "Vintage";
+"theme.playful" = "Playful";
+"theme.adventurous" = "Adventurous";
+"theme.modern" = "Modern";
+"theme.nature" = "Nature";
+"theme.fresh" = "Fresh";
+"theme.elegant" = "Elegant";
+"theme.feminine" = "Feminine";
+"theme.masculine" = "Masculine";
+
+// MARK: Base Color
+"base.title" = "Base Color";
+
+// MARK: Color Combination
+"combination.title" = "Color Combination";
+"combination.detail.analogous" = "The color grouping has similarities. These color scheme types have close relationships to one another, the range of colors in the color wheel are side by side.";
+"combination.detail.accented_analogous" = "An accented analogous scheme (also called analogous complementary) is a combination of the analogous and complementary color schemes. It consists of colors which sit next to each other on the color wheel and a color that is directly opposite to these.";
+"combination.detail.complementary" = "Complementary colors are pairs of colors which, when combined or mixed, cancel each other out (lose hue) by producing a grayscale color like white or black. When placed next to each other, they create the strongest contrast for those two colors. Complementary colors may also be called opposite colors.";
+"combination.detail.split_complementary" = "Split-complementary color, is a mix together one primary color and two colors adjacent to its complement. While complementary colors tend to look dull, split-complementary colors are used well for contrast purposes.";
+"combination.detail.monochromatic" = "Monochromatic colors are all the colors of a single hue. Monochromatic color schemes are derived from a single base hue and extended using its shades, tones and tints.";
+"combination.detail.compound" = "This combination is made up of one color and the colors on either side of the complement. This strategy adds more variety than complementary color schemes by including three hues, without being too jarring or too bold.";
+"combination.detail.triadic" = "A triadic color scheme is comprised of three colors evenly spaced on the color wheel. The two most basic triadic palettes are the primary colors red, blue, and yellow and the secondary hues orange, purple, and green.";
+/* MARK: Preview
+Steps Title */
+"preview.title.background" = "Background Color";
+"preview.title.title" = "Title Color";
+"preview.title.body" = "Body Color";
+"preview.title.button" = "Button Color";
+"preview.title.button_text" = "Button Text Color";
+
+// Steps Detail
+"preview.detail.background" = "A Background will establish the base and the accent color for your application, Make sure you make the most of it and it’s best to pick the lightest color or the darkest so the elements for the UI can be well distributed.";
+"preview.detail.title" = "A Headline, should have the biggest contrast than the background, and it should also have the biggest weight than captions and bodycopy so it can establish a good information Hierarchy.";
+"preview.detail.body" = "A body copy can have a slight difference with the title or headlines, but make sure they still have high contrast than the background.";
+"preview.detail.button" = "A Button shape color should have a big contrast with the background just like bodycopy, if the background is mainly dark color make sure the button shape is light colored and vice versa!";
+"preview.detail.button_text" = "A Button Text just like bodycopy, needs to have high contrast between shape and button text, so just like before, if the button shape color is bright choose a dark colored text and vice versa.";
+
+// Content Text
+"preview.body.title" = "The Title";
+"preview.body.text" = "A body copy may require higher contrast from the background color. It also requires a higher contrast if the font weight is less readable.";
+"preview.body.button" = "Call to Action";
+
+// MARK: Final Preview
+"final_preview.title" = "Palette Adjustment";
+"final_preview.color.background" = "Background";
+"final_preview.color.title" = "Title";
+"final_preview.color.body" = "Body";
+"final_preview.color.button" = "Button";
+"final_preview.color.button_txt" = "Button Text";
+"final_preview.adjustment.title" = "Adjust The Palette";
+"final_preview.adjustment.saturation" = "Saturation";
+"final_preview.adjustment.brightness" = "Brightness";
+"final_preview.adjustment.apply" = "Apply";
+
+// MARK: Palette Action
+"palette_action.title" = "What to do with the palette?";
+"palette_action.save" = "Save The Palette";
+"palette_action.save.title" = "New Palette";
+"palette_action.save.body" = "Enter a name for this palette.";
+"palette_action.cancel" = "Cancel";
+"palette_action.alert.save" = "Save";
